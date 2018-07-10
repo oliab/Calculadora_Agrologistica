@@ -1,0 +1,415 @@
+Autopista,Concesionario,Operador,Caseta,IAVE,Ubicación de caseta en Km,Coordenada latitud en grados,Coordenada longitud en grados,Tramo de cobro,Longitud en Km
+Acatzingo - Cd. Mendoza,BANOBRAS FONADIN,CAPUFE,Esperanza,SI,  217+500,18.870777,-97.385869,  Acatzingo - Cd. Mendoza,  92.950
+Acatzingo - Cd. Mendoza,BANOBRAS FONADIN,CAPUFE,Esperanza,SI,  217+501,18.870777,-97.385869,  Acatzingo - Esperanza,47.375
+Acatzingo - Cd. Mendoza,BANOBRAS FONADIN,CAPUFE,Esperanza,SI,  217+502,18.870777,-97.385869,Esperanza - Cd. Mendoza,45.575
+Amozoc - Perote y Libramiento de Perote,GRUPO AUTOPISTAS NACIONALES S. A. DE C. V.,GRUPO AUTOPISTAS NACIONALES S. A. DE C. V.,Amozoc II,NO,  1+000,19.063585,-98.069075,  Amozoc - Ent. Ixtenco,  25.700
+Amozoc - Perote y Libramiento de Perote,GRUPO AUTOPISTAS NACIONALES S. A. DE C. V.,GRUPO AUTOPISTAS NACIONALES S. A. DE C. V.,Cantona,NO,  1+000,19.507568,-97.497774,  Ent. Oriental - Ent. Perote II,  55.500
+Amozoc - Perote y Libramiento de Perote,GRUPO AUTOPISTAS NACIONALES S. A. DE C. V.,GRUPO AUTOPISTAS NACIONALES S. A. DE C. V.,Cantona A1,NO,  1+000,19.506554,-97.495453,  Ent. Oriental - Ent. Cantona,  18.800
+Amozoc - Perote y Libramiento de Perote,GRUPO AUTOPISTAS NACIONALES S. A. DE C. V.,GRUPO AUTOPISTAS NACIONALES S. A. DE C. V.,Cantona A2,NO,  1+000,19.508966,-97.497172,  Ent. Cantona - Ent. Perote II,  36.700
+Amozoc - Perote y Libramiento de Perote,GRUPO AUTOPISTAS NACIONALES S. A. DE C. V.,GRUPO AUTOPISTAS NACIONALES S. A. DE C. V.,Cuapiaxtla,NO,  1+000,19.310368,-97.797562,  Ent. Ixtenco - Ent. Oriental,  35.800
+Amozoc - Perote y Libramiento de Perote,GRUPO AUTOPISTAS NACIONALES S. A. DE C. V.,GRUPO AUTOPISTAS NACIONALES S. A. DE C. V.,Cuapiaxtla A1,NO,  1+000,19.304147,-97.805436,  Ent. Ixtenco - Ent. Cuapiaxtla,  14.000
+Amozoc - Perote y Libramiento de Perote,GRUPO AUTOPISTAS NACIONALES S. A. DE C. V.,GRUPO AUTOPISTAS NACIONALES S. A. DE C. V.,Cuapiaxtla A2,NO,  1+000,19.304378,-97.805668,  Ent. Cuapiaxtla - Ent. Oriental,  21.800
+Amozoc - Perote y Libramiento de Perote,GRUPO AUTOPISTAS NACIONALES S. A. DE C. V.,GRUPO AUTOPISTAS NACIONALES S. A. DE C. V.,Perote,NO,  3+000,19.55172,-97.289536,  Libramiento de Perote,  18.000
+Armería - Manzanillo,PROMOTORA DE AUTOPISTAS DEL PACÍFICO S. A. DE C. V.,OPERVITE S. A. DE C. V.,Cuyutlán,NO,  61+350,18.927786,-104.081504,  Armería - Manzanillo,  47.000
+Arriaga - Ocozocoautla,CONCESIONARIA DE AUTOPISTAS DEL SURESTE,CONCESIONARIA DE AUTOPISTAS DEL SURESTE S. A. DE C. V.,Arriaga,NO,  1+000,16.245558,-93.880876,  Arriaga - Tierra y Libertad,20
+Arriaga - Ocozocoautla,CONCESIONARIA DE AUTOPISTAS DEL SURESTE,CONCESIONARIA DE AUTOPISTAS DEL SURESTE S. A. DE C. V.,Jiquipilas,NO,  62+500,16.620564,-93.60209,  Jiquipilas - Montes Azules,  9.101
+Arriaga - Ocozocoautla,CONCESIONARIA DE AUTOPISTAS DEL SURESTE,CONCESIONARIA DE AUTOPISTAS DEL SURESTE S. A. DE C. V.,Ocozocuautla,NO,  91+000,16.738493,-93.400414,  Montes Azules - Ocozocoautla,  22.301
+Arriaga - Ocozocoautla,CONCESIONARIA DE AUTOPISTAS DEL SURESTE,CONCESIONARIA DE AUTOPISTAS DEL SURESTE S. A. DE C. V.,Tierra y Libertad,NO,  21+000,16.368058,-93.867043,  Tierra y Libertad - Jiquipilas,  41.598
+Atlacomulco - Maravatío,BANOBRAS S.N.C.,CAPUFE,  Contepec,NO,  133+100,19.876127,-100.177072,  Venta de Bravo - Maravatío,  32.175
+Atlacomulco - Maravatío,BANOBRAS S.N.C.,CAPUFE,  Contepec A1,NO,  133+100,19.877644,-100.176358,  Venta de Bravo - Maravatío,  32.175
+Atlacomulco - Maravatío,BANOBRAS S.N.C.,CAPUFE,  Contepec A2,NO,  133+100,19.875531,-100.176711,  Maravatío - Venta de Bravo,  32.175
+Atlacomulco - Maravatío,BANOBRAS S.N.C.,CAPUFE,  San Juanico,NO,  103+200,19.830719,-99.905209,  Atlacomulco - Venta de Bravo,  32.175
+Cadereyta - Reynosa,BANOBRAS FONADIN,CAPUFE,  Dr. Coss,NO,  119+700,25.813509,-99.169588,  Cadereyta - General Bravo,  85.015
+Cadereyta - Reynosa,BANOBRAS FONADIN,CAPUFE,  General Bravo,NO,  120+000,25.813509,-99.169588,  Cadereyta - Reynosa,  132.015
+Cadereyta - Reynosa,BANOBRAS FONADIN,CAPUFE,  General Bravo,NO,  120+000,25.813509,-99.169588,  General Bravo - La Sierrita,  47.000
+Cadereyta - Reynosa,BANOBRAS FONADIN,CAPUFE,  Los Herreras,NO,  98+900,25.757295,-99.373856,  Cadereyta - Los Herreras,  63.815
+Cadereyta - Reynosa,BANOBRAS FONADIN,CAPUFE,  Los Herreras,NO,  98+900,25.759393,-99.37416,  Los Herreras - General Bravo,  21.200
+Cadereyta - Reynosa,BANOBRAS FONADIN,CAPUFE,  Los Ramones,NO,  69+720,25.656016,-99.631035,  Cadereyta - Los Ramones,  35.275
+Cadereyta - Reynosa,BANOBRAS FONADIN,CAPUFE,  Los Ramones,NO,  69+720,25.662886,-99.628599,  Los Ramones - General Bravo,  49.740
+Camargo - Delicias,GOBIERNO DEL ESTADO DE CHIHUAHUA,GOBIERNO DEL ESTADO DE CHIHUAHUA,  Altavista,NO,  73+100,27.730842,-105.197882,  Camargo - Conchos,  35.000
+Camargo - Delicias,GOBIERNO DEL ESTADO DE CHIHUAHUA,GOBIERNO DEL ESTADO DE CHIHUAHUA,  Saucillo,NO,  116+300,28.04638,-105.329342,  Conchos - Delicias,  30.000
+Cardel - Veracruz,GOBIERNO DEL ESTADO DE VERACRUZ,GOBIERNO DEL ESTADO DE VERACRUZ,  La Antigua,NO,,19.320385,-96.310715,  Cardel - Veracruz,  29.880
+Cardel - Veracruz,GOBIERNO DEL ESTADO DE VERACRUZ,GOBIERNO DEL ESTADO DE VERACRUZ,  San Julián,NO,  233+093,19.239276,-96.257899,  San Julián - Veracruz,  7.910
+Cd. Cuauhtémoc - Osiris,CAPUFE,CAPUFE,  Zacatecas,NO,  31+000,22.710779,-102.448879,  Cd. Cuauhtemoc - Osiris,  42.310
+Cd. Mendoza - Córdoba,BANOBRAS FONADIN,CAPUFE,  Fortín,SI,  286+250,18.907151,-96.999524,  Cd. Mendoza - Córdoba,  30.675
+Cd. Mendoza - Córdoba,BANOBRAS FONADIN,CAPUFE,  Fortín Aux.,SI,,18.906565,-97.001589,  Cd. Mendoza - Fortín,  23.175
+Chamapa - Lechería,BANOBRAS FONADIN,CAPUFE,  San Mateo A1,SI,  286+250,19.487334,-99.309881,  Cd. Mendoza - Fortín,  23.176
+Chamapa - Lechería,BANOBRAS FONADIN,CAPUFE,  San Mateo A2,SI,  286+251,19.486228,-99.311503,  Cd. Mendoza - Fortín,  23.177
+Chamapa - Lechería,BANOBRAS FONADIN,CAPUFE,  San Mateo A3,SI,  286+252,19.487093,-99.310115,  Cd. Mendoza - Fortín,  23.178
+Chamapa - Lechería,BANOBRAS FONADIN,CAPUFE,  San Mateo A4,SI,  286+253,19.48819,-99.311068,  Cd. Mendoza - Fortín,  23.179
+Chamapa - Lechería,BANOBRAS FONADIN,CAPUFE,  Lomas Verdes,SI,  286+254,19.519198,-99.286355,  Cd. Mendoza - Fortín,  23.180
+Chamapa - Lechería,BANOBRAS FONADIN,CAPUFE,  Madín A1,SI,  286+255,19.544632,-99.277049,  Cd. Mendoza - Fortín,  23.181
+Chamapa - Lechería,BANOBRAS FONADIN,CAPUFE,  Madín A2,SI,  286+256,19.545601,-99.277405,  Cd. Mendoza - Fortín,  23.182
+Chamapa - Lechería,BANOBRAS FONADIN,CAPUFE,  Madín A3,SI,  286+257,19.548062,-99.276966,  Cd. Mendoza - Fortín,  23.183
+Chamapa - Lechería,BANOBRAS FONADIN,CAPUFE,  Madín A4,SI,  286+258,19.548788,-99.277298,  Cd. Mendoza - Fortín,  23.184
+Chamapa - Lechería,BANOBRAS FONADIN,CAPUFE,  Atizapán,SI,  286+259,19.582535,-99.271137,  Cd. Mendoza - Fortín,  23.185
+Chamapa - Lechería,BANOBRAS FONADIN,CAPUFE,  Lago de Guadalupe A1,SI,  286+260,19.608832,-99.237113,  Cd. Mendoza - Fortín,  23.186
+Chamapa - Lechería,BANOBRAS FONADIN,CAPUFE,  Lago de Guadalupe A2,SI,  286+261,19.60996,-99.236474,  Cd. Mendoza - Fortín,  23.187
+Champotón - Campeche,BANOBRAS FONADIN,CAPUFE,  Seybaplaya,SI,  32+000,19.636259,-90.671564,  Champotón - Campeche,  39.500
+Champotón - Campeche,BANOBRAS FONADIN,CAPUFE,  Seybaplaya,SI,  32+000,19.636259,-90.671564,  Seybaplaya - Campeche,  24.500
+Champotón - Campeche,BANOBRAS FONADIN,CAPUFE,  Seybaplaya,SI,  32+000,19.636259,-90.671564,  Villa Madero - Seybaplaya,  15.000
+Chapalilla - Compostela,CAPUFE,CAPUFE,  Compostela,SI,  31+600,21.229472,-104.887417,  Chapalilla - Compostela,  35.500
+Córdoba - Veracruz,BANOBRAS FONADIN,CAPUFE,  Cuitláhuac,SI,  14+140,18.839454,-96.746941,  Córdoba - La Tinaja,  45.000
+Córdoba - Veracruz,BANOBRAS FONADIN,CAPUFE,  Cuitláhuac A1,SI,  14+140,18.839314,-96.746978,  Córdoba - Cuitláhuac,  14.140
+Córdoba - Veracruz,BANOBRAS FONADIN,CAPUFE,  Cuitláhuac A1-2,SI,  14+140,18.839604,-96.746905,  Cuitláhuac - Córdoba,  14.140
+Córdoba - Veracruz,BANOBRAS FONADIN,CAPUFE,  Cuitláhuac A2-1,NO,  14+600,18.837511,-96.737458,  Cuitláhuac - La Tinaja,  30.860
+Córdoba - Veracruz,BANOBRAS FONADIN,CAPUFE,  Cuitláhuac A2-2,NO,  14+600,18.83865,-96.739512,  La Tinaja - Cuitláhuac,  30.860
+Córdoba - Veracruz,BANOBRAS FONADIN,CAPUFE,  Paso del Toro,SI,  89+900,19.081747,-96.198438,  La Tinaja - Paso del Toro,  44.900
+Córdoba - Veracruz,BANOBRAS FONADIN,CAPUFE,  Paso del Toro,SI,  89+900,19.081747,-96.198438,  La Tinaja - Veracruz,  53.000
+Córdoba - Veracruz,BANOBRAS FONADIN,CAPUFE,  Paso del Toro,SI,  89+900,19.081747,-96.198438,  Paso del Toro - Veracruz,  8.100
+Cuacnopalan - Oaxaca,BANOBRAS FONADIN,CAPUFE,  Huitzo,SI,  217+010,17.275026,-96.915277,  Nochixtlán-Oaxaca,  64.500
+Cuacnopalan - Oaxaca,BANOBRAS FONADIN,CAPUFE,  Huitzo,SI,  217+010,17.275026,-96.915277,  Nochixtlán - Huitzo,  38.510
+Cuacnopalan - Oaxaca,BANOBRAS FONADIN,CAPUFE,  Huitzo A1,NO,  217+010,17.278761,-96.914652,  Huitzo - Oaxaca,  25.990
+Cuacnopalan - Oaxaca,BANOBRAS FONADIN,CAPUFE,  Miahuatlán,SI,  71+415,18.264673,-97.315627,  Tehuacán - Miahuatlán,  30.367
+Cuacnopalan - Oaxaca,BANOBRAS FONADIN,CAPUFE,  Coixtlahuaca A1,NO,  141+300,17.726023,-97.353773,  Miahuatlán - Nochixtlán,  107.085
+Cuacnopalan - Oaxaca,BANOBRAS FONADIN,CAPUFE,  Coixtlahuaca,SI,  141+300,17.725859,-97.352916,  Miahuatlán - Coixtlahuaca,  69.885
+Cuacnopalan - Oaxaca,BANOBRAS FONADIN,CAPUFE,  Tehuacán,SI,  41+048,18.487127,-97.456212,  Cuacnopalan - Tehuacán,  41.048
+Cuernavaca - Acapulco,BANOBRAS FONADIN,CAPUFE,  Aeropuerto A1,NO,  104+800,18.802293,-99.221241,  Cuernavaca - Aeropuerto,  9.800
+Cuernavaca - Acapulco,BANOBRAS FONADIN,CAPUFE,  Aeropuerto A2,NO,  104+800,18.802741,-99.219852,  Cuernavaca - Aeropuerto,  9.800
+Cuernavaca - Acapulco,BANOBRAS FONADIN,CAPUFE,  Alpuyeca,SI,  114+800,18.69853,-99.278053,  Cuernavaca - Puente de Ixtla,  28.939
+Cuernavaca - Acapulco,BANOBRAS FONADIN,CAPUFE,  Alpuyeca A1,NO,  115+000,18.723779,-99.260215,  Cuernavaca - Alpuyeca,  8.939
+Cuernavaca - Acapulco,BANOBRAS FONADIN,CAPUFE,  Alpuyeca A2,NO,  115+000,18.722419,-99.259948,  Alpuyeca - Cuernavaca,  20.000
+Cuernavaca - Acapulco,BANOBRAS FONADIN,CAPUFE,  D.I.E.Z.,NO,  102+000,18.8375,-99.21537,  Cuernavaca - Central de Abastos,  7.000
+Cuernavaca - Acapulco,BANOBRAS FONADIN,CAPUFE,  La Venta,SI,  364+900,16.928256,-99.801892,  Tierra Colorada - Acapulco,  55.907
+Cuernavaca - Acapulco,BANOBRAS FONADIN,CAPUFE,  Palo Blanco,SI,  288+850,17.423967,-99.466861,  Chilpancingo - Tierra Colorada,  34.713
+Cuernavaca - Acapulco,BANOBRAS FONADIN,CAPUFE,  Paso Morelos,SI,  178+200,18.231465,-99.215466,  Paso Morelos - Chilpancingo,  88.960
+Cuernavaca - Acapulco,BANOBRAS FONADIN,CAPUFE,  Paso Morelos,SI,  178+200,18.231465,-99.215466,  Puente de Ixtla - Chilpancingo,  143.021
+Cuernavaca - Acapulco,BANOBRAS FONADIN,CAPUFE,  Paso Morelos,SI,  178+200,18.231465,-99.215466,  Puente de Ixtla - Paso Morelos,  54.061
+Cuernavaca - Acapulco,BANOBRAS FONADIN,CAPUFE,  Xochitepec,NO,  107+900,18.774978,-99.225314,  Cuernavaca - Xochitepec,  13.072
+Cuernavaca - Acapulco,BANOBRAS FONADIN,CAPUFE,  Xochitepec,NO,  107+900,18.774978,-99.225314,  Xochitepec - Alpuyeca,  6.928
+Durango - Mazatlán,BANOBRAS FONADIN,CAPUFE,  Garavitos,NO,  22+100,24.004477,-104.736419,  Libramiento de Durango - Entronque Otinapa,  44.900
+Durango - Mazatlán,BANOBRAS FONADIN,CAPUFE,  Llano Grande,NO,  44+900,23.868815,-105.203958,  Entronque Otinapa - Piloncillo,  59.100
+Durango - Mazatlán,BANOBRAS FONADIN,CAPUFE,  Mesillas,NO,  78+400,23.259302,-106.049587,  Santa Lucía - Villa Unión,  58.300
+Durango - Yerbanís,AUTOPISTAS DE CUOTA S. A. DE C. V.,AUTOPISTAS DE CUOTA S. A. DE C. V.,  Durango,SI,  15+900,24.131735,-104.534058,  Durango - Guadalupe Victoria,  49.000
+Durango - Yerbanís,AUTOPISTAS DE CUOTA S. A. DE C. V.,AUTOPISTAS DE CUOTA S. A. DE C. V.,  Yerbanís,SI,  112+724,24.730769,-103.861923,  Guadalupe Victoria - Yerbanís,  56.200
+Ecatepec - Pirámides,CONCESIONARIA ECATEPEC-PIRÁMIDES S. A. DE C. V.,OPERVITE S. A. DE C. V.,  Ecatepec,NO,  1+187,19.611707,-99.025732,  Ecatepec - Pirámides,  22.210
+Ecatepec - Pirámides,CONCESIONARIA ECATEPEC-PIRÁMIDES S. A. DE C. V.,OPERVITE S. A. DE C. V.,  Tepexpan,NO,  9+725,,,  Tepexpan - San Martín de las Pirámides,  12.480
+El Centinela - La Rumorosa,GOBIERNO DEL ESTADO DE BAJA CALIFORNIA,GOBIERNO DEL ESTADO DE BAJA CALIFORNIA,  La Rumorosa,NO,  47+000,32.562633,-116.047931,  El Centinela - La Rumorosa,  47.297
+El Centinela - La Rumorosa,GOBIERNO DEL ESTADO DE BAJA CALIFORNIA,GOBIERNO DEL ESTADO DE BAJA CALIFORNIA,  La Rumorosa 2,NO,  47+000,32.555877,-116.036431,  La Rumorosa - El Centinela,47.297
+El Sueco - Villa Ahumada,GOBIERNO DEL ESTADO DE CHIHUAHUA,GOBIERNO DEL ESTADO DE CHIHUAHUA,  Villa Ahumada,NO,  219+000,30.437079,-106.52185,  El Sueco - Villa Ahumada,  86.700
+Ensenada - Tijuana,BANOBRAS FONADIN,CAPUFE,  Ensenada,NO,  88+599,31.903121,-116.732727,  Ensenada - La Misión,  33.766
+Ensenada - Tijuana,BANOBRAS FONADIN,CAPUFE,  Playas de Tijuana,NO,  9+700,32.514036,-117.109538,  Rosarito - Tijuana,  25.927
+Ensenada - Tijuana,BANOBRAS FONADIN,CAPUFE,  Rosarito,NO,  35+427,32.32425,-117.049016,  La Misión - Rosarito,  29.847
+Ent. Agua Dulce - Cárdenas,BANOBRAS FONADIN,CAPUFE,  Sánchez Magallanes,SI,  28+500,18.030565,-93.812954,  Ent. Agua Dulce - Cárdenas,  53.300
+Ent. Agua Dulce - Cárdenas,BANOBRAS FONADIN,CAPUFE,  Sánchez Magallanes,NO,  28+500,18.029932,-93.813072,  Ent. Agua Dulce - Ent. Magallanes,  22.800
+Ent. Agua Dulce - Cárdenas,BANOBRAS FONADIN,CAPUFE,  Sánchez Magallanes,NO,  28+500,18.031623,-93.813693,  Ent. Magallanes - Cárdenas,  30.500
+Ent. Tulancingo - Venta Grande,FIDEICOMISO AUTOPISTAS Y PUENTES DEL GOLFO CENTRO,CAPUFE,  Asunción,NO,  22+700,20.147427,-98.285747,  Ent. Tulancingo - Venta Grande,  41.200
+Ent. Tulancingo - Venta Grande,FIDEICOMISO AUTOPISTAS Y PUENTES DEL GOLFO CENTRO,CAPUFE,  Asunción A1,NO,  22+700,20.146458,-98.286939,  Ent. Asunción - Tejocotal,  22.700
+Ent. Tulancingo - Venta Grande,FIDEICOMISO AUTOPISTAS Y PUENTES DEL GOLFO CENTRO,CAPUFE,  Asunción A2,NO,  22+700,20.150099,-98.286642,  Libramiento de Tulancingo,  18.500
+Estación Don - Nogales,BANOBRAS FONADIN,CAPUFE,  Esperanza,NO,  10+700,27.603722,-109.93909,  Cd. Obregón - Guaymas,  107.700
+Estación Don - Nogales,BANOBRAS FONADIN,CAPUFE,  Fundición,NO,  197+500,27.320373,-109.719802,  Navojoa - Cd. Obregón,  63.800
+Estación Don - Nogales,BANOBRAS FONADIN,CAPUFE,  Guaymas,NO,  3+200,28.036494,-110.924164,  Libramiento de Guaymas,  21.500
+Estación Don - Nogales,BANOBRAS FONADIN,CAPUFE,  Hermosillo,NO,  15+200,29.220733,-110.930184,  Hermosillo - Magdalena de Kino,  169.900
+Estación Don - Nogales,BANOBRAS FONADIN,CAPUFE,  La Jaula,NO,  129+900,26.849818,-109.373311,  Estación Don - Navojoa,  85.200
+Estación Don - Nogales,BANOBRAS FONADIN,CAPUFE,  Magdalena,NO,  184+400,30.629274,-110.948775,  Libramiento de Magdalena de Kino,  11.900
+Gómez Palacio - Corralitos,BANOBRAS FONADIN,CAPUFE,  Bermejillo,SI,  44+210,25.923655,-103.622077,  Gómez Palacio - Estación Banderas,  39.000
+Gómez Palacio - Corralitos,BANOBRAS FONADIN,CAPUFE,  Ceballos,SI,  130+560,26.586694,-104.057726,  Estación Banderas - Corralitos,  112.300
+Guadalajara - Colima,BANOBRAS S.N.C.,CAPUFE,  Acatlán,NO,  1+650,20.415926,-103.55704,  Acatlán - Ciudad Guzmán,  73.000
+Guadalajara - Colima,BANOBRAS S.N.C.,CAPUFE,  San Marcos,NO,  122+500,19.433636,-103.49487,  Cd. Guzmán - El Trapiche,  73.000
+Guadalajara - Tepic,CONCESIONARIA AUTOPISTA GUADALAJARA - TEPIC S.A. DE C.V.,CONCESIONARIA AUTOPISTA GUADALAJARA - TEPIC S.A. DE C.V.,  Arenal,SI,  10+960,20.778748,-103.662386,  Ent. Ameca - Magdalena,  46.000
+Guadalajara - Tepic,CONCESIONARIA AUTOPISTA GUADALAJARA - TEPIC S.A. DE C.V.,CONCESIONARIA AUTOPISTA GUADALAJARA - TEPIC S.A. DE C.V.,  Plan de Barrancas,SI,  69+337,21.005379,-104.144084,  Magdalena - Ixtlán del Río,  51.454
+Guadalajara - Tepic,CONCESIONARIA AUTOPISTA GUADALAJARA - TEPIC S.A. DE C.V.,CONCESIONARIA AUTOPISTA GUADALAJARA - TEPIC S.A. DE C.V.,  Santa María del Oro,SI,  145+146,21.328268,-104.664406,  Ixtlán del Río - Tepic,  77.600
+Guadalajara - Tepic,CONCESIONARIA AUTOPISTA GUADALAJARA - TEPIC S.A. DE C.V.,CONCESIONARIA AUTOPISTA GUADALAJARA - TEPIC S.A. DE C.V.,  Santa María A1,NO,  145+146,21.327973,-104.663151,  Ixtlán del Río - Santa María del Oro,  47.692
+Guadalajara - Tepic,CONCESIONARIA AUTOPISTA GUADALAJARA - TEPIC S.A. DE C.V.,CONCESIONARIA AUTOPISTA GUADALAJARA - TEPIC S.A. DE C.V.,  Santa María A2,NO,  145+146,21.327052,-104.664677,  Santa María del Oro - Tepic,  21.690
+Guadalajara - Tepic,CONCESIONARIA AUTOPISTA GUADALAJARA - TEPIC S.A. DE C.V.,CONCESIONARIA AUTOPISTA GUADALAJARA - TEPIC S.A. DE C.V.,  Tequepexpan A1,NO,  131+910,21.213906,-104.592673,  Ixtlán del Río - Tequepexpan,  32.910
+Guadalajara - Tepic,CONCESIONARIA AUTOPISTA GUADALAJARA - TEPIC S.A. DE C.V.,CONCESIONARIA AUTOPISTA GUADALAJARA - TEPIC S.A. DE C.V.,  Tequepexpan A2,NO,  131+910,21.213664,-104.594174,  Tequepexpan - Ixtlán del Río,  32.911
+Guadalajara - Tepic,CONCESIONARIA AUTOPISTA GUADALAJARA - TEPIC S.A. DE C.V.,CONCESIONARIA AUTOPISTA GUADALAJARA - TEPIC S.A. DE C.V.,  Tequila,NO,  32+700,20.854129,-103.861211,  Tequila - Magdalena,  12.260
+Guadalajara - Zapotlanejo,RED DE AUTOPISTAS DE OCCIDENTE S. A. P. I. B. DE C. V.,RED DE AUTOPISTAS DE OCCIDENTE S. A. P. I. B. DE C. V.,  La Joya,SI,  19+000,20.604788,-103.138943,  Guadalajara - Zapotlanejo,  26.000
+Gutiérrez Zamora - Tihuatlán,BANOBRAS FONADIN,CAPUFE,  Cazones1,NO,  181+500,20.469874,-97.254669,  Totomoxtle - Ent. Poza Rica,  26.104
+Gutiérrez Zamora - Tihuatlán,BANOBRAS FONADIN,CAPUFE,  Cazones2,NO,  ,,,  Ent. Poza Rica - Tihuatlán II,  9.372
+Gutiérrez Zamora - Tihuatlán,BANOBRAS FONADIN,CAPUFE,  Totomoxtle 1,NO,  0+200,20.461964,-97.245995,  Gutiérrez Zamora - Tihuatlán,  37.289
+Gutiérrez Zamora - Tihuatlán,BANOBRAS FONADIN,CAPUFE,  Totomoxtle 2,NO,  0+200,20.460995,-97.247746,  Tihuatlán - Gutiérrez Zamora,  37.289
+Jiménez - Camargo,GOBIERNO DEL ESTADO DE CHIHUAHUA,GOBIERNO DEL ESTADO DE CHIHUAHUA,  Jiménez,NO,  11+000,27.244991,-104.933224,  Jiménez - Camargo,  70.000
+La Pera - Cuautla,BANOBRAS FONADIN,CAPUFE,  Oacalco,SI,  21+200,18.931121,-99.02562,  Tepoztlán - Cuautla,  17.082
+La Pera - Cuautla,BANOBRAS FONADIN,CAPUFE,  Tepoztlán,SI,  7+960,18.98681,-99.112444,  La Pera - Tepoztlán,  17.083
+La Tinaja - Cosoleacaque,BANOBRAS FONADIN,CAPUFE,  Acayucan,SI,  188+000,17.910035,-94.937359,  Isla - Acayucan,  69.850
+La Tinaja - Cosoleacaque,BANOBRAS FONADIN,CAPUFE,  Acayucan,SI,  188+000,17.910035,-94.937359,  Isla - Cosoleacaque,  109.500
+La Tinaja - Cosoleacaque,BANOBRAS FONADIN,CAPUFE,  Acayucan,SI,  188+000,17.910035,-94.937359,  Acayucan - Cosoleacaque,  40.000
+La Tinaja - Cosoleacaque,BANOBRAS FONADIN,CAPUFE,  Cosamaloapan,SI,  83+360,18.334975,-95.822252,  La Tinaja - Cosamaloapan,  83.360
+La Tinaja - Cosoleacaque,BANOBRAS FONADIN,CAPUFE,  Cosamaloapan,SI,  83+360,18.334975,-95.822252,  La Tinaja - Isla,  118.150
+La Tinaja - Cosoleacaque,BANOBRAS FONADIN,CAPUFE,  Cosamaloapan,SI,  83+360,18.334975,-95.822252,  Cosamaloapan - Isla,  34.790
+Las Choapas - Ocozocuautla,BANOBRAS FONADIN,CAPUFE,  Las Choapas,NO,  17+000,17.944819,-94.172372,  Ent. Las Choapas - Ent. Nuevo Sacrificio,  63.200
+Las Choapas - Ocozocuautla,BANOBRAS FONADIN,CAPUFE,  Las Choapas A1,NO,  17+000,17.942707,-94.17224,  Ent. Las Choapas - Ent. Las Choapas II,  17.000
+Las Choapas - Ocozocuautla,BANOBRAS FONADIN,CAPUFE,  Las Choapas A1,NO,  17+000,17.942707,-94.17224,  Ent. Las Choapas II - Ent. Nuevo Sacrificio,  46.200
+Las Choapas - Ocozocuautla,BANOBRAS FONADIN,CAPUFE,  Malpasito,SI,  118+930,17.349101,-93.586441,  Ent. Nuevo Sacrificio - Ent. Raudales,  70.800
+Las Choapas - Ocozocuautla,BANOBRAS FONADIN,CAPUFE,  Malpasito A1,NO,  118+930,17.348467,-93.586933,  Ent. Nuevo Sacrificio - Ent. Malpasito,  49.600
+Las Choapas - Ocozocuautla,BANOBRAS FONADIN,CAPUFE,  Malpasito A2,NO,  118+930,17.349152,-93.585518,  Ent. Malpasito - Ent. Raudales,  21.200
+Las Choapas - Ocozocuautla,BANOBRAS FONADIN,CAPUFE,  Ocuilapa,SI,  183+500,16.863172,-93.40687,  Ent. Raudales - Ocozocuautla,  64.000
+León - Aguascalientes,RED DE AUTOPISTAS DE OCCIDENTE S. A. P. I. B. DE C. V.,RED DE CARRETERAS DE OCCIDENTE S. A. P. I. B. DE C. V.,  Cuerámaro A1,NO,  12+000,21.06969,-101.679198,  Ent. León - Ent. Central de Abastos,  12.000
+León - Aguascalientes,RED DE AUTOPISTAS DE OCCIDENTE S. A. P. I. B. DE C. V.,RED DE CARRETERAS DE OCCIDENTE S. A. P. I. B. DE C. V.,  Cuerámaro A2,NO,  12+000,21.069085,-101.67977,  Ent. Central de Abastos - Ent. León,  12.000
+León - Aguascalientes,RED DE AUTOPISTAS DE OCCIDENTE S. A. P. I. B. DE C. V.,RED DE CARRETERAS DE OCCIDENTE S. A. P. I. B. DE C. V.,  Encarnación,SI,  88+740,21.489618,-102.243204,  Ent. Lagos de Moreno - Aguascalientes,  43.800
+León - Aguascalientes,RED DE AUTOPISTAS DE OCCIDENTE S. A. P. I. B. DE C. V.,RED DE CARRETERAS DE OCCIDENTE S. A. P. I. B. DE C. V.,  Encarnación,SI,  88+740,21.489618,-102.243204,  Encarnación de Díaz - Aguascalientes,  15.110
+León - Aguascalientes,RED DE AUTOPISTAS DE OCCIDENTE S. A. P. I. B. DE C. V.,RED DE CARRETERAS DE OCCIDENTE S. A. P. I. B. DE C. V.,  León,SI,  23+500,21.102736,-101.784601,  Ent. León - Lagos de Moreno,  60.050
+León - Aguascalientes,RED DE AUTOPISTAS DE OCCIDENTE S. A. P. I. B. DE C. V.,RED DE CARRETERAS DE OCCIDENTE S. A. P. I. B. DE C. V.,  San Francisco A1,NO,  19+000,21.082341,-101.745577,  Ent. León - San Francisco del Rincón,  19.000
+León - Aguascalientes,RED DE AUTOPISTAS DE OCCIDENTE S. A. P. I. B. DE C. V.,RED DE CARRETERAS DE OCCIDENTE S. A. P. I. B. DE C. V.,  San Francisco A2,NO,  19+000,21.081411,-101.745975,  San Francisco del Rincón - Ent. León,  19.000
+Libramiento de Culiacán,,,  San Pedro,NO,  10+000,24.748965,-107.568618,  Libramiento de Culiacán,  22.000
+Libramiento de Fresnillo,GOBIERNO DEL ESTADO DE ZACATECAS GRUPO PROFREZAC S.A. DE C.V.,GOBIERNO DEL ESTADO DE ZACATECAS GRUPO PROFREZAC S.A. DE C.V.,  Morfín Chávez,NO,  57+060,23.177959,-102.828733,  Libramiento de Fresnillo,  20.050
+Libramiento de Fresnillo,GOBIERNO DEL ESTADO DE ZACATECAS GRUPO PROFREZAC S.A. DE C.V.,GOBIERNO DEL ESTADO DE ZACATECAS GRUPO PROFREZAC S.A. DE C.V.,  Morfín Chávez,NO,  57+060,23.177959,-102.828733,  Ent. La Providencia - Morfín Chávez,  7.020
+Libramiento de Fresnillo,GOBIERNO DEL ESTADO DE ZACATECAS GRUPO PROFREZAC S.A. DE C.V.,GOBIERNO DEL ESTADO DE ZACATECAS GRUPO PROFREZAC S.A. DE C.V.,  Morfín Chávez,NO,  57+060,23.177959,-102.828733,  Morfín Chávez - Ent. San Isidro,  13.030
+Libramiento de Irapuato,INFRAESTRUCTURA CONCESIONADA DE IRAPUATO S. A. DE C. V.,INFRAESTRUCTURA CONCESIONARIA DE IRAPAUATO,  Arandas,NO,  5+810,20.737502,-101.379985,  Entronque ITESI - San Cristobal,  19.570
+Libramiento de Irapuato,INFRAESTRUCTURA CONCESIONADA DE IRAPUATO S. A. DE C. V.,INFRAESTRUCTURA CONCESIONARIA DE IRAPAUATO,  Arandas A1,NO,  5+810,20.735284,-101.383209,  Entronque ITESI - Arandas,  5.810
+Libramiento de Irapuato,INFRAESTRUCTURA CONCESIONADA DE IRAPUATO S. A. DE C. V.,INFRAESTRUCTURA CONCESIONARIA DE IRAPAUATO,  Arandas A2,NO,  5+810,20.733461,-101.381244,  Arandas - San Cristobal,  13.760
+Libramiento de Irapuato,INFRAESTRUCTURA CONCESIONADA DE IRAPUATO S. A. DE C. V.,INFRAESTRUCTURA CONCESIONARIA DE IRAPAUATO,  San Cristobal,NO,  20+000,20.601075,-101.438521,  San Cristobal - Entronque Carretera 90,  9.630
+Libramiento de la Piedad,LIBRAMIENTO ICA LA PIEDAD S.A. DE C.V.,LIBRAMIENTO ICA LA PIEDAD S.A. DE C.V., La Calera,NO,  5+564,20.397139,-101.998746,  Laguna Larga - Patti II,  21.388
+Libramiento de la Piedad,LIBRAMIENTO ICA LA PIEDAD S.A. DE C.V.,LIBRAMIENTO ICA LA PIEDAD S.A. DE C.V.,  La Calera Aux.,NO,  5+564,20.395404,-101.998207,  Laguna Larga - Calera,  5.300
+Libramiento de la Piedad,LIBRAMIENTO ICA LA PIEDAD S.A. DE C.V.,LIBRAMIENTO ICA LA PIEDAD S.A. DE C.V.,  La Calera Aux.,NO,  5+564,20.395404,-101.998207,  Calera - Patti II,  16.080
+Libramiento de Matehuala,DESARROLLADORA DE CONCESIONES OMEGA S. A. DE C. V.,DESARROLLADORA DE CONCESIONES OMEGA S. A. DE C. V.,  Matehuala,NO,  8+000,23.664163,-100.607299,  Libramiento de Matehuala,  14.200
+Libramiento de Matehuala,DESARROLLADORA DE CONCESIONES OMEGA S. A. DE C. V.,DESARROLLADORA DE CONCESIONES OMEGA S. A. DE C. V.,  Matehuala A1,NO,  8+000,23.664161,-100.606222,  Ent. Sur Matehuala - Ent. Este Matehuala,
+Libramiento de Matehuala,DESARROLLADORA DE CONCESIONES OMEGA S. A. DE C. V.,DESARROLLADORA DE CONCESIONES OMEGA S. A. DE C. V.,  Matehuala A2,NO,  8+000,23.663767,-100.608339,  Ent. Este Matehuala - Ent. Norte Matehuala,
+Libramiento de Mexicali,LIBRAMIENTO OMEGA CACHANILLA S. A. DE C. V.,LIBRAMIENTO OMEGA CACHANILLA S. A. DE C. V.,  Mexcali A1,NO,  12+000,32.533552,-115.40878,  Entronque Cuernavaca - Entronque San Felipe,  12.000
+Libramiento de Mexicali,LIBRAMIENTO OMEGA CACHANILLA S. A. DE C. V.,LIBRAMIENTO OMEGA CACHANILLA S. A. DE C. V.,  Mexicali,NO,  12+000,32.533499,-115.420765,  Libramiento de Mexicali,  41.000
+Libramiento de Mexicali,LIBRAMIENTO OMEGA CACHANILLA S. A. DE C. V.,LIBRAMIENTO OMEGA CACHANILLA S. A. DE C. V.,  Mexicali A2,NO,  12+000,,,  Entronque San Felipe - Entronque Centinela,  29.000
+Libramiento de Nogales,GOBIERNO DEL ESTADO DE SONORA,VÍAS CONCESIONADAS DEL NORTE S.A. DE C.V.,  Nogales,NO,  3+300,31.258312,-110.974723,  Libramiento de Nogales,  12.500
+Libramiento de Tecpan,LIBRAMIENTO OMEGA TECPAN S. A. DE C. V.,LIBRAMIENTO OMEGA TECPAN S. A. DE C. V.,  Tecpan,SI,  0+100,17.197011,-100.626768,  Libramiento de Tecpan,  4.369
+Libramiento de Víctor Rosales,GOBIERNO DEL ESTADO DE ZACATECAS GRUPO PROFREZAC S.A. DE C.V.,GOBIERNO DEL ESTADO DE ZACATECAS GRUPO PROFREZAC S.A. DE C.V.,  Calera,NO,  26+850,22.941811,-102.689928,  Libramiento de Víctor Rosales,  5.900
+Libramiento Noreste de Querétaro,BANOBRAS FONADIN,CAPUFE,  Chichimequillas,SI,  20+000,20.705555,-100.343716,  Libramiento Noreste de Querétaro,  37.000
+Libramiento Norte de la Ciudad de México,"CARRETERAS, AUTOPISTAS Y LIBRAMIENTOS DE LA REPÚBLICA MEXICANA S.A. DE C.V.",AUTOPISTA ARCO NORTE S. A. DE C. V.,  Atlacomulco II,SI,,19.911815,-99.85251,,
+Libramiento Norte de la Ciudad de México,"CARRETERAS, AUTOPISTAS Y LIBRAMIENTOS DE LA REPÚBLICA MEXICANA S.A. DE C.V.",AUTOPISTA ARCO NORTE S. A. DE C. V.,  Acambay,SI,,19.923377,-99.844213,,
+Libramiento Norte de la Ciudad de México,"CARRETERAS, AUTOPISTAS Y LIBRAMIENTOS DE LA REPÚBLICA MEXICANA S.A. DE C.V.",AUTOPISTA ARCO NORTE S. A. DE C. V.,  Jilotepec,SI,,19.976547,-99.53149,,
+Libramiento Norte de la Ciudad de México,"CARRETERAS, AUTOPISTAS Y LIBRAMIENTOS DE LA REPÚBLICA MEXICANA S.A. DE C.V.",AUTOPISTA ARCO NORTE S. A. DE C. V.,  Querétaro 1,SI,,19.998688,-99.487671,,
+Libramiento Norte de la Ciudad de México,"CARRETERAS, AUTOPISTAS Y LIBRAMIENTOS DE LA REPÚBLICA MEXICANA S.A. DE C.V.",AUTOPISTA ARCO NORTE S. A. DE C. V.,  Querétaro 2,SI,,19.996155,-99.489945,,
+Libramiento Norte de la Ciudad de México,"CARRETERAS, AUTOPISTAS Y LIBRAMIENTOS DE LA REPÚBLICA MEXICANA S.A. DE C.V.",AUTOPISTA ARCO NORTE S. A. DE C. V.,  Querétaro 3,SI,,19.997821,-99.492,,
+Libramiento Norte de la Ciudad de México,"CARRETERAS, AUTOPISTAS Y LIBRAMIENTOS DE LA REPÚBLICA MEXICANA S.A. DE C.V.",AUTOPISTA ARCO NORTE S. A. DE C. V.,  Querétaro 4,SI,,20.000504,-99.489956,,
+Libramiento Norte de la Ciudad de México,"CARRETERAS, AUTOPISTAS Y LIBRAMIENTOS DE LA REPÚBLICA MEXICANA S.A. DE C.V.",AUTOPISTA ARCO NORTE S. A. DE C. V.,  Tula II-1,SI,,20.071871,-99.367698,,
+Libramiento Norte de la Ciudad de México,"CARRETERAS, AUTOPISTAS Y LIBRAMIENTOS DE LA REPÚBLICA MEXICANA S.A. DE C.V.",AUTOPISTA ARCO NORTE S. A. DE C. V.,  Tula II-2,SI,,20.070355,-99.368243,,
+Libramiento Norte de la Ciudad de México,"CARRETERAS, AUTOPISTAS Y LIBRAMIENTOS DE LA REPÚBLICA MEXICANA S.A. DE C.V.",AUTOPISTA ARCO NORTE S. A. DE C. V.,  Tula II-3,SI,,20.072661,-99.369804,,
+Libramiento Norte de la Ciudad de México,"CARRETERAS, AUTOPISTAS Y LIBRAMIENTOS DE LA REPÚBLICA MEXICANA S.A. DE C.V.",AUTOPISTA ARCO NORTE S. A. DE C. V.,  Tula II-4,SI,,20.071311,-99.367319,,
+Libramiento Norte de la Ciudad de México,"CARRETERAS, AUTOPISTAS Y LIBRAMIENTOS DE LA REPÚBLICA MEXICANA S.A. DE C.V.",AUTOPISTA ARCO NORTE S. A. DE C. V.,  Tula I-1,SI,,20.099725,-99.280562,,
+Libramiento Norte de la Ciudad de México,"CARRETERAS, AUTOPISTAS Y LIBRAMIENTOS DE LA REPÚBLICA MEXICANA S.A. DE C.V.",AUTOPISTA ARCO NORTE S. A. DE C. V.,  Tula I-2,SI,,20.098169,-99.283149,,
+Libramiento Norte de la Ciudad de México,"CARRETERAS, AUTOPISTAS Y LIBRAMIENTOS DE LA REPÚBLICA MEXICANA S.A. DE C.V.",AUTOPISTA ARCO NORTE S. A. DE C. V.,  Tula I-3,SI,,20.09821,-99.286059,,
+Libramiento Norte de la Ciudad de México,"CARRETERAS, AUTOPISTAS Y LIBRAMIENTOS DE LA REPÚBLICA MEXICANA S.A. DE C.V.",AUTOPISTA ARCO NORTE S. A. DE C. V.,  Tula I-4,SI,,20.100076,-99.28351,,
+Libramiento Norte de la Ciudad de México,"CARRETERAS, AUTOPISTAS Y LIBRAMIENTOS DE LA REPÚBLICA MEXICANA S.A. DE C.V.",AUTOPISTA ARCO NORTE S. A. DE C. V.,  Atitalaquia 1,SI,,20.067268,-99.218551,,
+Libramiento Norte de la Ciudad de México,"CARRETERAS, AUTOPISTAS Y LIBRAMIENTOS DE LA REPÚBLICA MEXICANA S.A. DE C.V.",AUTOPISTA ARCO NORTE S. A. DE C. V.,  Atitalaquia 2,SI,,20.064868,-99.219068,,
+Libramiento Norte de la Ciudad de México,"CARRETERAS, AUTOPISTAS Y LIBRAMIENTOS DE LA REPÚBLICA MEXICANA S.A. DE C.V.",AUTOPISTA ARCO NORTE S. A. DE C. V.,  Ajoloapan 1,SI,,19.956086,-99.053339,,
+Libramiento Norte de la Ciudad de México,"CARRETERAS, AUTOPISTAS Y LIBRAMIENTOS DE LA REPÚBLICA MEXICANA S.A. DE C.V.",AUTOPISTA ARCO NORTE S. A. DE C. V.,  Ajoloapan 2,SI,,19.955443,-99.052776,,
+Libramiento Norte de la Ciudad de México,"CARRETERAS, AUTOPISTAS Y LIBRAMIENTOS DE LA REPÚBLICA MEXICANA S.A. DE C.V.",AUTOPISTA ARCO NORTE S. A. DE C. V.,  Ajoloapan 3,SI,,19.955845,-99.055422,,
+Libramiento Norte de la Ciudad de México,"CARRETERAS, AUTOPISTAS Y LIBRAMIENTOS DE LA REPÚBLICA MEXICANA S.A. DE C.V.",AUTOPISTA ARCO NORTE S. A. DE C. V.,  Ajoloapan 4,SI,,19.95638,-99.05548,,
+Libramiento Norte de la Ciudad de México,"CARRETERAS, AUTOPISTAS Y LIBRAMIENTOS DE LA REPÚBLICA MEXICANA S.A. DE C.V.",AUTOPISTA ARCO NORTE S. A. DE C. V.,  Pachuca,SI,,19.927508,-98.891452,,
+Libramiento Norte de la Ciudad de México,"CARRETERAS, AUTOPISTAS Y LIBRAMIENTOS DE LA REPÚBLICA MEXICANA S.A. DE C.V.",AUTOPISTA ARCO NORTE S. A. DE C. V.,  Tulancingo 1,SI,,19.834861,-98.700138,,
+Libramiento Norte de la Ciudad de México,"CARRETERAS, AUTOPISTAS Y LIBRAMIENTOS DE LA REPÚBLICA MEXICANA S.A. DE C.V.",AUTOPISTA ARCO NORTE S. A. DE C. V.,  Tulancingo 2,SI,,19.83368,-98.698801,,
+Libramiento Norte de la Ciudad de México,"CARRETERAS, AUTOPISTAS Y LIBRAMIENTOS DE LA REPÚBLICA MEXICANA S.A. DE C.V.",AUTOPISTA ARCO NORTE S. A. DE C. V.,  Tulancingo 3,SI,,19.832456,-98.700121,,
+Libramiento Norte de la Ciudad de México,"CARRETERAS, AUTOPISTAS Y LIBRAMIENTOS DE LA REPÚBLICA MEXICANA S.A. DE C.V.",AUTOPISTA ARCO NORTE S. A. DE C. V.,  Tulancingo 4,SI,,19.83364,-98.701536,,
+Libramiento Norte de la Ciudad de México,"CARRETERAS, AUTOPISTAS Y LIBRAMIENTOS DE LA REPÚBLICA MEXICANA S.A. DE C.V.",AUTOPISTA ARCO NORTE S. A. DE C. V.,  Cd. Sahagún 1,SI,,19.756661,-98.628326,,
+Libramiento Norte de la Ciudad de México,"CARRETERAS, AUTOPISTAS Y LIBRAMIENTOS DE LA REPÚBLICA MEXICANA S.A. DE C.V.",AUTOPISTA ARCO NORTE S. A. DE C. V.,  Cd. Sahagún 2,SI,,19.75596,-98.628121,,
+Libramiento Norte de la Ciudad de México,"CARRETERAS, AUTOPISTAS Y LIBRAMIENTOS DE LA REPÚBLICA MEXICANA S.A. DE C.V.",AUTOPISTA ARCO NORTE S. A. DE C. V.,  Cd. Sahagún 3,SI,,19.755427,-98.629498,,
+Libramiento Norte de la Ciudad de México,"CARRETERAS, AUTOPISTAS Y LIBRAMIENTOS DE LA REPÚBLICA MEXICANA S.A. DE C.V.",AUTOPISTA ARCO NORTE S. A. DE C. V.,  Cd. Sahagún 4,SI,,19.756069,-98.630532,,
+Libramiento Norte de la Ciudad de México,"CARRETERAS, AUTOPISTAS Y LIBRAMIENTOS DE LA REPÚBLICA MEXICANA S.A. DE C.V.",AUTOPISTA ARCO NORTE S. A. DE C. V.,  Calpulalpan 1,SI,,19.62148,-98.548095,,
+Libramiento Norte de la Ciudad de México,"CARRETERAS, AUTOPISTAS Y LIBRAMIENTOS DE LA REPÚBLICA MEXICANA S.A. DE C.V.",AUTOPISTA ARCO NORTE S. A. DE C. V.,  Calpulalpan 2,SI,,19.62015,-98.547003,,
+Libramiento Norte de la Ciudad de México,"CARRETERAS, AUTOPISTAS Y LIBRAMIENTOS DE LA REPÚBLICA MEXICANA S.A. DE C.V.",AUTOPISTA ARCO NORTE S. A. DE C. V.,  Calpulalpan 3,SI,,19.619189,-98.54942,,
+Libramiento Norte de la Ciudad de México,"CARRETERAS, AUTOPISTAS Y LIBRAMIENTOS DE LA REPÚBLICA MEXICANA S.A. DE C.V.",AUTOPISTA ARCO NORTE S. A. DE C. V.,  Calpulalpan 4,SI,,19.619447,-98.54967,,
+Libramiento Norte de la Ciudad de México,"CARRETERAS, AUTOPISTAS Y LIBRAMIENTOS DE LA REPÚBLICA MEXICANA S.A. DE C.V.",AUTOPISTA ARCO NORTE S. A. DE C. V.,  Sanctórum 1,SI,,19.515572,-98.469019,,
+Libramiento Norte de la Ciudad de México,"CARRETERAS, AUTOPISTAS Y LIBRAMIENTOS DE LA REPÚBLICA MEXICANA S.A. DE C.V.",AUTOPISTA ARCO NORTE S. A. DE C. V.,  Sanctórum 2,SI,,19.512699,-98.466906,,
+Libramiento Norte de la Ciudad de México,"CARRETERAS, AUTOPISTAS Y LIBRAMIENTOS DE LA REPÚBLICA MEXICANA S.A. DE C.V.",AUTOPISTA ARCO NORTE S. A. DE C. V.,  Sanctórum 3,SI,,19.512702,-98.468831,,
+Libramiento Norte de la Ciudad de México,"CARRETERAS, AUTOPISTAS Y LIBRAMIENTOS DE LA REPÚBLICA MEXICANA S.A. DE C.V.",AUTOPISTA ARCO NORTE S. A. DE C. V.,  Sanctórum 4,SI,,19.513876,-98.46991,,
+Libramiento Norte de la Ciudad de México,"CARRETERAS, AUTOPISTAS Y LIBRAMIENTOS DE LA REPÚBLICA MEXICANA S.A. DE C.V.",AUTOPISTA ARCO NORTE S. A. DE C. V.,  Sanctórum 5,SI,,19.518652,-98.471763,,
+Libramiento Norte de la Ciudad de México,"CARRETERAS, AUTOPISTAS Y LIBRAMIENTOS DE LA REPÚBLICA MEXICANA S.A. DE C.V.",AUTOPISTA ARCO NORTE S. A. DE C. V.,  Texmelucan,SI,,19.301795,-98.409616,  Ent. Acambay - Ent. Tulancingo,  136.650
+Libramiento Oriente de Saltillo,BANOBRAS FONADIN,CAPUFE,  La Carbonera,SI,  12+300,25.510976,-100.868373,  Libramiento Oriente de Saltillo,  21.000
+Libramiento Oriente de San Luis Potosí,MEXICANA DE TÉCNICOS EN AUTOPISTAS S. A. DE C. V.,MEXICANA DE TÉCNICOS EN AUTOPISTAS S. A. DE C. V.,  San Nicolás de los Jassos,NO,  11+200,22.129759,-100.825106,  Libramiento Oriente de San Luis Potosí,  33.760
+Libramiento Oriente de San Luis Potosí,MEXICANA DE TÉCNICOS EN AUTOPISTAS S. A. DE C. V.,MEXICANA DE TÉCNICOS EN AUTOPISTAS S. A. DE C. V.,  San Nicolás de los Jassos,NO,  11+200,22.129759,-100.825106,  Ent. La Pila - Ent. San Nicolás,
+Libramiento Oriente de San Luis Potosí,MEXICANA DE TÉCNICOS EN AUTOPISTAS S. A. DE C. V.,MEXICANA DE TÉCNICOS EN AUTOPISTAS S. A. DE C. V.,  San Nicolás de los Jassos,NO,  11+200,22.129759,-100.825106,  Ent. San Nicolás - T San Elías,  
+Libramiento Poniente de Tampico,BANOBRAS FONADIN,CAPUFE,  Loma Real,NO,  6+020,22.276443,-97.893343,  Boulevard Loma Real - Ent. Altamira,  8.378
+Libramiento Poniente de Tampico,BANOBRAS FONADIN,CAPUFE,  Loma Real,NO,  6+020,22.276443,-97.893343,  Ent. Ciudad Valles - Boulevard Loma Real,  6.100
+Libramiento Poniente de Tampico,BANOBRAS FONADIN,CAPUFE,  Tampico,NO,  5+970,22.275332,-97.893427,  Libramiento Poniente de Tampico,  14.478
+Maravatío - Zapotlanejo,RED DE AUTOPISTAS DE OCCIDENTE S. A. P. I. B. DE C. V.,RED DE CARRETERAS DE OCCIDENTE S. A. P. I. B. DE C. V.,  Ecuandureo,SI,  360+000,20.17505,-102.191319,  Churintzio - La Barca,  55.823
+Maravatío - Zapotlanejo,RED DE AUTOPISTAS DE OCCIDENTE S. A. P. I. B. DE C. V.,RED DE CARRETERAS DE OCCIDENTE S. A. P. I. B. DE C. V.,  Ecuandureo,SI,  360+000,20.17505,-102.191319,  Churintzio - Ecuandureo,  13.682
+Maravatío - Zapotlanejo,RED DE AUTOPISTAS DE OCCIDENTE S. A. P. I. B. DE C. V.,RED DE CARRETERAS DE OCCIDENTE S. A. P. I. B. DE C. V.,  Ecuandureo,SI,  360+000,20.17505,-102.191319,  Ecuandureo - La Barca,  42.141
+Maravatío - Zapotlanejo,RED DE AUTOPISTAS DE OCCIDENTE S. A. P. I. B. DE C. V.,RED DE CARRETERAS DE OCCIDENTE S. A. P. I. B. DE C. V.,  Huaniqueo A1,NO,  278+423,19.884267,-101.510489,  Morelia - Huaniqueo,  39.573
+Maravatío - Zapotlanejo,RED DE AUTOPISTAS DE OCCIDENTE S. A. P. I. B. DE C. V.,RED DE CARRETERAS DE OCCIDENTE S. A. P. I. B. DE C. V.,  Huaniqueo A2,NO,  278+423,19.882534,-101.511604,  Huaniqueo - Morelia,  39.573
+Maravatío - Zapotlanejo,RED DE AUTOPISTAS DE OCCIDENTE S. A. P. I. B. DE C. V.,RED DE CARRETERAS DE OCCIDENTE S. A. P. I. B. DE C. V.,  Jeráhuaro A1,NO,  186+113,19.894416,-100.646701,  Maravatío - Jeráhuaro,  21.113
+Maravatío - Zapotlanejo,RED DE AUTOPISTAS DE OCCIDENTE S. A. P. I. B. DE C. V.,RED DE CARRETERAS DE OCCIDENTE S. A. P. I. B. DE C. V.,  Jeráhuaro A2,NO,  186+113,19.893593,-100.651203,  Jeráhuaro - Maravatío,  21.113
+Maravatío - Zapotlanejo,RED DE AUTOPISTAS DE OCCIDENTE S. A. P. I. B. DE C. V.,RED DE CARRETERAS DE OCCIDENTE S. A. P. I. B. DE C. V.,  Ocotlán,SI,  425+955,20.40586,-102.73889,  La Barca - Zapotlanejo,  72.556
+Maravatío - Zapotlanejo,RED DE AUTOPISTAS DE OCCIDENTE S. A. P. I. B. DE C. V.,RED DE CARRETERAS DE OCCIDENTE S. A. P. I. B. DE C. V.,  Ocotlán A1,NO,  425+955,20.406969,-102.738906,  La Barca - Ocotlán,  23.811
+Maravatío - Zapotlanejo,RED DE AUTOPISTAS DE OCCIDENTE S. A. P. I. B. DE C. V.,RED DE CARRETERAS DE OCCIDENTE S. A. P. I. B. DE C. V.,  Ocotlán A2,NO,  425+955,20.404903,-102.739378,  Ocotlán - Zapotlanejo,  48.095
+Maravatío - Zapotlanejo,RED DE AUTOPISTAS DE OCCIDENTE S. A. P. I. B. DE C. V.,RED DE CARRETERAS DE OCCIDENTE S. A. P. I. B. DE C. V.,  Panindícuaro,SI,  308+000,19.972189,-101.756945,  Morelia - Churintzio,  105.894
+Maravatío - Zapotlanejo,RED DE AUTOPISTAS DE OCCIDENTE S. A. P. I. B. DE C. V.,RED DE CARRETERAS DE OCCIDENTE S. A. P. I. B. DE C. V.,  Panindícuaro,SI,  308+000,19.972189,-101.756945,  Morelia - Panindícuaro,  66.663
+Maravatío - Zapotlanejo,RED DE AUTOPISTAS DE OCCIDENTE S. A. P. I. B. DE C. V.,RED DE CARRETERAS DE OCCIDENTE S. A. P. I. B. DE C. V.,  Panindícuaro,SI,  308+000,19.972189,-101.756945,  Panindícuaro - Churintzio,  39.231
+Maravatío - Zapotlanejo,RED DE AUTOPISTAS DE OCCIDENTE S. A. P. I. B. DE C. V.,RED DE CARRETERAS DE OCCIDENTE S. A. P. I. B. DE C. V.,  Panindícuaro,SI,  308+000,19.972189,-101.756945,  Huaniqueo - Panindícuaro,  27.090
+Maravatío - Zapotlanejo,RED DE AUTOPISTAS DE OCCIDENTE S. A. P. I. B. DE C. V.,RED DE CARRETERAS DE OCCIDENTE S. A. P. I. B. DE C. V.,  Vista Hermosa A1,NO,  390+000,20.269788,-102.43991,  Vista Hermosa - La Barca,  12.144
+Maravatío - Zapotlanejo,RED DE AUTOPISTAS DE OCCIDENTE S. A. P. I. B. DE C. V.,RED DE CARRETERAS DE OCCIDENTE S. A. P. I. B. DE C. V.,  Vista Hermosa A2,NO,  390+000,20.269344,-102.441826,  La Barca - Vista Hermosa,  12.144
+Maravatío - Zapotlanejo,RED DE AUTOPISTAS DE OCCIDENTE S. A. P. I. B. DE C. V.,RED DE CARRETERAS DE OCCIDENTE S. A. P. I. B. DE C. V.,  Zinapécuaro,SI,  202+017,19.901776,-100.788521,  Maravatío - Morelia,  75.427
+Maravatío - Zapotlanejo,RED DE AUTOPISTAS DE OCCIDENTE S. A. P. I. B. DE C. V.,RED DE CARRETERAS DE OCCIDENTE S. A. P. I. B. DE C. V.,  Zinapécuaro,SI,  202+017,19.901776,-100.788521,  Zinapécuaro - Morelia,  38.211
+Maravatío - Zapotlanejo,RED DE AUTOPISTAS DE OCCIDENTE S. A. P. I. B. DE C. V.,RED DE CARRETERAS DE OCCIDENTE S. A. P. I. B. DE C. V.,  Zinapécuaro A1,NO,  202+256,19.902373,-100.787561,  Jeráhuaro - Zinapécuaro,  16.103
+Maravatío - Zapotlanejo,RED DE AUTOPISTAS DE OCCIDENTE S. A. P. I. B. DE C. V.,RED DE CARRETERAS DE OCCIDENTE S. A. P. I. B. DE C. V.,  Zinapécuaro A1,NO,  202+256,19.902373,-100.787561,  Maravatío - Zinapécuaro,  37.216
+Maravatío - Zapotlanejo,RED DE AUTOPISTAS DE OCCIDENTE S. A. P. I. B. DE C. V.,RED DE CARRETERAS DE OCCIDENTE S. A. P. I. B. DE C. V.,  Zinapécuaro A2,NO,  202+256,19.900892,-100.789019,  Zinapécuaro - Maravatío,  38.211
+Mazatlán - Culiacán,AUTOPISTAS Y LIBRAMIENTOS DEL PACÍFICO NORTE S. A. DE C. V.,AUTOPISTAS Y LIBRAMIENTOS DEL PACÍFICO NORTE S. A. DE C. V.,  Costa Rica,SI,  178+800,24.570288,-107.430223,  Ent. La Cruz - Costa Rica,  91.959
+Mazatlán - Culiacán,AUTOPISTAS Y LIBRAMIENTOS DEL PACÍFICO NORTE S. A. DE C. V.,AUTOPISTAS Y LIBRAMIENTOS DEL PACÍFICO NORTE S. A. DE C. V.,  Mármol,SI,  25+150,23.471208,-106.569542,  El Venadillo - Ent. La Cruz,  89.541
+Mazatlán - Culiacán,AUTOPISTAS Y LIBRAMIENTOS DEL PACÍFICO NORTE S. A. DE C. V.,AUTOPISTAS Y LIBRAMIENTOS DEL PACÍFICO NORTE S. A. DE C. V.,  Quilá A1,NO,  153+800,24.397637,-107.269976,  Ent. La Cruz - Quilá,  64.259
+Mazatlán - Culiacán,AUTOPISTAS Y LIBRAMIENTOS DEL PACÍFICO NORTE S. A. DE C. V.,AUTOPISTAS Y LIBRAMIENTOS DEL PACÍFICO NORTE S. A. DE C. V.,  Quilá A2,NO,  153+800,24.396624,-107.271899,  Quilá - Costa Rica,  27.700
+Mérida - Cancún,CONSORCIO DEL MAYAB S. A. DE C. V.,CONSORCIO DEL MAYAB (ICA),  Pisté,NO,  115+200,20.728862,-88.583181,  Kantunil - Pisté,  50.000
+Mérida - Cancún,CONSORCIO DEL MAYAB S. A. DE C. V.,CONSORCIO DEL MAYAB (ICA),  Pisté,NO,  115+200,20.728862,-88.583181,  Kantunil - Valladolid,  90.000
+Mérida - Cancún,CONSORCIO DEL MAYAB S. A. DE C. V.,CONSORCIO DEL MAYAB (ICA),  Pisté,NO,  115+200,20.728862,-88.583181,  Pisté - Valladolid,  40.000
+Mérida - Cancún,CONSORCIO DEL MAYAB S. A. DE C. V.,CONSORCIO DEL MAYAB (ICA),  Xcan,NO,  216+500,20.876892,-87.63614,  Valladolid - Cancún,  151.340
+México - Cuernavaca,BANOBRAS FONADIN,CAPUFE,  Tlalpan,SI,  23+360,19.241915,-99.148321,  México - Cuernavaca,  61.540
+México - Cuernavaca,BANOBRAS FONADIN,CAPUFE,  Tres Marías A1,NO,  55+300,19.050851,-99.241365,  Tres Marías - Cuernavaca,  27.500
+México - Cuernavaca,BANOBRAS FONADIN,CAPUFE,  Tres Marías A2,NO,  55+300,19.056209,-99.241097,  Cuernavaca - Tres Marías,  27.500
+México - La Marquesa,PROMOTORA ADMINISTRADORA DE CARRETERAS S. A. DE C. V.,OPERVITE S. A. DE C. V.,  Contadero 1,NO,  23+430,19.333688,-99.313794,  México - Contadero,  11.070
+México - La Marquesa,PROMOTORA ADMINISTRADORA DE CARRETERAS S. A. DE C. V.,OPERVITE S. A. DE C. V.,  Contadero 2,NO,  23+430,19.331793,-99.31516,  Contadero - La Marquesa,  10.930
+México - La Marquesa,PROMOTORA ADMINISTRADORA DE CARRETERAS S. A. DE C. V.,OPERVITE S. A. DE C. V.,  La Venta,NO,  24+000,19.332852,-99.314303,  México - La Marquesa,  22.000
+México - La Marquesa,PROMOTORA ADMINISTRADORA DE CARRETERAS S. A. DE C. V.,OPERVITE S. A. DE C. V.,  La Venta,NO,  24+000,19.332852,-99.314303,  La Venta - La Marquesa,  10.500
+México - La Marquesa,PROMOTORA ADMINISTRADORA DE CARRETERAS S. A. DE C. V.,OPERVITE S. A. DE C. V.,  La Venta,NO,  24+000,19.332852,-99.314303,  México - La Venta,  11.500
+México - La Marquesa,PROMOTORA ADMINISTRADORA DE CARRETERAS S. A. DE C. V.,OPERVITE S. A. DE C. V.,  Santa Fe,NO,  17+626,19.363385,-99.26732,  México - Santa Fe,  5.130
+México - Pachuca,FIDEICOMISO AUTOPISTAS Y PUENTES DEL GOLFO CENTRO,CAPUFE,  Ojo de Agua,NO,  24+700,19.618814,-99.029522,  Indios Verdes - Tizayuca,  45.800
+México - Pachuca,FIDEICOMISO AUTOPISTAS Y PUENTES DEL GOLFO CENTRO,CAPUFE,  San Cristóbal,NO,  21+050,19.602763,-99.038148,  Indios Verdes - San Cristóbal Ecatepec,  8.800
+México - Puebla,BANOBRAS FONADIN,CAPUFE,  Chalco,SI,  32+000,19.292034,-98.88175,  México - Chalco,  15.055
+México - Puebla,BANOBRAS FONADIN,CAPUFE,  San Marcos,SI,  33+300,19.296387,-98.870735,  México - San Martín Texmelucan,  74.555
+México - Puebla,BANOBRAS FONADIN,CAPUFE,  San Martín,SI,  91+000,19.241121,-98.385855,  San Martín Texmelucan - Puebla,  36.155
+México - Querétaro,BANOBRAS FONADIN,CAPUFE,  Jorobas A1,SI,  56+280,19.826191,-99.250048,  Jorobas - Tepeji del Río,  34.149
+México - Querétaro,BANOBRAS FONADIN,CAPUFE,  Jorobas A2,SI,  56+280,19.825708,-99.250155,  Tepeji del Río - Jorobas,  34.149
+México - Querétaro,BANOBRAS FONADIN,CAPUFE,  Palmillas,SI,  147+917,20.296108,-99.929058,  Tepeji del Río - Palmillas,  57.571
+México - Querétaro,BANOBRAS FONADIN,CAPUFE,  Polotitlán A1,SI,  133+050,20.22643,-99.810686,  Tepeji del Río - Polotitlán,  42.621
+México - Querétaro,BANOBRAS FONADIN,CAPUFE,  Polotitlán A2,SI,  133+050,20.225308,-99.810547,  Polotitlán - Tepeji del Río,  42.621
+México - Querétaro,BANOBRAS FONADIN,CAPUFE,  Tepotzotlán,SI,  43+010,19.715364,-99.207569,  México - Tepeji del Río,  57.571
+Monterrey - Nuevo Laredo,BANOBRAS FONADIN,CAPUFE,  Agualeguas A1,NO,  79+600,26.340266,-100.070469,  Monterrey - Agualeguas,  56.900
+Monterrey - Nuevo Laredo,BANOBRAS FONADIN,CAPUFE,  Agualeguas A2,NO,  79+600,26.341505,-100.071739,  Agualeguas - Monterrey,
+Monterrey - Nuevo Laredo,BANOBRAS FONADIN,CAPUFE,  Parás,NO,  99+300,26.508381,-100.008192,  Monterrey - Sabinas,  77.300
+Monterrey - Nuevo Laredo,BANOBRAS FONADIN,CAPUFE,  Sabinas,SI,  100+000,26.512104,-100.007159,  Monterrey - Nuevo Laredo,  123.100
+Monterrey - Nuevo Laredo,BANOBRAS FONADIN,CAPUFE,  Sabinas Aux.,NO,  99+800,26.508381,-100.008192,  Sabinas - La Gloria,  45.800
+Monterrey - Nuevo Laredo,BANOBRAS FONADIN,CAPUFE,  Vallecillos,NO,  115+550,26.642361,-99.942202,  Vallecillos - La Gloria,  30.250
+Monterrey - Saltillo y Libramiento Norponiente de Saltillo,CONCESIONARIA AUTOPISTA MONTERREY-SALTILLO S. A. DE C. V.,CONCESIONARIA AUTOPISTA MONTERREY-SALTILLO S. A. DE C. V.,  Playa 1 A1,NO,  21+500,25.456853,-101.063694,  Zacatecas - Torreón,  21.500
+Monterrey - Saltillo y Libramiento Norponiente de Saltillo,CONCESIONARIA AUTOPISTA MONTERREY-SALTILLO S. A. DE C. V.,CONCESIONARIA AUTOPISTA MONTERREY-SALTILLO S. A. DE C. V.,  Playa 1 A2,NO,  21+500,25.457025,-101.063828,  Torreón - Monclova,  10.000
+Monterrey - Saltillo y Libramiento Norponiente de Saltillo,CONCESIONARIA AUTOPISTA MONTERREY-SALTILLO S. A. DE C. V.,CONCESIONARIA AUTOPISTA MONTERREY-SALTILLO S. A. DE C. V.,  Playa 1 P,NO,  21+500,25.44846,-101.067009,  Zacatecas - Monclova,  31.500
+Monterrey - Saltillo y Libramiento Norponiente de Saltillo,CONCESIONARIA AUTOPISTA MONTERREY-SALTILLO S. A. DE C. V.,CONCESIONARIA AUTOPISTA MONTERREY-SALTILLO S. A. DE C. V.,  Playa 2 A1,NO,  35+300,25.615722,-100.908414,  Monclova - Ojo Caliente 1,  13.800
+Monterrey - Saltillo y Libramiento Norponiente de Saltillo,CONCESIONARIA AUTOPISTA MONTERREY-SALTILLO S. A. DE C. V.,CONCESIONARIA AUTOPISTA MONTERREY-SALTILLO S. A. DE C. V.,  Playa 2 A2,NO,  35+300,25.616308,-100.908432,  Ojo Caliente 1 - Ojo Caliente 2,  8.200
+Monterrey - Saltillo y Libramiento Norponiente de Saltillo,CONCESIONARIA AUTOPISTA MONTERREY-SALTILLO S. A. DE C. V.,CONCESIONARIA AUTOPISTA MONTERREY-SALTILLO S. A. DE C. V.,  Playa 2 P,NO,  35+300,25.612236,-100.913526,  Monclova - Ojo Caliente 2,  22.000
+Monterrey - Saltillo y Libramiento Norponiente de Saltillo,CONCESIONARIA AUTOPISTA MONTERREY-SALTILLO S. A. DE C. V.,CONCESIONARIA AUTOPISTA MONTERREY-SALTILLO S. A. DE C. V.,  Playa 3 A1,NO,  82+237,25.696264,-100.57736,  Ojo Caliente 2 - Periférico,  28.700
+Monterrey - Saltillo y Libramiento Norponiente de Saltillo,CONCESIONARIA AUTOPISTA MONTERREY-SALTILLO S. A. DE C. V.,CONCESIONARIA AUTOPISTA MONTERREY-SALTILLO S. A. DE C. V.,  Playa 3 A2,NO,  82+237,25.696264,-100.57736,  Periférico - Morones Prieto,  12.900
+Monterrey - Saltillo y Libramiento Norponiente de Saltillo,CONCESIONARIA AUTOPISTA MONTERREY-SALTILLO S. A. DE C. V.,CONCESIONARIA AUTOPISTA MONTERREY-SALTILLO S. A. DE C. V.,  Playa 3 P,NO,  82+237,25.696264,-100.57736,  Ojo Caliente 2 - Morones Prieto,  41.600
+Morelia - Salamanca,AUTOPISTA MORELIA SALAMANCA S.A. DE C.V.,AUTOPISTA MORELIA-SALAMANCA S. A. DE C. V.,  La Cinta,NO,45+770,20.073484,-101.136663,  Copándaro - La Cinta,  20.000
+Morelia - Salamanca,AUTOPISTA MORELIA SALAMANCA S.A. DE C.V.,AUTOPISTA MORELIA-SALAMANCA S. A. DE C. V.,  Cuitzeo A1,NO,  7+100,19.968867,-101.159727,  Copándaro - Cuitzeo,  7.000
+Morelia - Salamanca,AUTOPISTA MORELIA SALAMANCA S.A. DE C.V.,AUTOPISTA MORELIA-SALAMANCA S. A. DE C. V.,  Cuitzeo A2,NO,  7+100,19.968282,-101.162062,  Cuitzeo - La Cinta,  13.000
+Morelia - Salamanca,AUTOPISTA MORELIA SALAMANCA S.A. DE C.V.,AUTOPISTA MORELIA-SALAMANCA S. A. DE C. V.,  Uriangato,NO,58+200,20.182921,-101.157187,  La Cinta - Uriangato,  12.000
+Morelia - Salamanca,AUTOPISTA MORELIA SALAMANCA S.A. DE C.V.,AUTOPISTA MORELIA-SALAMANCA S. A. DE C. V.,  Uriangato,NO,58+200,20.182921,-101.157187,  Uriangato - Valle de Santiago,  26.000
+Morelia - Salamanca,AUTOPISTA MORELIA SALAMANCA S.A. DE C.V.,AUTOPISTA MORELIA-SALAMANCA S. A. DE C. V.,  Valle de Santiago,NO,  ,20.372552,-101.147354,  La Cinta - Valle de Santiago,  38.000
+Morelia - Salamanca,AUTOPISTA MORELIA SALAMANCA S.A. DE C.V.,AUTOPISTA MORELIA-SALAMANCA S. A. DE C. V.,  Valtierrilla,NO,  ,20.542645,-101.137717,  Valle de Santiago - Ent. Cerro Gordo,  25.000
+Morelia - Salamanca,AUTOPISTA MORELIA SALAMANCA S.A. DE C.V.,AUTOPISTA MORELIA-SALAMANCA S. A. DE C. V.,  Valtierrilla A1,NO,  ,20.553053,-101.136236,  Valtierrilla - Ent. Cerro Gordo,  5.000
+Morelia - Salamanca,AUTOPISTA MORELIA SALAMANCA S.A. DE C.V.,AUTOPISTA MORELIA-SALAMANCA S. A. DE C. V.,  Valtierrilla A2,NO,,20.553134,-101.136428,  Ent. Cerro Gordo - Valtierrilla,
+Nueva Italia - Lázaro Cárdenas,CONCESIONARIA DE AUTOPISTAS DE MICHOACÁN S. A. DE C. V.,CONCESIONARIA DE AUTOPISTAS DE MICHOACÁN S. A. DE C. V.,  Feliciano,NO,  282+000,18.006497,-101.961761,  Ent. Las Cañas - Lázaro Cárdenas,  99.250
+Nueva Italia - Lázaro Cárdenas,CONCESIONARIA DE AUTOPISTAS DE MICHOACÁN S. A. DE C. V.,CONCESIONARIA DE AUTOPISTAS DE MICHOACÁN S. A. DE C. V.,  Feliciano,NO,  282+000,18.006497,-101.961761,  Ent. Las Cañas - Ent. Feliciano,  70.500
+Nueva Italia - Lázaro Cárdenas,CONCESIONARIA DE AUTOPISTAS DE MICHOACÁN S. A. DE C. V.,CONCESIONARIA DE AUTOPISTAS DE MICHOACÁN S. A. DE C. V.,  Feliciano A1,NO,  282+000,18.004663,-101.9639,  Ent. Feliciano - Lázaro Cárdenas,  28.750
+Nueva Italia - Lázaro Cárdenas,CONCESIONARIA DE AUTOPISTAS DE MICHOACÁN S. A. DE C. V.,CONCESIONARIA DE AUTOPISTAS DE MICHOACÁN S. A. DE C. V.,  Feliciano A2,NO,  282+000,18.004082,-101.961901,  Lázaro Cárdenas - Ent. Feliciano,  28.750
+Nueva Italia - Lázaro Cárdenas,CONCESIONARIA DE AUTOPISTAS DE MICHOACÁN S. A. DE C. V.,CONCESIONARIA DE AUTOPISTAS DE MICHOACÁN S. A. DE C. V.,  Las Cañas,NO,  212+000,18.554181,-101.970317,  Ent. Nueva Italia - Ent. Las Cañas,  57.500
+Nueva Italia - Lázaro Cárdenas,CONCESIONARIA DE AUTOPISTAS DE MICHOACÁN S. A. DE C. V.,CONCESIONARIA DE AUTOPISTAS DE MICHOACÁN S. A. DE C. V.,  Las Cañas A1,NO,  212+000,18.553657,-101.972961,  Ent. Nueva Italia - Ent. Las Cañas,  57.500
+Pátzcuaro - Uruapan,AUTOPISTAS DE MICHOACÁN S. A. DE C. V.,AUTOPISTAS DE MICHOACÁN S. A. DE C. V.,  Zirahuén,SI,  60+500,19.505606,-101.659297,  Pátzcuaro - Zirahuén,  20.700
+Pátzcuaro - Uruapan,AUTOPISTAS DE MICHOACÁN S. A. DE C. V.,AUTOPISTAS DE MICHOACÁN S. A. DE C. V.,  Zirahuén A1,NO,  87+400,19.482235,-101.730717,  Zirahuén - Zurumucapío,  35.800
+Pátzcuaro - Uruapan,AUTOPISTAS DE MICHOACÁN S. A. DE C. V.,AUTOPISTAS DE MICHOACÁN S. A. DE C. V.,  Zurumucapío,SI,  87+400,19.441166,-101.882235,  Zirahuén - Uruapan,  16.500
+Peñón - Texcoco,"GOBIERNO DEL ESTADO DE MÉXICO SISTEMA DE AUTOPISTAS, AEROPUERTOS, SERVICIOS CONEXOS Y AUXILIARES DEL ESTADO DE MÉXICO",OPERVITE,  Peñón,SI,  0+860,19.468849,-99.004418,  Peñón - Texcoco,  16.170
+Peñón - Texcoco,"GOBIERNO DEL ESTADO DE MÉXICO SISTEMA DE AUTOPISTAS, AEROPUERTOS, SERVICIOS CONEXOS Y AUXILIARES DEL ESTADO DE MÉXICO",OPERVITE,  Texcoco,SI,14+480,19.502896,-98.912747,  Texcoco - Peñón,
+Perote - Banderilla y Libramiento de Xalapa,Concesionaria Autopista Perote-Xalapa S. A. de C. V.,Concesionaria Autopista Perote-Xalapa S. A. de C. V.,  Las Vigas,NO,117+110,19.627722,-97.153089,Perote - Banderilla,30
+Perote - Banderilla y Libramiento de Xalapa,Concesionaria Autopista Perote-Xalapa S. A. de C. V.,Concesionaria Autopista Perote-Xalapa S. A. de C. V.,  Miradores,NO,77+140,19.472105,-96.772824,Libramiento de Xalapa,29.6
+Puebla - Acatzingo,BANOBRAS FONADIN,CAPUFE,  Amozoc,SI,  141+613,19.049787,-98.032313,  Puebla - Acatzingo,  42.270
+Puebla - Acatzingo,BANOBRAS FONADIN,CAPUFE,  Amozoc,SI,  141+613,19.049787,-98.032313,  Puebla - Amozoc,  13.758
+Puente Alvarado,CAPUFE,CAPUFE,  Alvarado,SI,  1+500,18.769878,-95.744556,  Puente Alvarado,  0.530
+Puente Cadereyta,CAPUFE,CAPUFE,  Cadereyta,SI,  28+000,25.601059,-100.005737,  Puente Cadereyta,  0.179
+Puente Camargo,CAPUFE,CAPUFE,  Camargo,NO,  0+000,26.362441,-98.806402,  Puente Camargo,  0.116
+Puente Caracol,CAPUFE,CAPUFE,  Caracol,SI,  10+100,18.133114,-96.136671,  Puente Caracol,  0.164
+Puente Cd. Acuña,CAPUFE,CAPUFE,  Cd. Acuña,NO,  0+000,29.325454,-100.928793,  Puente Cd. Acuña,  0.129
+Puente Coatzacoalcos,GOBIERNO DEL ESTADO DE VERACRUZ,OPERACIÓN Y CONSERVACIÓN DE AUTOPISTAS CONCESIONADAS S.A. DE C.V.,  Coatzacoalcos,SI,  2+100,18.115156,-94.410884,  Puente Coatzacoalcos,  0.985
+Puente Colorado,GOBIERNO DEL ESTADO DE SONORA,GOBIERNO DEL ESTADO DE SONORA,  San Luis Río Colorado,NO,  0+000,32.491685,-114.808756,  Puente Colorado,  0.304
+Puente Colorado II,GOBIERNO DEL ESTADO DE SONORA,GOBIERNO DEL ESTADO DE SONORA,  San Luis Río Colorado,NO,  0+001,32.491685,-114.808756,  Puente Colorado,  0.305
+Puente Córdova (Las Américas),GOBIERNO DEL ESTADO DE CHIHUAHUA,GOBIERNO DEL ESTADO DE CHIHUAHUA,  Sin cargo para los usuarios,NO,  0,,,  Puente Córdova,  0.250
+Puente Culiacán,CAPUFE,CAPUFE,  Culiacán,SI,"  1,429+000",24.948879,-107.545718,  Puente Culiacán,  0.433
+Puente de Ixtla - Iguala,BANOBRAS FONADIN,CAPUFE,  Iguala,SI,  95+950,18.33621,-99.508327,  Puente de Ixtla - Iguala,  63.578
+Puente Dovalí Jaime (Cosoleacaque - Nuevo Teapa),CAPUFE,CAPUFE,  Dovalí,NO,,18.013379,-94.396777,  Puente Dovalí Jaime,  1.268
+Puente Dovalí Jaime (Cosoleacaque - Nuevo Teapa),CAPUFE,CAPUFE,  Dovalí Bis,NO,,18.014055,-94.443264,  Salida a Nanchital,
+Puente El Zacatal,BANOBRAS FONADIN,CAPUFE,  El Zacatal,SI,  162+497,18.61286,-91.860817,  Puente El Zacatal,  3.861
+Puente Grijalva,CAPUFE,CAPUFE,,NO,,,,  Puente Grijalva,  0.254
+Puente Juárez - Lincoln,CAPUFE,CAPUFE,  Juárez Lincoln,NO,  0+000,27.498254,-99.502409,  Puente Juárez - Lincoln,  0.159
+Puente La Piedad,CAPUFE,CAPUFE,  La Piedad,SI,  89+100,20.352787,-102.025175,  Puente La Piedad,  0.092
+Puente La Unidad - Eugenio Echeverria Castellot,GOBIERNO DEL ESTADO DE CAMPECHE,GOBIERNO DEL ESTADO DE CAMPECHE,  Isla Aguada,NO,  0+000,18.785548,-91.494874,  Isla del Carmen - Isla Aguada,  3.222
+Puente Laredo I (Las Américas),CAPUFE,CAPUFE,  Laredo I,NO,  0+000,27.49856,-99.507378,  Puente Laredo I,  0.108
+Puente Las Flores,CAPUFE,CAPUFE,  Las Flores,NO,  0+000,26.060544,-97.950416,  Puente Las Flores,  0.083
+Puente Libre Comercio,GOBIERNO DEL ESTADO DE TAMAULIPAS,GOBIERNO DEL ESTADO DE TAMAULIPAS,  Libre Comercio,NO,  0+000,26.021585,-97.738817,  Puente Libre Comercio,  0.080
+Puente Los Tomates,BANOBRAS FONADIN,CAPUFE,  Los Tomates,NO,  0+000,25.874233,-97.474692,  Puente Los Tomates,  0.810
+Puente Matamoros,CAPUFE,CAPUFE,  Matamoros,NO,  0+000,25.891382,-97.503914,  Puente Matamoros,  0.155
+Puente Miguel Alemán,CAPUFE,CAPUFE,  Miguel Alemán,NO,  0+000,26.402916,-99.020661,  Puente Miguel Alemán,  0.155
+Puente Nautla,CAPUFE,CAPUFE,  Nautla,SI,  0+700,20.210215,-96.778734,  Puente Nautla,  0.214
+Puente Nuevo Laredo III,GOBIERNO DEL ESTADO DE TAMAULIPAS ,GOBIERNO DEL ESTADO DE TAMAULIPAS ,  Nuevo Laredo III,NO,  0+000,27.595071,-99.541437,  Puente Nuevo Laredo III,  0.298
+Puente Ojinaga,CAPUFE,CAPUFE,  Ojinaga,NO,  0+000,29.561043,-104.397206,  Puente Ojinaga,  0.121
+Puente Papaloapan,CAPUFE,CAPUFE,  Papaloapan,SI,  2+800,18.159588,-96.096688,  Puente Papaloapan,  0.288
+Puente Paso del Norte,CAPUFE,CAPUFE,  Paso del Norte,NO,  0+000,31.745887,-106.486418,  Puente Paso del Norte,  0.216
+Puente Pánuco,CAPUFE,CAPUFE,  Pánuco,SI,  198+000,22.148794,-98.144897,  Puente Pánuco,  0.179
+Puente Piedras Negras,CAPUFE,CAPUFE,  Piedras Negras,NO,  0+000,28.705234,-100.512987,  Puente Piedras Negras,  0.113
+Puente Piedras Negras II,GOBIERNO DEL ESTADO DE COAHUILA,GOBIERNO DEL ESTADO DE COAHUILA,  Piedras Negras II,NO,  0+000,28.697047,-100.512395,  Puente Piedras Negras II,  0.102
+Puente Reynosa,CAPUFE,CAPUFE,  Reynosa,NO,  0+000,26.093215,-98.270947,  Puente Reynosa,  0.112
+Puente Reynosa-Pharr (Nuevo Amanecer),BANOBRAS FONADIN,CAPUFE,  Reynosa - Pharr,NO,  0+000,26.041812,-98.20886,  Puente Reynosa-Pharr,  2.629
+Puente Rodolfo Robles,CAPUFE,CAPUFE,  Rodolfo Robles,NO,  0+000,14.677057,-92.149701,  Puente Rodolfo Robles,  0.189
+Puente San Juan,CAPUFE,CAPUFE,  San Juan,NO,  1+100,26.311873,-98.841957,  Puente San Juan,  0.175
+Puente San Miguel,GOBIERNO DEL ESTADO DE SINALOA,GOBIERNO DEL ESTADO DE SINALOA,  San Miguel,NO,  19+700,25.976312,-109.033558,  Puente San Miguel,  0.260
+Puente Sinaloa,CAPUFE,CAPUFE,  Sinaloa,SI,"  1,617+000",25.512842,-108.347578,  Puente Sinaloa,  0.320
+Puente Solidaridad (Colombia),GOBIERNO DEL ESTADO DE NUEVO LEÓN,GOBIERNO DEL ESTADO DE NUEVO LEÓN,  Solidaridad,NO,  0+000,27.697345,-99.747804,  Puente Solidaridad,  0.160
+Puente Suchiate II,CAPUFE,CAPUFE,  Suchiate II,NO,  0+000,14.702181,-92.151404,  Puente Suchiate II,  0.029
+Puente Tampico,CAPUFE,CAPUFE,  Tampico,NO,  1+900,22.218325,-97.824741,  Puente Tampico,  1.543
+Puente Tecolutla,CAPUFE,CAPUFE,  Tecolutla,SI,  0+000,20.437802,-97.086444,  Puente Tecolutla,  0.368
+Puente Tlacotalpan,CAPUFE,CAPUFE,  Tlacotalpan,SI,  1+300,18.704609,-95.641325,  Puente Tlacotalpan,  0.597
+Puente Usumacinta,CAPUFE,CAPUFE,  Usumacinta,SI,  45+200,17.859877,-91.783643,  Puente Usumacinta,  0.347
+Puente Zaragoza - Ysleta,PROMOFONT S. A. DE C. V.,CAPUFE,  Zaragoza,NO,  0+000,31.670895,-106.34067,  Puente Zaragoza - Ysleta,  0.155
+Puerto México - Ent. La Carbonera,BANOBRAS FONADIN,CAPUFE,  Los Chorros,SI,  203+500,25.186754,-100.731938,  Puerto México - Ent. La Carbonera,  32.000
+Puerto México - Ent. La Carbonera,BANOBRAS FONADIN,CAPUFE,  Huachichil,NO,206+500,25.24548,-100.801484,Puerto México - Huachichil,
+Querétaro - Irapuato,BANOBRAS FONADIN,CAPUFE,  Cerro Gordo,SI,  ,20.591875,-101.137274,  Celaya - Cerro Gordo,  32.750
+Querétaro - Irapuato,BANOBRAS FONADIN,CAPUFE,  Cerro Gordo,SI,  ,20.591875,-101.137274,  Cerro Gordo - Salamanca,  5.000
+Querétaro - Irapuato,BANOBRAS FONADIN,CAPUFE,  Querétaro,SI,  1+000,20.57217,-100.472837,  Querétaro - Celaya,  44.500
+Querétaro - Irapuato,BANOBRAS FONADIN,CAPUFE,  Salamanca,SI,  83+250,20.598452,-101.180914,  Celaya - Irapuato,  59.250
+Querétaro - Irapuato,BANOBRAS FONADIN,CAPUFE,  Salamanca A1,SI,  83+250,20.599141,-101.180695,  Celaya - Salamanca,  37.750
+Querétaro - Irapuato,BANOBRAS FONADIN,CAPUFE,  Salamanca A2,SI,  83+250,20.597586,-101.181031,  Salamanca - Irapuato,  21.500
+Querétaro - Irapuato,BANOBRAS FONADIN,CAPUFE,  Salamanca A3,SI,  83+250,20.590023,-101.136035,  Cerro Gordo - Irapuato,  26.750
+Querétaro - Irapuato,BANOBRAS FONADIN,CAPUFE,  Villagrán A1,NO,  63+000,20.582207,-100.992157,  Celaya - Ent. Villagrán,  19.950
+Querétaro - Irapuato,BANOBRAS FONADIN,CAPUFE,  Villagrán A2,NO,  63+000,20.579417,-100.99235,  Ent. Villagrán - Celaya,
+Rancho Viejo - Taxco,BANOBRAS FONADIN,CAPUFE,  Taxco,SI,  0+300,18.588623,-99.559957,  Rancho Viejo - Taxco,  8.340
+Reynosa - Matamoros,BANOBRAS FONADIN,CAPUFE,  Nuevo Progreso A2,NO,  21+040,26.037152,-97.954566,  Nuevo Progreso - Matamoros,  21.610
+Reynosa - Matamoros,BANOBRAS FONADIN,CAPUFE,  Nuevo Progreso P,SI,  21+040,26.036267,-97.954452,  Reynosa - Matamoros,  44.000
+Reynosa - Matamoros,BANOBRAS FONADIN,CAPUFE,  Nuevo Progreso A1,NO,  21+040,26.035227,-97.954438,  Reynosa - Nuevo Progreso,  22.390
+Río Verde - Cd. Valles,ICA SAN LUIS S. A. DE C. V.,ICA SAN LUIS S. A. DE C. V.,  Rayón,NO,  0+300,21.864264,-99.618995,  Rayón - Vicente Guerrero,  18.200
+Rumorosa - Tecate,BANOBRAS FONADIN,CAPUFE,  El Hongo,NO,  92+310,32.521819,-116.319985,  La Rumorosa - Tecate,  55.500
+Rumorosa - Tecate,BANOBRAS FONADIN,CAPUFE,  El Hongo A1,NO,  92+310,32.521141,-116.320114,  El Hongo - Tecate,  24.900
+Rumorosa - Tecate,BANOBRAS FONADIN,CAPUFE,  El Hongo A2,NO,  92+310,32.522437,-116.31983,  Rumorosa - El Hongo,  30.560
+Salina Cruz - La Ventosa,BANOBRAS FONADIN,CAPUFE,  Ixtepec A1,NO,  53+600,16.561071,-95.134966,  Tehuantepec - Ixtepec,  30.900
+Salina Cruz - La Ventosa,BANOBRAS FONADIN,CAPUFE,  Ixtepec A2,NO,  53+600,16.561481,-95.134292,  Ixtepec - La Ventosa,  27.900
+Salina Cruz - La Ventosa,BANOBRAS FONADIN,CAPUFE,  Ixtepec A3,NO,  53+600,16.561823,-95.136055,  Ixtepec - La Ventosa,  27.900
+Salina Cruz - La Ventosa,BANOBRAS FONADIN,CAPUFE,  Ixtepec,SI,  53+600,16.561154,-95.135615,  Tehuantepec - La Ventosa,  52.600
+Salina Cruz - La Ventosa,BANOBRAS FONADIN,CAPUFE,  Tehuantepec,SI,  1+800,16.162139,-95.289239,  Salina Cruz - Tehuantepec,  22.700
+San José del Cabo - Aeropuerto Los Cabos,BANOBRAS FONADIN,CAPUFE,  San José del Cabo,NO,  0+200,23.04992,-109.719559,  San José del Cabo - Aeropuerto Los Cabos,  20.200
+San Martín Texmelucan - Tlaxcala,PROMOTORA DE AUTOPISTAS DEL PACÍFICO S. A. DE C. V.,OPERVITE S. A. DE C. V.,  Aucal,NO,  5+450,19.301587,-98.404051,  San Martín Texmelucan - Tlaxcala,  19.419
+Santa Ana - Altar,GOBIERNO DEL ESTADO DE SONORA CONCESIONARIA ZONALTA S. A. DE C. V.,OPERVITE S. A. DE C. V.,  Santa Ana,NO,  39+753,30.568679,-111.284143,  Santa Ana - Altar,  73.000
+Tecate - Tijuana,AUTOPISTA TIJUANA - TECATE S. A. DE C. V.,"CONCESIONARIA DE CARRETERAS, AUTOPISTAS Y LIBRAMIENTOS DE LA REP. MEXICANA S. A. DE C. V. ",  Esperanza,NO,  122+800,32.550743,-116.621899,  Ent. Esperanza - Ent. Sandoval,  4.800
+Tecate - Tijuana,AUTOPISTA TIJUANA - TECATE S. A. DE C. V.,"CONCESIONARIA DE CARRETERAS, AUTOPISTAS Y LIBRAMIENTOS DE LA REP. MEXICANA S. A. DE C. V. ",  Tecate,NO,  130+500,32.52585,-116.690261,  Libramiento de Tecate,  12.250
+Tecate - Tijuana,AUTOPISTA TIJUANA - TECATE S. A. DE C. V.,"CONCESIONARIA DE CARRETERAS, AUTOPISTAS Y LIBRAMIENTOS DE LA REP. MEXICANA S. A. DE C. V. ",  Tijuana,NO,  147+600,32.54579,-116.852039,  Tecate - Tijuana y Lib. de Tecate,  29.800
+Tejocotal - Nuevo Necaxa,FIDEICOMISO AUTOPISTAS Y PUENTES DEL GOLFO CENTRO,CAPUFE,  Nuevo Necaxa,NO,  17+000,20.183843,-98.027601,  Tejocotal - Nuevo Necaxa,  17.500
+Tepic - Villa Unión,"CONCESIONARIA DE CARRETERAS, AUTOPISTAS Y LIBRAMIENTOS DE LA REPÚBLICA MEXICANA S. A. DE C. V.","CONCESIONARIA DE CARRETERAS, AUTOPISTAS Y LIBRAMIENTOS DE LA REPÚBLICA MEXICANA S. A. DE C. V.",  Acaponeta,NO,,22.453835,-105.424726,  Rosamorada - Escuinapa,  100.560
+Tepic - Villa Unión,"CONCESIONARIA DE CARRETERAS, AUTOPISTAS Y LIBRAMIENTOS DE LA REPÚBLICA MEXICANA S. A. DE C. V.","CONCESIONARIA DE CARRETERAS, AUTOPISTAS Y LIBRAMIENTOS DE LA REPÚBLICA MEXICANA S. A. DE C. V.",  Acaponeta A1,NO,  ,22.454088,-105.418817,  Rosamorada - Acaponeta,  46.300
+Tepic - Villa Unión,"CONCESIONARIA DE CARRETERAS, AUTOPISTAS Y LIBRAMIENTOS DE LA REPÚBLICA MEXICANA S. A. DE C. V.","CONCESIONARIA DE CARRETERAS, AUTOPISTAS Y LIBRAMIENTOS DE LA REPÚBLICA MEXICANA S. A. DE C. V.",  Acaponeta A2,NO,  ,22.454088,-105.418817,  Acaponeta - Escuinapa,  54.260
+Tepic - Villa Unión,"CONCESIONARIA DE CARRETERAS, AUTOPISTAS Y LIBRAMIENTOS DE LA REPÚBLICA MEXICANA S. A. DE C. V.","CONCESIONARIA DE CARRETERAS, AUTOPISTAS Y LIBRAMIENTOS DE LA REPÚBLICA MEXICANA S. A. DE C. V.",  Rosario,NO,  37+000,22.984707,-105.878039,  Escuinapa - Villa Unión,  64.950
+Tepic - Villa Unión,"CONCESIONARIA DE CARRETERAS, AUTOPISTAS Y LIBRAMIENTOS DE LA REPÚBLICA MEXICANA S. A. DE C. V.","CONCESIONARIA DE CARRETERAS, AUTOPISTAS Y LIBRAMIENTOS DE LA REPÚBLICA MEXICANA S. A. DE C. V.",  Rosario A1,NO,  37+000,22.985107,-105.875275,  Escuinapa - Rosario,  26.380
+Tepic - Villa Unión,"CONCESIONARIA DE CARRETERAS, AUTOPISTAS Y LIBRAMIENTOS DE LA REPÚBLICA MEXICANA S. A. DE C. V.","CONCESIONARIA DE CARRETERAS, AUTOPISTAS Y LIBRAMIENTOS DE LA REPÚBLICA MEXICANA S. A. DE C. V.",  Rosario A2,NO,  37+000,22.985107,-105.875275,  Rosario - Villa Unión,  38.570
+Tepic - Villa Unión,"CONCESIONARIA DE CARRETERAS, AUTOPISTAS Y LIBRAMIENTOS DE LA REPÚBLICA MEXICANA S. A. DE C. V.","CONCESIONARIA DE CARRETERAS, AUTOPISTAS Y LIBRAMIENTOS DE LA REPÚBLICA MEXICANA S. A. DE C. V.",  Ruiz A2,NO,  ,21.953097,-105.120877,  Ruiz - Rosamorada,  18.562
+Tepic - Villa Unión,"CONCESIONARIA DE CARRETERAS, AUTOPISTAS Y LIBRAMIENTOS DE LA REPÚBLICA MEXICANA S. A. DE C. V.","CONCESIONARIA DE CARRETERAS, AUTOPISTAS Y LIBRAMIENTOS DE LA REPÚBLICA MEXICANA S. A. DE C. V.",  Ruíz,NO,  ,21.951811,-105.116064,  Entronque San Blas - Rosamorada,  45.180
+Tepic - Villa Unión,"CONCESIONARIA DE CARRETERAS, AUTOPISTAS Y LIBRAMIENTOS DE LA REPÚBLICA MEXICANA S. A. DE C. V.","CONCESIONARIA DE CARRETERAS, AUTOPISTAS Y LIBRAMIENTOS DE LA REPÚBLICA MEXICANA S. A. DE C. V.",  Ruíz A1,NO,  ,21.953097,-105.120877,  Entronque San Blas - Estación Ruiz,  26.618
+Tepic - Villa Unión,"CONCESIONARIA DE CARRETERAS, AUTOPISTAS Y LIBRAMIENTOS DE LA REPÚBLICA MEXICANA S. A. DE C. V.","CONCESIONARIA DE CARRETERAS, AUTOPISTAS Y LIBRAMIENTOS DE LA REPÚBLICA MEXICANA S. A. DE C. V.",  Ruíz,NO,  ,21.951811,-105.116064,  Estación Yago - Rosamorada,  31.700
+Tepic - Villa Unión,"CONCESIONARIA DE CARRETERAS, AUTOPISTAS Y LIBRAMIENTOS DE LA REPÚBLICA MEXICANA S. A. DE C. V.","CONCESIONARIA DE CARRETERAS, AUTOPISTAS Y LIBRAMIENTOS DE LA REPÚBLICA MEXICANA S. A. DE C. V.",  Trapichillo,SI,  5+100,21.571769,-104.987465,  Tepic - Ent. San Blas,  25.000
+Tepic - Villa Unión,"CONCESIONARIA DE CARRETERAS, AUTOPISTAS Y LIBRAMIENTOS DE LA REPÚBLICA MEXICANA S. A. DE C. V.","CONCESIONARIA DE CARRETERAS, AUTOPISTAS Y LIBRAMIENTOS DE LA REPÚBLICA MEXICANA S. A. DE C. V.",  Yago A1,NO,  ,21.844631,-105.084918,  Ent San Blas - Estación Yago,  13.480
+Tepic - Villa Unión,"CONCESIONARIA DE CARRETERAS, AUTOPISTAS Y LIBRAMIENTOS DE LA REPÚBLICA MEXICANA S. A. DE C. V.","CONCESIONARIA DE CARRETERAS, AUTOPISTAS Y LIBRAMIENTOS DE LA REPÚBLICA MEXICANA S. A. DE C. V.",  Yago A2,NO,  ,21.845203,-105.086575,  Estación Yago - Ruiz,  13.138
+Tihuatlán - Tuxpam y Puente Tuxpam,FIDEICOMISO AUTOPISTAS Y PUENTES DEL GOLFO CENTRO,CAPUFE,  Tuxpam,NO,  342+700,20.918939,-97.415892,  Tihuatlán - Tuxpam,  37.500
+Torreón - Saltillo,BANOBRAS FONADIN,CAPUFE,  La Cuchilla,SI,  67+036,25.627001,-102.878215,  Matamoros - La Cuchilla,  39.840
+Torreón - Saltillo,BANOBRAS FONADIN,CAPUFE,  Plan de Ayala,SI,  142+000,25.444123,-101.303947,  Loma Bonita - Puebla,  78.000
+Tuxtla Gutiérrez - San Cristóbal de las Casas,CONCESIONARIA DE AUTOPISTAS DEL SURESTE S. A. DE C. V.,CONCESIONARIA DE AUTOPISTAS DEL SURESTE S. A. DE C. V.,  Chiapa de Corzo,SI,  0+000,16.730618,-93.0095,  Tuxtla Gutiérrez - San Cristóbal de las Casas,  21.000
+Uruapan - Nueva Italia,CONCESIONARIA DE AUTOPISTAS DE MICHOACÁN S. A. DE C. V.,CONCESIONARIA DE AUTOPISTAS DE MICHOACÁN S. A. DE C. V.,  Santa Casilda,SI,  132+500,19.152932,-101.97813,  Ent. Cajones - Ent. Cuatro Caminos,  31.000
+Uruapan - Nueva Italia,CONCESIONARIA DE AUTOPISTAS DE MICHOACÁN S. A. DE C. V.,CONCESIONARIA DE AUTOPISTAS DE MICHOACÁN S. A. DE C. V.,  Santa Casilda A1,NO,  132+500,19.156446,-101.976099,  Ent. Cajones - Ent. Santa Casilda,  11.000
+Uruapan - Nueva Italia,CONCESIONARIA DE AUTOPISTAS DE MICHOACÁN S. A. DE C. V.,CONCESIONARIA DE AUTOPISTAS DE MICHOACÁN S. A. DE C. V.,  Santa Casilda A1,NO,  132+500,19.156446,-101.976099,  Ent. Santa Casilda - Ent. Cuatro Caminos,  20.000
+Uruapan - Nueva Italia,CONCESIONARIA DE AUTOPISTAS DE MICHOACÁN S. A. DE C. V.,CONCESIONARIA DE AUTOPISTAS DE MICHOACÁN S. A. DE C. V.,  Taretán,SI,  102+200,19.355443,-101.917902,  Ent. Zirimícuaro - Ent. Cajones,  29.000
+Uruapan - Nueva Italia,CONCESIONARIA DE AUTOPISTAS DE MICHOACÁN S. A. DE C. V.,CONCESIONARIA DE AUTOPISTAS DE MICHOACÁN S. A. DE C. V.,  Taretán A1,NO,  102+200,19.351874,-101.917368,  Ent. Zirimícuaro - Taretán,  8.000
+Uruapan - Nueva Italia,CONCESIONARIA DE AUTOPISTAS DE MICHOACÁN S. A. DE C. V.,CONCESIONARIA DE AUTOPISTAS DE MICHOACÁN S. A. DE C. V.,  Taretán A1,NO,  102+200,19.351874,-101.917368,  Taretán - Ent. Cajones,  21.000
+Yerbanís - Gómez Palacio,AUTOPISTAS DE CUOTA S. A. DE C. V.,AUTOPISTAS DE CUOTA S. A. DE C. V.,  Cuencamé III,SI,  143+222,24.981671,-103.73525,  Yerbanís - Pedriceña,  48.550
+Yerbanís - Gómez Palacio,AUTOPISTAS DE CUOTA S. A. DE C. V.,AUTOPISTAS DE CUOTA S. A. DE C. V.,  Cuencamé III A2,SI,  146+150/143+100,24.980948,-103.736669,  Cuencamé - Pedriceña,  18.630
+Yerbanís - Gómez Palacio,AUTOPISTAS DE CUOTA S. A. DE C. V.,AUTOPISTAS DE CUOTA S. A. DE C. V.,  Cuencamé III A1,SI,  146+150/143+100,24.980356,-103.734326,  Yerbanís - Cuencamé,  29.920
+Yerbanís - Gómez Palacio,AUTOPISTAS DE CUOTA S. A. DE C. V.,AUTOPISTAS DE CUOTA S. A. DE C. V.,  León Guzmán A2,SI,  212+659,25.519483,-103.63969,  León Guzmán - Gómez Palacio,  16.970
+Yerbanís - Gómez Palacio,AUTOPISTAS DE CUOTA S. A. DE C. V.,AUTOPISTAS DE CUOTA S. A. DE C. V.,  León Guzmán,SI,  212+659,25.520619,-103.639462,  Pedriceña - Gómez Palacio,  68.450
+Yerbanís - Gómez Palacio,AUTOPISTAS DE CUOTA S. A. DE C. V.,AUTOPISTAS DE CUOTA S. A. DE C. V.,  León Guzmán A1,SI,  212+500,25.519463,-103.639408,  Pedirceña - León Guzmán,  51.480
+Zacapalco - Rancho Viejo,BANOBRAS FONADIN,CAPUFE,  Zacapalco,SI,  0+500,18.537976,-99.447394,  Zacapalco - Rancho Viejo,  17.300
+Zapotlanejo - Lagos de Moreno,RED DE AUTOPISTAS DE OCCIDENTE S. A. P. I. B. DE C. V.,RED DE CARRETERAS DE OCCIDENTE S. A. P. I. B. DE C. V.,  Jalostotitlán,SI,  90+800,21.117576,-102.458041,  Ent. Arandas - El Desperdicio,  65.216
+Zapotlanejo - Lagos de Moreno,RED DE AUTOPISTAS DE OCCIDENTE S. A. P. I. B. DE C. V.,RED DE CARRETERAS DE OCCIDENTE S. A. P. I. B. DE C. V.,  Jalostotitlán,SI,  90+800,21.117576,-102.458041,  Ent. Arandas - Jalostotitlán,  37.516
+Zapotlanejo - Lagos de Moreno,RED DE AUTOPISTAS DE OCCIDENTE S. A. P. I. B. DE C. V.,RED DE CARRETERAS DE OCCIDENTE S. A. P. I. B. DE C. V.,  Jalostotitlán A1,SI,  91+000,21.119064,-102.455793,  Jalostotitlán - El Desperdicio,  27.700
+Zapotlanejo - Lagos de Moreno,RED DE AUTOPISTAS DE OCCIDENTE S. A. P. I. B. DE C. V.,RED DE CARRETERAS DE OCCIDENTE S. A. P. I. B. DE C. V.,  Jalostotitlán A2,SI,  91+000,21.120273,-102.455559,  El Desperdicio - Jalostotitlán,  27.700
+Zapotlanejo - Lagos de Moreno,RED DE AUTOPISTAS DE OCCIDENTE S. A. P. I. B. DE C. V.,RED DE CARRETERAS DE OCCIDENTE S. A. P. I. B. DE C. V.,  San Juan A1,NO,  110+400,21.224694,-102.313144,  Ent. San Juan de los Lagos - El Desperdicio,  8.180
+Zapotlanejo - Lagos de Moreno,RED DE AUTOPISTAS DE OCCIDENTE S. A. P. I. B. DE C. V.,RED DE CARRETERAS DE OCCIDENTE S. A. P. I. B. DE C. V.,  San Juan A2,NO,  110+400,21.225663,-102.313651,  El Desperdicio - Ent. San Juan de los Lagos,
+Zapotlanejo - Lagos de Moreno,RED DE AUTOPISTAS DE OCCIDENTE S. A. P. I. B. DE C. V.,RED DE CARRETERAS DE OCCIDENTE S. A. P. I. B. DE C. V.,  Tepatitlán,SI,  41+512,20.824618,-102.794958,  Zapotlanejo - Ent. Arandas,  53.284
+Zapotlanejo - Lagos de Moreno,RED DE AUTOPISTAS DE OCCIDENTE S. A. P. I. B. DE C. V.,RED DE CARRETERAS DE OCCIDENTE S. A. P. I. B. DE C. V.,  Tepatitlán,SI,  41+512,20.824618,-102.794958,  Tepatitlán - Ent. Arandas,  11.772
+Zapotlanejo - Lagos de Moreno,RED DE AUTOPISTAS DE OCCIDENTE S. A. P. I. B. DE C. V.,RED DE CARRETERAS DE OCCIDENTE S. A. P. I. B. DE C. V.,  Tepatitlán Aux.,NO,  41+512,20.82091,-102.794064,  Zapotlanejo - Tepatitlán,  41.512

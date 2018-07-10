@@ -1,0 +1,341 @@
+<?xml version = "1.0" encoding = "ISO-8859-1"?>
+<Metadata>
+<MD_DataIdentification>
+<title>Conjunto de Datos Vectoriales de Carreteras y Vialidades Urbanas Edición 1.0 (Distribución por entidad federativa)</title>
+<purpose>Proporcionar a las unidades del estado y a todos los sectores de la sociedad la información de la infraestructura carretera con que cuenta el país a través de la estructuración de información vectorial de carreteras y vialidades para que pueda ser aprovechada para la toma de decisiones.
+</purpose>
+<abstract>Sistema de circulación lineal estructurado que integra carreteras pavimentadas y vialidades de localidades urbanas, así como la integración de principales vialidades de localidades rurales que interconectan con carreteras, además de presentar una actualización en función del comparativo con la cobertura 2007-2008 de la SCT.</abstract>
+<MD_DataIdentification_language>ES - Español.</MD_DataIdentification_language>
+<topicCategory>
+<principalTopic>  4. Economía: Actividades económicas, condiciones y empleo. </principalTopic>
+<principalTopic>14. Estructura: Construcciones hechas por el hombre. </principalTopic>
+<groupCategory>4. Grupo de datos topográficos: Subdivisión de la Infraestructura de Datos Espaciales de México que contiene elementos que caracterizan parte o toda la superficie  terrestre, constituidos por datos referidos a los componentes físicos del paisaje y de los correspondientes a objetos de infraestructura humana. Particularizan un terreno en su configuración superficial, permitiendo la identificación de la disposición y forma de sus partes y lo distinguen de otros semejantes.</groupCategory>
+</topicCategory>
+<keyword>Vialidades</keyword>
+<type>2. Lugar: La palabra clave identifica un lugar o ubicación cubierto por el conjunto de datos espaciales o producto.</type>
+<keyword>Número de carretera</keyword>
+<type>2. Lugar: La palabra clave identifica un lugar o ubicación cubierto por el conjunto de datos espaciales o producto.</type>
+<keyword>Marco Geoestadístico</keyword>
+<type>2. Lugar: La palabra clave identifica un lugar o ubicación cubierto por el conjunto de datos espaciales o producto.</type>
+<keyword>Vías de transporte</keyword>
+<type>3. Estrato: La palabra clave identifica una capa de cualquier material depositado.</type>
+<keyword>Carreteras pavimentadas</keyword>
+<type>3. Estrato: La palabra clave identifica una capa de cualquier material depositado.</type>
+<keyword>Pavimentada</keyword>
+<type>5. Tema: La palabra clave que identifica un tema o materia particular.</type>
+<keyword>Base Cartográfica Única</keyword>
+<type>5. Tema: La palabra clave que identifica un tema o materia particular.</type>
+<keyword>Sector Comunicaciones y Transportes</keyword>
+<type>1. Disciplina: La palabra clave identifica una rama de la enseñanza o aprendizaje especializado.</type>
+<thesaurusName> </thesaurusName>
+<edition> </edition>
+<presentationForm>  5. Mapa digital: Mapa representado en formato raster o vector.</presentationForm>
+<CI_OnlineResource>
+<CI_OnlineResource_linkage>http://www.inegi.org.mx</CI_OnlineResource_linkage>
+<CI_OnlineResource_description> </CI_OnlineResource_description>
+</CI_OnlineResource>
+<maintenanceAndUpdateFrequency>  1. Diariamente: Los datos se actualizan cada día.</maintenanceAndUpdateFrequency>
+<MD_DataIdentification_characterSet>  6. 8859parte1: ISO/IEC 8859-1, Tecnologías de la Información - Conjuntos de caracteres gráficos codificados de 8-bit por byte - Parte 1: Alfabeto Latino No.1.</MD_DataIdentification_characterSet>
+<graphfilename>Red_de_Carreteras_01_Ags.shp</graphfilename>
+<specuse>Proporcionar una red de carreteras nacional que permita identificar las carreteras entre destinos y sitios de interés, a través de un sistema continuo entre localidades y estados, además de atributos que distingan los tramos carreteros por su administración y el derecho de tránsito, entre otros como su nomenclatura y longitud que permite estimar otros datos como es la distancia por recorrer y el tiempo de traslado. </specuse>
+</MD_DataIdentification>
+<CI_Date>
+<Dates_Events>
+<date>2011-01-03</date>
+<dateType>1. Creación: Indicador  de la fecha que especifica cuando fue creado el recurso.</dateType>
+<date>2011-11-30</date>
+<dateType>3. Revisión: Identificador de la fecha que especifica cuando el recurso fue examinado o re-examinado y mejorado o corregido.</dateType>
+</Dates_Events>
+<Ad_Date>
+<date_creation>2005-06-01</date_creation>
+<date_begin></date_begin>
+<date_end></date_end>
+<inpname>Carta Topográfica 1:50 000</inpname>
+<date_creation>2007-06-01</date_creation>
+<date_begin></date_begin>
+<date_end></date_end>
+<inpname>Carreteras SCT</inpname>
+<date_creation>2007-06-01</date_creation>
+<date_begin></date_begin>
+<date_end></date_end>
+<inpname>Imágenes Spot INEGI</inpname>
+<date_creation>2008-06-02</date_creation>
+<date_begin></date_begin>
+<date_end></date_end>
+<inpname>Carreteras SCT</inpname>
+<date_creation>2010-06-01</date_creation>
+<date_begin></date_begin>
+<date_end></date_end>
+<inpname>Imágenes Spot INEGI</inpname>
+<date_creation>2010-06-01</date_creation>
+<date_begin></date_begin>
+<date_end></date_end>
+<inpname>Base Cartográfica Única</inpname>
+</Ad_Date>
+</CI_Date>
+<CI_ResponsibleParty>
+<CI_ResponsibleParty_individualName>Lic. Luz María Velázquez Márquez.</CI_ResponsibleParty_individualName>
+<CI_ResponsibleParty_organisationName>Instituto Nacional de Estadística y Geografía - INEGI.</CI_ResponsibleParty_organisationName>
+<CI_ResponsibleParty_positionName>Jefa del Departamento de Atención a Usuarios y Comercialización.</CI_ResponsibleParty_positionName>
+<CI_ResponsibleParty_voice>(449)9105300 Ext. 1406, 1407 y 1408. Lada 01 800 111 46 34.</CI_ResponsibleParty_voice>
+<CI_ResponsibleParty_facsimile></CI_ResponsibleParty_facsimile>
+<CI_ResponsibleParty_deliveryPoint>Av. Héroe de Nacozari Sur Núm. 2301. Fracc. Jardines del Parque.</CI_ResponsibleParty_deliveryPoint>
+<CI_ResponsibleParty_city>Aguascalientes.</CI_ResponsibleParty_city>
+<CI_ResponsibleParty_administrativeArea>Aguascalientes.</CI_ResponsibleParty_administrativeArea>
+<CI_ResponsibleParty_postalCode>20276.</CI_ResponsibleParty_postalCode>
+<CI_ResponsibleParty_country>México.</CI_ResponsibleParty_country>
+<CI_ResponsibleParty_electronicMailAddress>atencion.usuarios@inegi.org.mx</CI_ResponsibleParty_electronicMailAddress>
+<CI_ResponsibleParty_linkage>http://www.inegi.org.mx/</CI_ResponsibleParty_linkage>
+<CI_ResponsibleParty_role>  5. Distribuidor: Parte que distribuye el recurso.</CI_ResponsibleParty_role>
+</CI_ResponsibleParty>
+<geographicElement>
+<EX_GeographicBoundingBox>
+<westBoundLongitude>-102.874177</westBoundLongitude>
+<eastBoundLongitude>-101.835289</eastBoundLongitude>
+<southBoundLatitude>21.622266</southBoundLatitude>
+<northBoundLatitude>22.45959</northBoundLatitude>
+</EX_GeographicBoundingBox>
+<spatialRepresentationType>1. Vector: Los datos vectoriales se utilizan para representar datos espaciales.</spatialRepresentationType>
+</geographicElement>
+<MD_ReferenceSystem>
+<ReferenceHorizontalSystem>
+<geograph>
+<latres></latres>
+<longres></longres>
+<geogunit></geogunit>
+</geograph>
+<planar>
+<mapprojn>
+<lambertc>
+<lambertc_stdparll>17.5</lambertc_stdparll>
+<lambertc_stdparll>29.5</lambertc_stdparll>
+<lambertc_longcm>-102.0</lambertc_longcm>
+<lambertc_latprjo>12.0</lambertc_latprjo>
+<lambertc_feast>2500000.0</lambertc_feast>
+<lambertc_fnorth>0.0</lambertc_fnorth>
+</lambertc>
+<mercatort>
+<mercatort_sfctrmer> </mercatort_sfctrmer>
+<mercatort_longcm> </mercatort_longcm>
+<mercatort_latprjo> </mercatort_latprjo>
+<mercatort_feast> </mercatort_feast>
+<mercatort_fnorth> </mercatort_fnorth>
+</mercatort>
+<mercator>
+<mercator_stdparll> </mercator_stdparll>
+<mercator_sfec> </mercator_sfec>
+<mercator_longcm> </mercator_longcm>
+<mercator_feast> </mercator_feast>
+<mercator_fnorth> </mercator_fnorth>
+</mercator>
+<tme>
+<tme_sfctrmer> </tme_sfctrmer>
+<tme_longcm> </tme_longcm>
+<tme_latprjo> </tme_latprjo>
+<tme_feast> </tme_feast>
+<tme_fnorth> </tme_fnorth>
+</tme>
+<anoth_proj_def>
+</anoth_proj_def>
+</mapprojn>
+<gridcoordinatessystem>
+<utm>
+<utm_zone></utm_zone>
+<utm_sfctrmer></utm_sfctrmer>
+<utm_longcm></utm_longcm>
+<utm_latprjo></utm_latprjo>
+<utm_feast></utm_feast>
+<utm_fnorth></utm_fnorth>
+</utm>
+</gridcoordinatessystem>
+<local_planar>
+<local_planar_desc></local_planar_desc>
+<local_planar_geo_inf></local_planar_geo_inf>
+</local_planar>
+<planci>
+<plance>Par coordenado.</plance>
+<coord_repres>
+<absres>1</absres>
+<ordres>1</ordres>
+</coord_repres>
+<distance_and_bearing_repres>
+<distance_res></distance_res>
+<bearing_res></bearing_res>
+<bearing_uni></bearing_uni>
+<ref_bearing_dir></ref_bearing_dir>
+<ref_bearing_mer></ref_bearing_mer>
+</distance_and_bearing_repres>
+<plandu>Metros.</plandu>
+</planci>
+</planar>
+<local_coordinates>
+<local_desc></local_desc>
+<local_geo_inf></local_geo_inf>
+</local_coordinates>
+<geodetic>
+<horizdn>ITRF92 época 1988.0.</horizdn>
+<ellips>Sistema Geodésico de Referencia de 1980 (GRS80).</ellips>
+<semiaxis>6378137.0</semiaxis>
+<denflat>298.2572221</denflat>
+</geodetic>
+</ReferenceHorizontalSystem>
+<ReferenceVerticalSystem>
+<altsys>
+<altdatum></altdatum>
+<altres></altres>
+<altunits></altunits>
+<altenc> </altenc>
+</altsys>
+<depthsys>
+<depthdn></depthdn>
+<depthres></depthres>
+<depthdu></depthdu>
+<depthem> </depthem>
+</depthsys>
+</ReferenceVerticalSystem>
+</MD_ReferenceSystem>
+<DQ_DataQuality>
+<DQ_Scope>
+<level>  5. Conjunto de datos espaciales: Información aplicada al conjunto de datos espaciales.</level>
+</DQ_Scope>
+<report>
+<DQ_Completeness>
+<DQ_Completeness_evalqualsubname>
+<DQ_Completeness_nameOfMeasure></DQ_Completeness_nameOfMeasure>
+<DQ_Completeness_measureDescription></DQ_Completeness_measureDescription>
+<DQ_Completeness_result>
+<DQ_Completeness_DQ_QuantitativeResult>
+<DQ_Completeness_valueUnit></DQ_Completeness_valueUnit>
+<DQ_Completeness_value></DQ_Completeness_value></DQ_Completeness_DQ_QuantitativeResult>
+</DQ_Completeness_result>
+</DQ_Completeness_evalqualsubname>
+</DQ_Completeness>
+<DQ_LogicConsistency>
+<DQ_LogicConsistency_evalqualsubname>
+<DQ_LogicConsistency_nameOfMeasure></DQ_LogicConsistency_nameOfMeasure>
+<DQ_LogicConsistency_measureDescription></DQ_LogicConsistency_measureDescription>
+<DQ_LogicConsistency_result>
+<DQ_LogicConsistency_DQ_QuantitativeResult>
+<DQ_LogicConsistency_valueUnit></DQ_LogicConsistency_valueUnit>
+<DQ_LogicConsistency_value></DQ_LogicConsistency_value></DQ_LogicConsistency_DQ_QuantitativeResult>
+</DQ_LogicConsistency_result>
+</DQ_LogicConsistency_evalqualsubname>
+</DQ_LogicConsistency>
+<PositionalAccuracy>
+<PositionalAccuracy_evalqualsubname>
+<PositionalAccuracy_nameOfMeasure></PositionalAccuracy_nameOfMeasure>
+<PositionalAccuracy_measureDescription></PositionalAccuracy_measureDescription>
+<PositionalAccuracy_result>
+<PositionalAccuracy_DQ_QuantitativeResult>
+<PositionalAccuracy_valueUnit></PositionalAccuracy_valueUnit>
+<PositionalAccuracy_value></PositionalAccuracy_value></PositionalAccuracy_DQ_QuantitativeResult>
+</PositionalAccuracy_result>
+</PositionalAccuracy_evalqualsubname>
+</PositionalAccuracy>
+<TemporalAccuracy>
+<TemporalAccuracy_evalqualsubname>
+<TemporalAccuracy_nameOfMeasure></TemporalAccuracy_nameOfMeasure>
+<TemporalAccuracy_measureDescription></TemporalAccuracy_measureDescription>
+<TemporalAccuracy_result>
+<TemporalAccuracy_DQ_QuantitativeResult>
+<TemporalAccuracy_valueUnit></TemporalAccuracy_valueUnit>
+<TemporalAccuracy_value></TemporalAccuracy_value></TemporalAccuracy_DQ_QuantitativeResult>
+</TemporalAccuracy_result>
+</TemporalAccuracy_evalqualsubname>
+</TemporalAccuracy>
+<ThematicAccuracy>
+<ThematicAccuracy_evalqualsubname>
+<ThematicAccuracy_nameOfMeasure></ThematicAccuracy_nameOfMeasure>
+<ThematicAccuracy_measureDescription></ThematicAccuracy_measureDescription>
+<ThematicAccuracy_result>
+<ThematicAccuracy_DQ_QuantitativeResult>
+<ThematicAccuracy_valueUnit></ThematicAccuracy_valueUnit>
+<ThematicAccuracy_value></ThematicAccuracy_value></ThematicAccuracy_DQ_QuantitativeResult>
+</ThematicAccuracy_result>
+</ThematicAccuracy_evalqualsubname>
+</ThematicAccuracy>
+</report>
+<LI_Lineage>
+<statement>Shapefile vectorial de tipo lineal de los conjuntos de datos vectoriales correspondiente a carreteras y ejes de calle de localidades rurales, Escala 1:50 000 creados en el Instituto Nacional de Estadística y Geografía. 
+Shapefile vectorial de tipo lineal con información de vialidades al interior de localidades urbanas correspondiente a la Base Cartográfica Única Escala 1:50 000 del Instituto Nacional de Estadística y Geografía. 
+Shapefile vectorial de tipo lineal del Inventario Nacional de Infraestructura para el Transporte de la Secretaría de Comunicaciones y Transporte.</statement>
+<LI_ProcessStep>
+<LI_ProcessStep_description>Actualización a partir de la revisión y comparación de cada carretera respecto a los datos vectoriales proporcionados por la Secretaría de Comunicaciones y Transporte a través de su Inventario Nacional de Infraestructura para el Transporte, se incorpora información de terracerías que en la actualidad ya están pavimentadas.</LI_ProcessStep_description>
+<LI_ProcessStep_description>Interconexión de carreteras a través de localidades integrando los ejes de vialidad de localidades urbanas de la Base Cartográfica Única 2010, así como los ejes de las principales calles de localidades rurales de los datos topográficos escala 1:50 000.</LI_ProcessStep_description>
+<LI_ProcessStep_description>Limpieza y ajuste de la información de carreteras, consistente en eliminar los excedentes de líneas al interior de polígonos de localidades urbanas y conexión de carreteras a dichos polígonos.</LI_ProcessStep_description>
+<LI_ProcessStep_description>Revisión de carreteras periféricas entre los estados para determinar el sentido de pertenencia evitando que la carretera quedara discontinua debido a los límites estatales, al mismo tiempo se estableció la conexión interestatal para dar continuidad entre tramos que pasen a través de dos o más entidades federativas.</LI_ProcessStep_description>
+<LI_ProcessStep_description>Verificación de la conexión y continuidad al interior de un estado y a través de sus localidades urbanas, estableciendo también el número de carretera en caso de existir, al tramo carretero correspondiente.</LI_ProcessStep_description>
+<LI_ProcessStep_description>Integración y validación de la información.</LI_ProcessStep_description>
+<LI_ProcessStep_description>Generación de archivos entregables.</LI_ProcessStep_description>
+</LI_ProcessStep>
+<LI_Source>
+<LI_Source_description>
+</LI_Source_description>
+</LI_Source>
+</LI_Lineage>
+</DQ_DataQuality>
+<Attributes>
+<schemaAscii>Entidad: Línea de Red Carretera
+Atributos: Contiene los atributos, descripción, tipo y dominio de valores aplicados a los vectores según el tipo de rasgo al que se le están asociando, que puede ser Carretera, Vialidad y  Calle rural
+</schemaAscii>
+<entity_detail>Entidad: Línea de Red Carretera
+Atributos:
+Nombre	Descripción			Dominio
+ID	Identificador único para cada arco	1,2..N
+TIPO VIA	Tipo de Vía			Según catálogo 
+TIPO	Tipo de Carretera		Pavimentada: de Asfalto o concreto, Terracería: De arena y grava compactada
+NUMERO	Código de Carretera		Número Oficial asignado al segmento o NINGUNO (En vialidades sólo para fines de representación 				continua de carreteras. El resto N/A)
+DERE_TRAN	Derecho de transito de la carretera	Cuota, libre o restringido.  (En vialidades y calles rurales sólo para fines de representación 						continua de carreteras. El resto de vialidades N/A)                     
+ADMINISTRA	Administración de la carretera		Federal, Estatal, Municipal, Particular, Otro. (En vialidades y calles rurales sólo para fines de 						representación continua de carreteras. El resto de vialidades N/A)                     
+NUME_CARR	Número de carriles		Valor mayor o igual 1. (En vialidades y calles rurales sólo para fines de representación continua 					de carreteras. El resto de vialidades N/A)                     
+CONDICION	Condición 			En operación, En construcción,  Fuera de uso
+ORIGEN	Fuente a la que pertenece el tramo	TOPO50K, BCU, NUEVA
+CALI_REPR	Calificador de representación geométrica	Aproximada, Definida 
+CVEGEO	Clave de la localidad		Según catálogo
+NOMVIAL	Nombre de la Vialidad		Nombre de la vialidad
+SENTIDO	Sentido de la vialidad definido en la BCU	Un sentido, dos sentidos, N/A, NINGUNO
+LONGITUD	Longitud del segmento		Longitud calculada con la proyección Equivalente de Albers.
+UNIDAD	Unidad de trabajo		Clave del estado utilizado como unidad de trabajo para evitar la segmentación de líneas por 						límites geoestadísticos.
+
+
+
+
+
+
+
+
+
+
+</entity_detail>
+</Attributes>
+<MD_Distribution>
+<accessConstraints>7. Restringido: Limitado de la circulación general o acceso.</accessConstraints>
+<useConstraints>7. Restringido: Limitado de la circulación general o acceso.</useConstraints>
+<otherConstraints></otherConstraints>
+<MD_Format>
+<name> Shapefile</name>
+<version> Esri</version>
+</MD_Format>
+</MD_Distribution>
+<Inf_Metadata>
+<metadataStandardName>ISO 19115 Información Geográfica - Metadatos (Norma Técnica para Metadatos).</metadataStandardName>
+<metadataStandardVersion>2003 (1.0).</metadataStandardVersion>
+<Inf_Metadata_language>ES - Español.</Inf_Metadata_language>
+<CI_ResponsibleParty>
+<Inf_Metadata_CI_ResponsibleParty_individualName>Lic. Rafael Arrioja Urzúa.</Inf_Metadata_CI_ResponsibleParty_individualName>
+<Inf_Metadata_CI_ResponsibleParty_organisationName>Instituto Nacional de Estadística y Geografía - INEGI.</Inf_Metadata_CI_ResponsibleParty_organisationName>
+<Inf_Metadata_CI_ResponsibleParty_positionName>Jefe del Departamento de Administración de Metadatos.</Inf_Metadata_CI_ResponsibleParty_positionName>
+<Inf_Metadata_CI_ResponsibleParty_voice>(449)9105300 Ext. 1750 y 5631.</Inf_Metadata_CI_ResponsibleParty_voice>
+<Inf_Metadata_CI_ResponsibleParty_facsimile>(449)4424145.</Inf_Metadata_CI_ResponsibleParty_facsimile>
+<Inf_Metadata_CI_ResponsibleParty_deliveryPoint>Av. Héroe de Nacozari Sur Núm. 2301. Fracc. Jardines del Parque.</Inf_Metadata_CI_ResponsibleParty_deliveryPoint>
+<Inf_Metadata_CI_ResponsibleParty_city>Aguascalientes.</Inf_Metadata_CI_ResponsibleParty_city>
+<Inf_Metadata_CI_ResponsibleParty_administrativeArea>Aguascalientes.</Inf_Metadata_CI_ResponsibleParty_administrativeArea>
+<Inf_Metadata_CI_ResponsibleParty_postalCode>20276</Inf_Metadata_CI_ResponsibleParty_postalCode>
+<Inf_Metadata_CI_ResponsibleParty_country>México</Inf_Metadata_CI_ResponsibleParty_country>
+<Inf_Metadata_CI_ResponsibleParty_electronicMailAddress>rafael.arrioja@inegi.org.mx</Inf_Metadata_CI_ResponsibleParty_electronicMailAddress>
+<Inf_Metadata_CI_ResponsibleParty_role>  7. Punto de contacto: Parte que puede ser contactada para informarse sobre el recurso o adquisición del mismo.</Inf_Metadata_CI_ResponsibleParty_role>
+</CI_ResponsibleParty>
+<dateStamp>2011-11-30</dateStamp>
+<Inf_Metadata_characterSet>  6. 8859parte1: ISO/IEC 8859-1, Tecnologías de la Información - Conjuntos de caracteres gráficos codificados de 8-bit por byte - Parte 1: Alfabeto Latino No.1.</Inf_Metadata_characterSet>
+</Inf_Metadata>
+</Metadata>
