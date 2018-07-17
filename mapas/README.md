@@ -41,11 +41,25 @@ La información de esta base se puede encontrar en *bases_siap/* junto con un di
 
 ## Proceso
 
+El proceso que se siguió para la geocodificación de los datos fue el sigioente:
 
+- Se filtró la base de datos del SIAP para dejar la información de los 36 cultivos estratégicos que se encontraron ahí.
+- Se construyó una clave de municipio de acuerdo al **estándar para datos geográficos del INEGI**
+- Se agregó la información de cada uno de los cultivos a nivel municipio.
 
+Esta parte del proceso se puede encontrar en un script de limpieza en la carpeta *limpieza_datos/* ahí mismo se encuentran las bases generadas en este primer proceso agregando por: * hectáreas totales sembradas, valor del cultivo, precio del cultivo* aunque solo se utilizará la de héctareas totales sembradas.  
 
+Una vez realizado esto se utilizó un programa para manejar datos geográficos llamado *Qgis*. En este programa:  
 
+- Se cruzó la información de los cultivos con el **marco geoestadístico del INEGI**.   
+- Se generaron los mapas estáticos.  
 
+Los datos del marco geoestadístico del INEGI se pueden encontrar en la carpeta *cartografía/*.
+El ambiente de trabajo de Qgis se puede encontrar en la carpeta *ambiente_gis*.
+
+## Mapas dinámicos
+
+Propuesta de mapas dinámicos con información de actores de cadenas logísticas.
 
 
 
