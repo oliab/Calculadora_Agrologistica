@@ -14,7 +14,7 @@ Para encontrar la información de los 38 cultivos estratégicos se revisaron dis
 
 ### Censo Agropecuario y Ejidal INEGI, actualización 2016
 
-Se revisó el **Censo Agropecuario y Ejidal INEGI 2017** para ver si podiamos obtener información sobre los cultivos estratégicos. Sin embargo la información que arroja el censo corresponde a menos de 10 de los cultivos estratégicos, por lo que no se utilizó esta base en este proceso.
+Se revisó el **Censo Agropecuario y Ejidal INEGI en su actualización de 2016** para ver si podiamos obtener información sobre los cultivos estratégicos. Sin embargo la información que arroja el censo corresponde a menos de 10 de los cultivos estratégicos, por lo que no se utilizó esta base en este proceso.
 
 Sin embargo esta base de datos puede ser valiosa en caso de que se quiera obtener información sobre:  
 - Tipo de riego utilizado.  
