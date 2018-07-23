@@ -2,24 +2,30 @@ library(tidyverse)
 library(httr)
 ### origen-destino
 
-### Busqueda de destino, en este caso Central de Abastos Iztapalapa, por ejemplo.
-busqueda<-"abasto"
 
-url<-paste0("http://gaia.inegi.org.mx/sakbe/wservice?make=SD&buscar=",busqueda,"&type=json&key=",token)
-data<-GET(url)
-this.raw.content <- rawToChar(data$content)
+token<-"IMw3vu3s-tSkM-7Fbx-13si-V1hLQP103alN"
 
-data<-fromJSON(this.raw.content) %>% data.frame()
-id_dest<-data$id_dest[2] ## Esto se tiene que solucionar con un scroll- down en la app. Por ahora es manual.
+get_ubicaciones<-function(busqueda){
+  url<-paste0("http://gaia.inegi.org.mx/sakbe/wservice?make=SD&buscar=",busqueda,"&type=json&key=",token)
+  data<-GET(url)
+  this.raw.content <- rawToChar(data$content)
+  
+  data<-fromJSON(this.raw.content) %>% data.frame()
+  return(data)
+}
 
+obtener_id<-function(busqueda,fila){
+  id<-busqueda$id_dest[fila]
+  return(id)
+}
 
-## Busqueda de origen, En este caso, Uruapan, Michoacán.
+get_coord<-function(lon,lat){
+  url<-paste0("http://gaia.inegi.org.mx/sakbe/wservice?make=IL&x=",lon,"&y=",lat,"&escala=100000&type=json&key=",token)
+  data<-GET(url)
+  
+  this.raw.content <- rawToChar(data$content)
+  data<-fromJSON(this.raw.content) %>% data.frame()
+  return(data)
+}
 
-busqueda<-"Uruapan"
-
-url<-paste0("http://gaia.inegi.org.mx/sakbe/wservice?make=SD&buscar=",busqueda,"&type=json&key=",token)
-data<-GET(url)
-this.raw.content <- rawToChar(data$content)
-
-data<-fromJSON(this.raw.content) %>% data.frame()
-id_origen<-data$id_dest[1] ## Esto se tiene que solucionar con un scroll- down en la app. Por ahora es manual.
+get_coord("-99.0061961","19.618094")

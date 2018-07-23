@@ -1,0 +1,101 @@
+---
+title: "Documentación: Cálculo de costos"
+output: html_notebook
+---
+
+Para la primer versión de la **Calculadora Logística** se tiene considerado el cálculo del **costo de transporte** de mercancias desde un punto elegido por el usuario hasta alguna de las centrales de abasto de las cuáles se tiene información.  
+
+El objetivo de la aplicación será la de brindar la información de cuál es la central de abastos que generará una mayor ganancia a la venta de los productos. Para lograr esto es necesario hacer un cálculo de los costos de producción y de traslado de la mercancía desde el punto de producción/embalaje a los distintos puntos de destino.
+
+Para lograr hacer esto se revisaron diferentes fuentes de información que pudieran generar **rutas** entre dos puntos y que nos diera la información necesaria para poder cruzarla con los datos tales como precios de costos de caseta según tipo de vehículo, y que nos diera información como el tiempo de traslado y los kilómetros de camino.
+
+Después de revisar varias opciones se decidió usar una API de ruteo del INEGI. A pesar de que esta API es relativamente nueva, nos da la información que necesitamos además de que nos permite hacer cruces rápidos con los catálogos de precios de casetas que también tiene el INEGI.
+
+## Funcionamiento de la API
+
+Para utilizar la API es necesario generar un *Token* (llave) el cuál puede ser generado en la siguiente liga: **http://gaia.inegi.org.mx/sakbe/genera_token.jsp**.
+
+Esta llave será utilizada para las diferentes búsquedas que se pueden hacer dentro de la API y no hay restricciones del número de llaves que se pueden generar, aunque solamente es necesaria una. En estos momentos, el Token que estamos utilizando para hacer nuestras pruebas es el siguiente: **IMw3vu3s-tSkM-7Fbx-13si-V1hLQP103alN**
+
+Con esta llave se iran formando url´s con diferentes parámetros, según sea el caso de lo que estemos buscando,en las cuales siempre pondremos como último parámetro el *Token*. Más adelante daremos los ejemplos de la estructura de estos url´s y los parámetros necesarios según sea el caso.
+
+Para poder trazar una ruta se tienen que llevara cabo dos procesos:
+- Buscar y seleccionar el origen y destino.
+- Trazar la ruta.
+
+Primero explicaremos el proceso de busqueda y selección de origen - destino
+La API permite buscar un origen o destino de dos maneras:
+
+- Búsqueda específica de un lugar.
+- Búsqueda por coordenadas.
+
+## Trazo de ruta
+
+Para poder trazar una ruta se tienen que llevara cabo dos procesos:
+- Buscar y seleccionar los puntos de origen.
+- Trazar la ruta.
+
+En este caso el usuario solamente tendrá que seleccionar el punto de origen, y el sistema trazará la ruta a las diferentes centrales de abasto y hará el cálculo de costos asociados a cada ruta.
+
+### Búsqueda y selección de punto de origen.
+
+Primero explicaremos el proceso de busqueda y selección de origen - destino
+La API permite buscar un origen o destino de dos maneras:
+
+- Búsqueda específica de un lugar.
+- Búsqueda por coordenadas.
+
+#### Búsqueda específica de un lugar.
+
+Los **parámetros** a utilizar en este caso son:
+- make: clave de la función.
+- buscar: es una cadena de caracteres que define el nombre o parte del destino que desea encontrar.
+- type: Tipo de formato a regresar (json o xml).
+- key: Token que permite acceder a la API.  
+
+Esto formará un url del tipo:  
+
+**http://gaia.inegi.org.mx/sakbe/wservice?make=SD&buscar=busqueda&type=json&key=token**  
+
+Para sistematizar esto se hizo una función llamada *get_ubicaciones()* que genera la url para hacer la búsqueda de manera automatizada dándole solo el nombre del lugar que estamos buscando, por ejemplo:
+
+```{r}
+
+source("get_origendestino.R")
+
+
+busqueda<-get_ubicaciones("Uruapan")
+knitr::kable(busqueda)
+
+```
+
+Esta función deberá de implementarse en un menú de búsqueda dentro de la aplicación.
+
+#### Búsqueda por coordenadas.
+
+```{r}
+id_origen<-obtener_id(busqueda,1)
+ejes_totales<-1
+
+url<-paste0("http://gaia.inegi.org.mx/sakbe/wservice?make=CR&dest_i=",id_origen,"&id_f=99589&source_f=218261&target_f=158343&p=2&v=1&e=1&type=json&key=",token)
+data<-GET(url)
+this.raw.content <- rawToChar(data$content)
+
+data<-fromJSON(this.raw.content) %>% data.frame()
+
+## Datos que puedo obtener de la app
+print(paste0("El costo de las casetas es: ", as.character(sum(data$costo_caseta)), " mxn."))
+print(paste0("El costo por eje excedente es: ", as.character(sum(data$eje_excedente)*ejes_totales), " mxn."))
+print(paste0("El viaje es de un total de : ", as.character(sum(data$long_km)), " kilómetros totales"))
+print(paste0("La duración del viaje es aproximadamente de : ", as.character(data$tiempo_min), " minutos"))
+```
+
+Cálculo de costos:
+
+```{r}
+## Casetas + ejes excedentes
+
+peajes<-sum(data$costo_caseta) + sum(data$eje_excedente)
+
+```
+
