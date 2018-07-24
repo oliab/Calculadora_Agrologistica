@@ -48,7 +48,6 @@ La API permite buscar un origen o destino de dos maneras:
 #### Búsqueda específica de un lugar.
 
 Los **parámetros** a utilizar en este caso son:
-- make: clave de la función.
 - buscar: es una cadena de caracteres que define el nombre o parte del destino que desea encontrar.
 - type: Tipo de formato a regresar (json o xml).
 - key: Token que permite acceder a la API.  
@@ -57,7 +56,9 @@ Esto formará un url del tipo:
 
 **http://gaia.inegi.org.mx/sakbe/wservice?make=SD&buscar=busqueda&type=json&key=token**  
 
-Para sistematizar esto se hizo una función llamada *get_ubicaciones()* que genera la url para hacer la búsqueda de manera automatizada dándole solo el nombre del lugar que estamos buscando, por ejemplo:
+Para sistematizar esto se hizo una función llamada *get_ubicaciones()*, que genera la url para hacer la búsqueda de manera automatizada dándole solo el nombre del lugar que estamos buscando. La función se puede encontrar en el archivo *get_origendestino.R*
+
+por ejemplo:
 
 ```{r}
 
@@ -73,29 +74,93 @@ Esta función deberá de implementarse en un menú de búsqueda dentro de la apl
 
 #### Búsqueda por coordenadas.
 
+En caso de que la ubicación específica de la que queremos partir no exista, la aplicación tendrá un mapa en el cuál se podrá poner un pin desde tu ubicación actual o algún lugar mediante un pin (como en uber). Para hacer la ruta usando las coordenadas se generó la función *get_coord(lon,lat)* la cuál nos da información similar a la función *get_ubicaciones()* que definimos arriba. 
+
+Los parámetros que se utilizan en este caso son:
+- escala: es el valor de la escala de visualización en la que se encuentra su mapa.
+- x: es el valor de la longitud de un punto dado en coordenadas geográficas (grados decimales) o Spherical Mercator (metros) dependiendo del valor del parámetro proj.
+- y: es el valor de la latitud de un punto dado en coordenadas geográficas (grados decimales) o Spherical Mercator (metros) dependiendo del valor del parámetro proj.
+- proj: es el tipo de sistema de referencia, entre los valores permitidos están GRS80 (Geográfica) y MERC (Spherical Mercator). Este parámetro es opcional, si se omite el valor por default será GRS80, y las coordenadas deberán de están en grados decimales.
+- type: Tipo de formato a regresar (json o xml).
+- key: número único que permite acceder a la API.
+
+La función se puede encontrar de manera detallada en el archivo *get_origendestino.R*.
+Un ejemplo del uso y las salidas de esta función es:
+
+```{r}
+knitr::kable(get_coord("-99.0061961","19.618094"))
+```
+
+## Obtener ruta e información de costos
+
+Una vez que se ha definido el punto de origen por cualquiera de los dos métodos arriba mencionados, se obtendrá el trazo de la ruta. Los parámetros que los usuarios podrán escoger son:
+
+- tipo_ruta: específica tipo de ruta. Por default será la ruta sugerida pero se puede escoger si prefiero tomar una sin casetas.(*Ver tabla1 en tablas_parametros.xlsx*)
+- tipo_vehiculo: especifica el tipo de vehículo (*Ver tabla2 en tablas_parametros.xlsx*).
+- ejes: especifica el número de ejes excedentes. Es opcional, si se omite el valor por default será 0. (*Ver tabla3 en tablas_parametros.xlsx*)
+
+Además de estas, hay que configurar: 
+- proj: es el tipo de sistema de referencia, entre los valores permitidos están GRS80 (Geográfica) y MERC (Spherical Mercator). Este parámetro es opcional, si se omite el valor por default será GRS80.
+- type: tipo de formato a regresar (json o xml).
+- key: número único que permite acceder a la API.
+
+A continuación presentamos un ejemplo de los datos que entran y la información que se obtiene
+
+
 ```{r}
 id_origen<-obtener_id(busqueda,1)
+tipo_vehiculo<-5
 ejes_totales<-1
+tipo_ruta<-2
 
-url<-paste0("http://gaia.inegi.org.mx/sakbe/wservice?make=CR&dest_i=",id_origen,"&id_f=99589&source_f=218261&target_f=158343&p=2&v=1&e=1&type=json&key=",token)
-data<-GET(url)
-this.raw.content <- rawToChar(data$content)
+data<-hacer_ruta(id_origen,tipo_ruta,tipo_vehiculo,ejes_totales)
 
-data<-fromJSON(this.raw.content) %>% data.frame()
 
-## Datos que puedo obtener de la app
 print(paste0("El costo de las casetas es: ", as.character(sum(data$costo_caseta)), " mxn."))
 print(paste0("El costo por eje excedente es: ", as.character(sum(data$eje_excedente)*ejes_totales), " mxn."))
 print(paste0("El viaje es de un total de : ", as.character(sum(data$long_km)), " kilómetros totales"))
 print(paste0("La duración del viaje es aproximadamente de : ", as.character(data$tiempo_min), " minutos"))
 ```
 
-Cálculo de costos:
+Con esta información podemos fácilmente calcular costos:
+
+Costos de peaje:
 
 ```{r}
 ## Casetas + ejes excedentes
-
 peajes<-sum(data$costo_caseta) + sum(data$eje_excedente)
+peajes
+```
+
+Costos de gasolina:
+
+Para realizar el cálculo del costo de gasolina se considera un rendimiento de 3 kms por litro de acuerdo a una pequeña investigación que se realizó *https://imt.mx/archivos/Publicaciones/PublicacionTecnica/pt368.pdf*
+
+Para calcular el costo de gasolina se hixo una función que obtiene el precio promedio de los diferentes combustibles, esto es:
+
+```{r, echo=FALSE, warning=FALSE}
+get_gasolina("Diésel")
+```
+
+Entonces el cálculo de costo de gasolina se da con la siguiente fórmula:
+
+```{r,warning=FALSE}
+precio<-get_gasolina("Diésel")$costo
+
+gasto_gas<-(data$long_km/3)*precio
+print(paste0("Se va a gastar un aprozimado de de ", round(gasto_gas,2), " mxn. en combusible"))
 
 ```
+
+
+Así, el costo total en transporte sería de :
+
+```{r}
+peajes + gasto_gas
+```
+
+Así podríamos calcular los costos de transporte.
+
+
+
 

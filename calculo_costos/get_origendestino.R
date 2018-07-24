@@ -1,5 +1,6 @@
 library(tidyverse)
 library(httr)
+library(jsonlite)
 ### origen-destino
 
 
@@ -29,3 +30,18 @@ get_coord<-function(lon,lat){
 }
 
 get_coord("-99.0061961","19.618094")
+
+
+hacer_ruta<-function(id_origen,tipo_ruta,tipo_vehiculo,ejes){
+  id_origen<-as.character(id_origen)
+  tipo_ruta<-as.character(tipo_ruta)
+  tipo_vehiculo<-as.character(tipo_vehiculo)
+  ejes<-as.character(ejes)
+  url<-paste0("http://gaia.inegi.org.mx/sakbe/wservice?make=CR&dest_i=",id_origen,"&id_f=99589&source_f=218261&target_f=158343&p=",tipo_ruta,"&v=",tipo_vehiculo,"&e=",ejes_totales,"&type=json&key=",token)
+  data<-GET(url)
+  this.raw.content <- rawToChar(data$content)
+  
+  data<-fromJSON(this.raw.content) %>% data.frame()
+  return(data)
+  
+}

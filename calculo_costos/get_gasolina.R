@@ -11,12 +11,18 @@ library(jsonlite)
 token<-"IMw3vu3s-tSkM-7Fbx-13si-V1hLQP103alN"
 
 ## El URL donde obtenemos la información es:
+tipo_gas<-"Diésel"
 
-url<-paste0("http://gaia.inegi.org.mx/sakbe/wservice?make=CM&type=json&key=",token)
+get_gasolina<-function(tipo_gas){
+  url<-paste0("http://gaia.inegi.org.mx/sakbe/wservice?make=CM&type=json&key=",token)
+  
+  con<-curl(url)
+  open(con)
+  
+  out <- readLines(con, n = 3)
+  
+  data<-fromJSON(out) %>% filter(tipo==tipo_gas)
+  return(data)
+  
+}
 
-con<-curl(url)
-open(con)
-
-out <- readLines(con, n = 3)
-
-fromJSON(out)

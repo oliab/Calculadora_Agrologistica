@@ -202,10 +202,11 @@ $(document).ready(function () {
 </ul>
 <div id="busqueda-especifica-de-un-lugar." class="section level4">
 <h4>Búsqueda específica de un lugar.</h4>
-<p>Los <strong>parámetros</strong> a utilizar en este caso son: - make: clave de la función. - buscar: es una cadena de caracteres que define el nombre o parte del destino que desea encontrar. - type: Tipo de formato a regresar (json o xml). - key: Token que permite acceder a la API.</p>
+<p>Los <strong>parámetros</strong> a utilizar en este caso son: - buscar: es una cadena de caracteres que define el nombre o parte del destino que desea encontrar. - type: Tipo de formato a regresar (json o xml). - key: Token que permite acceder a la API.</p>
 <p>Esto formará un url del tipo:</p>
 <p>**<a href="http://gaia.inegi.org.mx/sakbe/wservice?make=SD&amp;buscar=busqueda&amp;type=json&amp;key=token**" class="uri">http://gaia.inegi.org.mx/sakbe/wservice?make=SD&amp;buscar=busqueda&amp;type=json&amp;key=token**</a></p>
-<p>Para sistematizar esto se hizo una función llamada <em>get_ubicaciones()</em> que genera la url para hacer la búsqueda de manera automatizada dándole solo el nombre del lugar que estamos buscando, por ejemplo:</p>
+<p>Para sistematizar esto se hizo una función llamada <em>get_ubicaciones()</em>, que genera la url para hacer la búsqueda de manera automatizada dándole solo el nombre del lugar que estamos buscando. La función se puede encontrar en el archivo <em>get_origendestino.R</em></p>
+<p>por ejemplo:</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc291cmNlKFwiZ2V0X29yaWdlbmRlc3Rpbm8uUlwiKVxuYnVzcXVlZGE8LWdldF91YmljYWNpb25lcyhcIlVydWFwYW5cIilcbmtuaXRyOjprYWJsZShidXNxdWVkYSlcbmBgYCJ9 -->
@@ -346,51 +347,154 @@ knitr::kable(busqueda)</code></pre>
 </div>
 <div id="busqueda-por-coordenadas." class="section level4">
 <h4>Búsqueda por coordenadas.</h4>
+<p>En caso de que la ubicación específica de la que queremos partir no exista, la aplicación tendrá un mapa en el cuál se podrá poner un pin desde tu ubicación actual o algún lugar mediante un pin (como en uber). Para hacer la ruta usando las coordenadas se generó la función <em>get_coord(lon,lat)</em> la cuál nos da información similar a la función <em>get_ubicaciones()</em> que definimos arriba.</p>
+<p>Los parámetros que se utilizan en este caso son: - escala: es el valor de la escala de visualización en la que se encuentra su mapa. - x: es el valor de la longitud de un punto dado en coordenadas geográficas (grados decimales) o Spherical Mercator (metros) dependiendo del valor del parámetro proj. - y: es el valor de la latitud de un punto dado en coordenadas geográficas (grados decimales) o Spherical Mercator (metros) dependiendo del valor del parámetro proj. - proj: es el tipo de sistema de referencia, entre los valores permitidos están GRS80 (Geográfica) y MERC (Spherical Mercator). Este parámetro es opcional, si se omite el valor por default será GRS80, y las coordenadas deberán de están en grados decimales. - type: Tipo de formato a regresar (json o xml). - key: número único que permite acceder a la API.</p>
+<p>La función se puede encontrar de manera detallada en el archivo <em>get_origendestino.R</em>. Un ejemplo del uso y las salidas de esta función es:</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaWRfb3JpZ2VuPC1vYnRlbmVyX2lkKGJ1c3F1ZWRhLDEpXG5lamVzX3RvdGFsZXM8LTFcbnVybDwtcGFzdGUwKFwiaHR0cDovL2dhaWEuaW5lZ2kub3JnLm14L3Nha2JlL3dzZXJ2aWNlP21ha2U9Q1ImZGVzdF9pPVwiLGlkX29yaWdlbixcIiZpZF9mPTk5NTg5JnNvdXJjZV9mPTIxODI2MSZ0YXJnZXRfZj0xNTgzNDMmcD0yJnY9MSZlPTEmdHlwZT1qc29uJmtleT1cIix0b2tlbilcbmRhdGE8LUdFVCh1cmwpXG50aGlzLnJhdy5jb250ZW50IDwtIHJhd1RvQ2hhcihkYXRhJGNvbnRlbnQpXG5kYXRhPC1mcm9tSlNPTih0aGlzLnJhdy5jb250ZW50KSAlPiUgZGF0YS5mcmFtZSgpXG5wcmludChwYXN0ZTAoXCJFbCBjb3N0byBkZSBsYXMgY2FzZXRhcyBlczogXCIsIGFzLmNoYXJhY3RlcihzdW0oZGF0YSRjb3N0b19jYXNldGEpKSwgXCIgbXhuLlwiKSlcbmBgYCJ9 -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxua25pdHI6OmthYmxlKGdldF9jb29yZChcIi05OS4wMDYxOTYxXCIsXCIxOS42MTgwOTRcIikpXG5gYGAifQ== -->
+<pre class="r"><code>knitr::kable(get_coord(&quot;-99.0061961&quot;,&quot;19.618094&quot;))</code></pre>
+<!-- rnb-source-end -->
+
+<!-- rnb-html-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImtuaXRfYXNpcyJdLCJzaXppbmdQb2xpY3kiOltdfX0= -->
+
+<table>
+<colgroup>
+<col width="58%" />
+<col width="6%" />
+<col width="13%" />
+<col width="14%" />
+<col width="6%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">geojson</th>
+<th align="left">source</th>
+<th align="left">id_routing_net</th>
+<th align="left">nombre</th>
+<th align="left">target</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">{&quot;type&quot;:&quot;Point&quot;,&quot;coordinates&quot;:[-99.0050716435404,19.6174030724993]}</td>
+<td align="left">158339</td>
+<td align="left">99589</td>
+<td align="left">Avenida Central</td>
+<td align="left">158343</td>
+</tr>
+</tbody>
+</table>
+
+
+<!-- rnb-html-end -->
+
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+</div>
+</div>
+<div id="obtener-ruta-e-informacion-de-costos" class="section level2">
+<h2>Obtener ruta e información de costos</h2>
+<p>Una vez que se ha definido el punto de origen por cualquiera de los dos métodos arriba mencionados, se obtendrá el trazo de la ruta. Los parámetros que los usuarios podrán escoger son:</p>
+<ul>
+<li>tipo_ruta: específica tipo de ruta. Por default será la ruta sugerida pero se puede escoger si prefiero tomar una sin casetas.(<em>Ver tabla1 en tablas_parametros.xlsx</em>)</li>
+<li>tipo_vehiculo: especifica el tipo de vehículo (<em>Ver tabla2 en tablas_parametros.xlsx</em>).</li>
+<li>ejes: especifica el número de ejes excedentes. Es opcional, si se omite el valor por default será 0. (<em>Ver tabla3 en tablas_parametros.xlsx</em>)</li>
+</ul>
+<p>Además de estas, hay que configurar: - proj: es el tipo de sistema de referencia, entre los valores permitidos están GRS80 (Geográfica) y MERC (Spherical Mercator). Este parámetro es opcional, si se omite el valor por default será GRS80. - type: tipo de formato a regresar (json o xml). - key: número único que permite acceder a la API.</p>
+<p>A continuación presentamos un ejemplo de los datos que entran y la información que se obtiene</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaWRfb3JpZ2VuPC1vYnRlbmVyX2lkKGJ1c3F1ZWRhLDEpXG50aXBvX3ZlaGljdWxvPC01XG5lamVzX3RvdGFsZXM8LTFcbnRpcG9fcnV0YTwtMlxuZGF0YTwtaGFjZXJfcnV0YShpZF9vcmlnZW4sdGlwb19ydXRhLHRpcG9fdmVoaWN1bG8sZWplc190b3RhbGVzKVxucHJpbnQocGFzdGUwKFwiRWwgY29zdG8gZGUgbGFzIGNhc2V0YXMgZXM6IFwiLCBhcy5jaGFyYWN0ZXIoc3VtKGRhdGEkY29zdG9fY2FzZXRhKSksIFwiIG14bi5cIikpXG5gYGAifQ== -->
 <pre class="r"><code>id_origen&lt;-obtener_id(busqueda,1)
+tipo_vehiculo&lt;-5
 ejes_totales&lt;-1
-url&lt;-paste0(&quot;http://gaia.inegi.org.mx/sakbe/wservice?make=CR&amp;dest_i=&quot;,id_origen,&quot;&amp;id_f=99589&amp;source_f=218261&amp;target_f=158343&amp;p=2&amp;v=1&amp;e=1&amp;type=json&amp;key=&quot;,token)
-data&lt;-GET(url)
-this.raw.content &lt;- rawToChar(data$content)
-data&lt;-fromJSON(this.raw.content) %&gt;% data.frame()
+tipo_ruta&lt;-2
+data&lt;-hacer_ruta(id_origen,tipo_ruta,tipo_vehiculo,ejes_totales)
 print(paste0(&quot;El costo de las casetas es: &quot;, as.character(sum(data$costo_caseta)), &quot; mxn.&quot;))</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiRWwgY29zdG8gZGUgbGFzIGNhc2V0YXMgZXM6IDM2NSBteG4uXCJcbiJ9 -->
-<pre><code>[1] &quot;El costo de las casetas es: 365 mxn.&quot;</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiRWwgY29zdG8gZGUgbGFzIGNhc2V0YXMgZXM6IDE0MDkgbXhuLlwiXG4ifQ== -->
+<pre><code>[1] &quot;El costo de las casetas es: 1409 mxn.&quot;</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucHJpbnQocGFzdGUwKFwiRWwgY29zdG8gcG9yIGVqZSBleGNlZGVudGUgZXM6IFwiLCBhcy5jaGFyYWN0ZXIoc3VtKGRhdGEkZWplX2V4Y2VkZW50ZSkqZWplc190b3RhbGVzKSwgXCIgbXhuLlwiKSlcbmBgYCJ9 -->
 <pre class="r"><code>print(paste0(&quot;El costo por eje excedente es: &quot;, as.character(sum(data$eje_excedente)*ejes_totales), &quot; mxn.&quot;))</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiRWwgY29zdG8gcG9yIGVqZSBleGNlZGVudGUgZXM6IDE4NSBteG4uXCJcbiJ9 -->
-<pre><code>[1] &quot;El costo por eje excedente es: 185 mxn.&quot;</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiRWwgY29zdG8gcG9yIGVqZSBleGNlZGVudGUgZXM6IDU0MyBteG4uXCJcbiJ9 -->
+<pre><code>[1] &quot;El costo por eje excedente es: 543 mxn.&quot;</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucHJpbnQocGFzdGUwKFwiRWwgdmlhamUgZXMgZGUgdW4gdG90YWwgZGUgOiBcIiwgYXMuY2hhcmFjdGVyKHN1bShkYXRhJGxvbmdfa20pKSwgXCIga2lsw7NtZXRyb3MgdG90YWxlc1wiKSlcbmBgYCJ9 -->
 <pre class="r"><code>print(paste0(&quot;El viaje es de un total de : &quot;, as.character(sum(data$long_km)), &quot; kilómetros totales&quot;))</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiRWwgdmlhamUgZXMgZGUgdW4gdG90YWwgZGUgOiAyMDUuMDkga2lsw7NtZXRyb3MgdG90YWxlc1wiXG4ifQ== -->
-<pre><code>[1] &quot;El viaje es de un total de : 205.09 kilómetros totales&quot;</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiRWwgdmlhamUgZXMgZGUgdW4gdG90YWwgZGUgOiAzOTguNzcga2lsw7NtZXRyb3MgdG90YWxlc1wiXG4ifQ== -->
+<pre><code>[1] &quot;El viaje es de un total de : 398.77 kilómetros totales&quot;</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucHJpbnQocGFzdGUwKFwiTGEgZHVyYWNpw7NuIGRlbCB2aWFqZSBlcyBhcHJveGltYWRhbWVudGUgZGUgOiBcIiwgYXMuY2hhcmFjdGVyKGRhdGEkdGllbXBvX21pbiksIFwiIG1pbnV0b3NcIikpXG5gYGAifQ== -->
 <pre class="r"><code>print(paste0(&quot;La duración del viaje es aproximadamente de : &quot;, as.character(data$tiempo_min), &quot; minutos&quot;))</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiTGEgZHVyYWNpw7NuIGRlbCB2aWFqZSBlcyBhcHJveGltYWRhbWVudGUgZGUgOiAxMzMuMzEgbWludXRvc1wiXG4ifQ== -->
-<pre><code>[1] &quot;La duración del viaje es aproximadamente de : 133.31 minutos&quot;</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiTGEgZHVyYWNpw7NuIGRlbCB2aWFqZSBlcyBhcHJveGltYWRhbWVudGUgZGUgOiAyNDUuMjMgbWludXRvc1wiXG4ifQ== -->
+<pre><code>[1] &quot;La duración del viaje es aproximadamente de : 245.23 minutos&quot;</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p>Cálculo de costos:</p>
+<p>Con esta información podemos fácilmente calcular costos:</p>
+<p>Costos de peaje:</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyMgQ2FzZXRhcyArIGVqZXMgZXhjZWRlbnRlc1xucGVhamVzPC1zdW0oZGF0YSRjb3N0b19jYXNldGEpICsgc3VtKGRhdGEkZWplX2V4Y2VkZW50ZSlcbnBlYWplc1xuYGBgIn0= -->
+<pre class="r"><code>## Casetas + ejes excedentes
+peajes&lt;-sum(data$costo_caseta) + sum(data$eje_excedente)
+peajes</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDE5NTJcbiJ9 -->
+<pre><code>[1] 1952</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
+<p>Costos de gasolina:</p>
+<p>Para realizar el cálculo del costo de gasolina se considera un rendimiento de 3 kms por litro de acuerdo a una pequeña investigación que se realizó *<a href="https://imt.mx/archivos/Publicaciones/PublicacionTecnica/pt368.pdf*" class="uri">https://imt.mx/archivos/Publicaciones/PublicacionTecnica/pt368.pdf*</a></p>
+<p>Para calcular el costo de gasolina se hixo una función que obtiene el precio promedio de los diferentes combustibles, esto es:</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibmNvbCI6MywibnJvdyI6MX0sInJkZiI6Ikg0c0lBQUFBQUFBQUExMVJRVTdETUJEYzJJR29saWlWK0FBSHJqR2lVaVU0SUhIb0N6ajE2cnFtdFRCMlpMc3FSMzdCQXpqeERoN0Jid3AyWWxldEQwbDJaM2ZHNDhuemZERWxDd0lBQ0hCZEFjS2hyRkY0VlZEREtIN2ZBZkJWS09KazBnL2dJdzZhdWZ6NWRrS0ZjaHpocCtrbmVleStmb3UxU1ZxN3ZybTdwN09IVzFYb24ybjJKbHdpNFFUV1huWW1MM0RqZkc1SUhMUURjcW96c21aSHM5YkZZQ0ErcDRkeHhadzdPRXlhSytZWmZiR0JHN3A5UVdsTTU2WFJnWVJpQ2swa0pIVW9oQ3BiQUpkYkhSMnRXcjdaNnRkMlZuQ1A2eVBIaHhvUFZ0QmZrbTF5T29KdmNpRG5RcStsRnZsK2lpM0RIMG5PZDh4cXFkZXBIWWVBK254b1o2WDIrZklCZGRRYnp6S05jS015MHNjQiszLzJiNmpHSmdJQUFBPT0ifQ== -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["tipo"],"name":[1],"type":["chr"],"align":["left"]},{"label":["costo"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["tipo-costo"],"name":[3],"type":["chr"],"align":["left"]}],"data":[{"1":"Diésel","2":"18.59","3":"Diésel $18.59/l"}],"options":{"columns":{"min":{},"max":[10],"total":[3]},"rows":{"min":[10],"max":[10],"total":[1]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Entonces el cálculo de costo de gasolina se da con la siguiente fórmula:</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucHJlY2lvPC1nZXRfZ2Fzb2xpbmEoXCJEacOpc2VsXCIpJGNvc3RvXG5nYXN0b19nYXM8LShkYXRhJGxvbmdfa20vMykqcHJlY2lvXG5wcmludChwYXN0ZTAoXCJTZSB2YSBhIGdhc3RhciB1biBhcHJvemltYWRvIGRlIGRlIFwiLCByb3VuZChnYXN0b19nYXMsMiksIFwiIG14bi4gZW4gY29tYnVzaWJsZVwiKSlcbmBgYCJ9 -->
+<pre class="r"><code>precio&lt;-get_gasolina(&quot;Diésel&quot;)$costo
+gasto_gas&lt;-(data$long_km/3)*precio
+print(paste0(&quot;Se va a gastar un aprozimado de de &quot;, round(gasto_gas,2), &quot; mxn. en combusible&quot;))</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiU2UgdmEgYSBnYXN0YXIgdW4gYXByb3ppbWFkbyBkZSBkZSAyNDcxLjA0IG14bi4gZW4gY29tYnVzaWJsZVwiXG4ifQ== -->
+<pre><code>[1] &quot;Se va a gastar un aprozimado de de 2471.04 mxn. en combusible&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Así, el costo total en transporte sería de :</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucGVhamVzICsgZ2FzdG9fZ2FzXG5cbmBgYCJ9 -->
+<pre class="r"><code>peajes + gasto_gas
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDQ0MjMuMDQ1XG4ifQ== -->
+<pre><code>[1] 4423.045</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Así podríamos calcular los costos de transporte.</p>
 <!-- rnb-text-end -->
 </div>
-</div>
-</div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiRG9jdW1lbnRhY2nDs246IEPDoWxjdWxvIGRlIGNvc3RvcyIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQoKUGFyYSBsYSBwcmltZXIgdmVyc2nDs24gZGUgbGEgKipDYWxjdWxhZG9yYSBMb2fDrXN0aWNhKiogc2UgdGllbmUgY29uc2lkZXJhZG8gZWwgY8OhbGN1bG8gZGVsICoqY29zdG8gZGUgdHJhbnNwb3J0ZSoqIGRlIG1lcmNhbmNpYXMgZGVzZGUgdW4gcHVudG8gZWxlZ2lkbyBwb3IgZWwgdXN1YXJpbyBoYXN0YSBhbGd1bmEgZGUgbGFzIGNlbnRyYWxlcyBkZSBhYmFzdG8gZGUgbGFzIGN1w6FsZXMgc2UgdGllbmUgaW5mb3JtYWNpw7NuLiAgCgpFbCBvYmpldGl2byBkZSBsYSBhcGxpY2FjacOzbiBzZXLDoSBsYSBkZSBicmluZGFyIGxhIGluZm9ybWFjacOzbiBkZSBjdcOhbCBlcyBsYSBjZW50cmFsIGRlIGFiYXN0b3MgcXVlIGdlbmVyYXLDoSB1bmEgbWF5b3IgZ2FuYW5jaWEgYSBsYSB2ZW50YSBkZSBsb3MgcHJvZHVjdG9zLiBQYXJhIGxvZ3JhciBlc3RvIGVzIG5lY2VzYXJpbyBoYWNlciB1biBjw6FsY3VsbyBkZSBsb3MgY29zdG9zIGRlIHByb2R1Y2Npw7NuIHkgZGUgdHJhc2xhZG8gZGUgbGEgbWVyY2FuY8OtYSBkZXNkZSBlbCBwdW50byBkZSBwcm9kdWNjacOzbi9lbWJhbGFqZSBhIGxvcyBkaXN0aW50b3MgcHVudG9zIGRlIGRlc3Rpbm8uCgpQYXJhIGxvZ3JhciBoYWNlciBlc3RvIHNlIHJldmlzYXJvbiBkaWZlcmVudGVzIGZ1ZW50ZXMgZGUgaW5mb3JtYWNpw7NuIHF1ZSBwdWRpZXJhbiBnZW5lcmFyICoqcnV0YXMqKiBlbnRyZSBkb3MgcHVudG9zIHkgcXVlIG5vcyBkaWVyYSBsYSBpbmZvcm1hY2nDs24gbmVjZXNhcmlhIHBhcmEgcG9kZXIgY3J1emFybGEgY29uIGxvcyBkYXRvcyB0YWxlcyBjb21vIHByZWNpb3MgZGUgY29zdG9zIGRlIGNhc2V0YSBzZWfDum4gdGlwbyBkZSB2ZWjDrWN1bG8sIHkgcXVlIG5vcyBkaWVyYSBpbmZvcm1hY2nDs24gY29tbyBlbCB0aWVtcG8gZGUgdHJhc2xhZG8geSBsb3Mga2lsw7NtZXRyb3MgZGUgY2FtaW5vLgoKRGVzcHXDqXMgZGUgcmV2aXNhciB2YXJpYXMgb3BjaW9uZXMgc2UgZGVjaWRpw7MgdXNhciB1bmEgQVBJIGRlIHJ1dGVvIGRlbCBJTkVHSS4gQSBwZXNhciBkZSBxdWUgZXN0YSBBUEkgZXMgcmVsYXRpdmFtZW50ZSBudWV2YSwgbm9zIGRhIGxhIGluZm9ybWFjacOzbiBxdWUgbmVjZXNpdGFtb3MgYWRlbcOhcyBkZSBxdWUgbm9zIHBlcm1pdGUgaGFjZXIgY3J1Y2VzIHLDoXBpZG9zIGNvbiBsb3MgY2F0w6Fsb2dvcyBkZSBwcmVjaW9zIGRlIGNhc2V0YXMgcXVlIHRhbWJpw6luIHRpZW5lIGVsIElORUdJLgoKIyMgRnVuY2lvbmFtaWVudG8gZGUgbGEgQVBJCgpQYXJhIHV0aWxpemFyIGxhIEFQSSBlcyBuZWNlc2FyaW8gZ2VuZXJhciB1biAqVG9rZW4qIChsbGF2ZSkgZWwgY3XDoWwgcHVlZGUgc2VyIGdlbmVyYWRvIGVuIGxhIHNpZ3VpZW50ZSBsaWdhOiAqKmh0dHA6Ly9nYWlhLmluZWdpLm9yZy5teC9zYWtiZS9nZW5lcmFfdG9rZW4uanNwKiouCgpFc3RhIGxsYXZlIHNlcsOhIHV0aWxpemFkYSBwYXJhIGxhcyBkaWZlcmVudGVzIGLDunNxdWVkYXMgcXVlIHNlIHB1ZWRlbiBoYWNlciBkZW50cm8gZGUgbGEgQVBJIHkgbm8gaGF5IHJlc3RyaWNjaW9uZXMgZGVsIG7Dum1lcm8gZGUgbGxhdmVzIHF1ZSBzZSBwdWVkZW4gZ2VuZXJhciwgYXVucXVlIHNvbGFtZW50ZSBlcyBuZWNlc2FyaWEgdW5hLiBFbiBlc3RvcyBtb21lbnRvcywgZWwgVG9rZW4gcXVlIGVzdGFtb3MgdXRpbGl6YW5kbyBwYXJhIGhhY2VyIG51ZXN0cmFzIHBydWViYXMgZXMgZWwgc2lndWllbnRlOiAqKklNdzN2dTNzLXRTa00tN0ZieC0xM3NpLVYxaExRUDEwM2FsTioqCgpDb24gZXN0YSBsbGF2ZSBzZSBpcmFuIGZvcm1hbmRvIHVybMK0cyBjb24gZGlmZXJlbnRlcyBwYXLDoW1ldHJvcywgc2Vnw7puIHNlYSBlbCBjYXNvIGRlIGxvIHF1ZSBlc3RlbW9zIGJ1c2NhbmRvLGVuIGxhcyBjdWFsZXMgc2llbXByZSBwb25kcmVtb3MgY29tbyDDumx0aW1vIHBhcsOhbWV0cm8gZWwgKlRva2VuKi4gTcOhcyBhZGVsYW50ZSBkYXJlbW9zIGxvcyBlamVtcGxvcyBkZSBsYSBlc3RydWN0dXJhIGRlIGVzdG9zIHVybMK0cyB5IGxvcyBwYXLDoW1ldHJvcyBuZWNlc2FyaW9zIHNlZ8O6biBzZWEgZWwgY2Fzby4KClBhcmEgcG9kZXIgdHJhemFyIHVuYSBydXRhIHNlIHRpZW5lbiBxdWUgbGxldmFyYSBjYWJvIGRvcyBwcm9jZXNvczoKLSBCdXNjYXIgeSBzZWxlY2Npb25hciBlbCBvcmlnZW4geSBkZXN0aW5vLgotIFRyYXphciBsYSBydXRhLgoKUHJpbWVybyBleHBsaWNhcmVtb3MgZWwgcHJvY2VzbyBkZSBidXNxdWVkYSB5IHNlbGVjY2nDs24gZGUgb3JpZ2VuIC0gZGVzdGlubwpMYSBBUEkgcGVybWl0ZSBidXNjYXIgdW4gb3JpZ2VuIG8gZGVzdGlubyBkZSBkb3MgbWFuZXJhczoKCi0gQsO6c3F1ZWRhIGVzcGVjw61maWNhIGRlIHVuIGx1Z2FyLgotIELDunNxdWVkYSBwb3IgY29vcmRlbmFkYXMuCgojIyBUcmF6byBkZSBydXRhCgpQYXJhIHBvZGVyIHRyYXphciB1bmEgcnV0YSBzZSB0aWVuZW4gcXVlIGxsZXZhcmEgY2FibyBkb3MgcHJvY2Vzb3M6Ci0gQnVzY2FyIHkgc2VsZWNjaW9uYXIgbG9zIHB1bnRvcyBkZSBvcmlnZW4uCi0gVHJhemFyIGxhIHJ1dGEuCgpFbiBlc3RlIGNhc28gZWwgdXN1YXJpbyBzb2xhbWVudGUgdGVuZHLDoSBxdWUgc2VsZWNjaW9uYXIgZWwgcHVudG8gZGUgb3JpZ2VuLCB5IGVsIHNpc3RlbWEgdHJhemFyw6EgbGEgcnV0YSBhIGxhcyBkaWZlcmVudGVzIGNlbnRyYWxlcyBkZSBhYmFzdG8geSBoYXLDoSBlbCBjw6FsY3VsbyBkZSBjb3N0b3MgYXNvY2lhZG9zIGEgY2FkYSBydXRhLgoKIyMjIELDunNxdWVkYSB5IHNlbGVjY2nDs24gZGUgcHVudG8gZGUgb3JpZ2VuLgoKUHJpbWVybyBleHBsaWNhcmVtb3MgZWwgcHJvY2VzbyBkZSBidXNxdWVkYSB5IHNlbGVjY2nDs24gZGUgb3JpZ2VuIC0gZGVzdGlubwpMYSBBUEkgcGVybWl0ZSBidXNjYXIgdW4gb3JpZ2VuIG8gZGVzdGlubyBkZSBkb3MgbWFuZXJhczoKCi0gQsO6c3F1ZWRhIGVzcGVjw61maWNhIGRlIHVuIGx1Z2FyLgotIELDunNxdWVkYSBwb3IgY29vcmRlbmFkYXMuCgojIyMjIELDunNxdWVkYSBlc3BlY8OtZmljYSBkZSB1biBsdWdhci4KCkxvcyAqKnBhcsOhbWV0cm9zKiogYSB1dGlsaXphciBlbiBlc3RlIGNhc28gc29uOgotIG1ha2U6IGNsYXZlIGRlIGxhIGZ1bmNpw7NuLgotIGJ1c2NhcjogZXMgdW5hIGNhZGVuYSBkZSBjYXJhY3RlcmVzIHF1ZSBkZWZpbmUgZWwgbm9tYnJlIG8gcGFydGUgZGVsIGRlc3Rpbm8gcXVlIGRlc2VhIGVuY29udHJhci4KLSB0eXBlOiBUaXBvIGRlIGZvcm1hdG8gYSByZWdyZXNhciAoanNvbiBvIHhtbCkuCi0ga2V5OiBUb2tlbiBxdWUgcGVybWl0ZSBhY2NlZGVyIGEgbGEgQVBJLiAgCgpFc3RvIGZvcm1hcsOhIHVuIHVybCBkZWwgdGlwbzogIAoKKipodHRwOi8vZ2FpYS5pbmVnaS5vcmcubXgvc2FrYmUvd3NlcnZpY2U/bWFrZT1TRCZidXNjYXI9YnVzcXVlZGEmdHlwZT1qc29uJmtleT10b2tlbioqICAKClBhcmEgc2lzdGVtYXRpemFyIGVzdG8gc2UgaGl6byB1bmEgZnVuY2nDs24gbGxhbWFkYSAqZ2V0X3ViaWNhY2lvbmVzKCkqIHF1ZSBnZW5lcmEgbGEgdXJsIHBhcmEgaGFjZXIgbGEgYsO6c3F1ZWRhIGRlIG1hbmVyYSBhdXRvbWF0aXphZGEgZMOhbmRvbGUgc29sbyBlbCBub21icmUgZGVsIGx1Z2FyIHF1ZSBlc3RhbW9zIGJ1c2NhbmRvLCBwb3IgZWplbXBsbzoKCmBgYHtyfQoKc291cmNlKCJnZXRfb3JpZ2VuZGVzdGluby5SIikKCgpidXNxdWVkYTwtZ2V0X3ViaWNhY2lvbmVzKCJVcnVhcGFuIikKa25pdHI6OmthYmxlKGJ1c3F1ZWRhKQoKYGBgCgpFc3RhIGZ1bmNpw7NuIGRlYmVyw6EgZGUgaW1wbGVtZW50YXJzZSBlbiB1biBtZW7DuiBkZSBiw7pzcXVlZGEgZGVudHJvIGRlIGxhIGFwbGljYWNpw7NuLgoKIyMjIyBCw7pzcXVlZGEgcG9yIGNvb3JkZW5hZGFzLgoKYGBge3J9CmlkX29yaWdlbjwtb2J0ZW5lcl9pZChidXNxdWVkYSwxKQplamVzX3RvdGFsZXM8LTEKCnVybDwtcGFzdGUwKCJodHRwOi8vZ2FpYS5pbmVnaS5vcmcubXgvc2FrYmUvd3NlcnZpY2U/bWFrZT1DUiZkZXN0X2k9IixpZF9vcmlnZW4sIiZpZF9mPTk5NTg5JnNvdXJjZV9mPTIxODI2MSZ0YXJnZXRfZj0xNTgzNDMmcD0yJnY9MSZlPTEmdHlwZT1qc29uJmtleT0iLHRva2VuKQpkYXRhPC1HRVQodXJsKQp0aGlzLnJhdy5jb250ZW50IDwtIHJhd1RvQ2hhcihkYXRhJGNvbnRlbnQpCgpkYXRhPC1mcm9tSlNPTih0aGlzLnJhdy5jb250ZW50KSAlPiUgZGF0YS5mcmFtZSgpCgojIyBEYXRvcyBxdWUgcHVlZG8gb2J0ZW5lciBkZSBsYSBhcHAKcHJpbnQocGFzdGUwKCJFbCBjb3N0byBkZSBsYXMgY2FzZXRhcyBlczogIiwgYXMuY2hhcmFjdGVyKHN1bShkYXRhJGNvc3RvX2Nhc2V0YSkpLCAiIG14bi4iKSkKcHJpbnQocGFzdGUwKCJFbCBjb3N0byBwb3IgZWplIGV4Y2VkZW50ZSBlczogIiwgYXMuY2hhcmFjdGVyKHN1bShkYXRhJGVqZV9leGNlZGVudGUpKmVqZXNfdG90YWxlcyksICIgbXhuLiIpKQpwcmludChwYXN0ZTAoIkVsIHZpYWplIGVzIGRlIHVuIHRvdGFsIGRlIDogIiwgYXMuY2hhcmFjdGVyKHN1bShkYXRhJGxvbmdfa20pKSwgIiBraWzDs21ldHJvcyB0b3RhbGVzIikpCnByaW50KHBhc3RlMCgiTGEgZHVyYWNpw7NuIGRlbCB2aWFqZSBlcyBhcHJveGltYWRhbWVudGUgZGUgOiAiLCBhcy5jaGFyYWN0ZXIoZGF0YSR0aWVtcG9fbWluKSwgIiBtaW51dG9zIikpCmBgYAoKQ8OhbGN1bG8gZGUgY29zdG9zOgoKYGBge3J9CiMjIENhc2V0YXMgKyBlamVzIGV4Y2VkZW50ZXMKCnBlYWplczwtc3VtKGRhdGEkY29zdG9fY2FzZXRhKSArIHN1bShkYXRhJGVqZV9leGNlZGVudGUpCgpgYGAKCg==</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiRG9jdW1lbnRhY2nDs246IEPDoWxjdWxvIGRlIGNvc3RvcyIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQoKUGFyYSBsYSBwcmltZXIgdmVyc2nDs24gZGUgbGEgKipDYWxjdWxhZG9yYSBMb2fDrXN0aWNhKiogc2UgdGllbmUgY29uc2lkZXJhZG8gZWwgY8OhbGN1bG8gZGVsICoqY29zdG8gZGUgdHJhbnNwb3J0ZSoqIGRlIG1lcmNhbmNpYXMgZGVzZGUgdW4gcHVudG8gZWxlZ2lkbyBwb3IgZWwgdXN1YXJpbyBoYXN0YSBhbGd1bmEgZGUgbGFzIGNlbnRyYWxlcyBkZSBhYmFzdG8gZGUgbGFzIGN1w6FsZXMgc2UgdGllbmUgaW5mb3JtYWNpw7NuLiAgCgpFbCBvYmpldGl2byBkZSBsYSBhcGxpY2FjacOzbiBzZXLDoSBsYSBkZSBicmluZGFyIGxhIGluZm9ybWFjacOzbiBkZSBjdcOhbCBlcyBsYSBjZW50cmFsIGRlIGFiYXN0b3MgcXVlIGdlbmVyYXLDoSB1bmEgbWF5b3IgZ2FuYW5jaWEgYSBsYSB2ZW50YSBkZSBsb3MgcHJvZHVjdG9zLiBQYXJhIGxvZ3JhciBlc3RvIGVzIG5lY2VzYXJpbyBoYWNlciB1biBjw6FsY3VsbyBkZSBsb3MgY29zdG9zIGRlIHByb2R1Y2Npw7NuIHkgZGUgdHJhc2xhZG8gZGUgbGEgbWVyY2FuY8OtYSBkZXNkZSBlbCBwdW50byBkZSBwcm9kdWNjacOzbi9lbWJhbGFqZSBhIGxvcyBkaXN0aW50b3MgcHVudG9zIGRlIGRlc3Rpbm8uCgpQYXJhIGxvZ3JhciBoYWNlciBlc3RvIHNlIHJldmlzYXJvbiBkaWZlcmVudGVzIGZ1ZW50ZXMgZGUgaW5mb3JtYWNpw7NuIHF1ZSBwdWRpZXJhbiBnZW5lcmFyICoqcnV0YXMqKiBlbnRyZSBkb3MgcHVudG9zIHkgcXVlIG5vcyBkaWVyYSBsYSBpbmZvcm1hY2nDs24gbmVjZXNhcmlhIHBhcmEgcG9kZXIgY3J1emFybGEgY29uIGxvcyBkYXRvcyB0YWxlcyBjb21vIHByZWNpb3MgZGUgY29zdG9zIGRlIGNhc2V0YSBzZWfDum4gdGlwbyBkZSB2ZWjDrWN1bG8sIHkgcXVlIG5vcyBkaWVyYSBpbmZvcm1hY2nDs24gY29tbyBlbCB0aWVtcG8gZGUgdHJhc2xhZG8geSBsb3Mga2lsw7NtZXRyb3MgZGUgY2FtaW5vLgoKRGVzcHXDqXMgZGUgcmV2aXNhciB2YXJpYXMgb3BjaW9uZXMgc2UgZGVjaWRpw7MgdXNhciB1bmEgQVBJIGRlIHJ1dGVvIGRlbCBJTkVHSS4gQSBwZXNhciBkZSBxdWUgZXN0YSBBUEkgZXMgcmVsYXRpdmFtZW50ZSBudWV2YSwgbm9zIGRhIGxhIGluZm9ybWFjacOzbiBxdWUgbmVjZXNpdGFtb3MgYWRlbcOhcyBkZSBxdWUgbm9zIHBlcm1pdGUgaGFjZXIgY3J1Y2VzIHLDoXBpZG9zIGNvbiBsb3MgY2F0w6Fsb2dvcyBkZSBwcmVjaW9zIGRlIGNhc2V0YXMgcXVlIHRhbWJpw6luIHRpZW5lIGVsIElORUdJLgoKIyMgRnVuY2lvbmFtaWVudG8gZGUgbGEgQVBJCgpQYXJhIHV0aWxpemFyIGxhIEFQSSBlcyBuZWNlc2FyaW8gZ2VuZXJhciB1biAqVG9rZW4qIChsbGF2ZSkgZWwgY3XDoWwgcHVlZGUgc2VyIGdlbmVyYWRvIGVuIGxhIHNpZ3VpZW50ZSBsaWdhOiAqKmh0dHA6Ly9nYWlhLmluZWdpLm9yZy5teC9zYWtiZS9nZW5lcmFfdG9rZW4uanNwKiouCgpFc3RhIGxsYXZlIHNlcsOhIHV0aWxpemFkYSBwYXJhIGxhcyBkaWZlcmVudGVzIGLDunNxdWVkYXMgcXVlIHNlIHB1ZWRlbiBoYWNlciBkZW50cm8gZGUgbGEgQVBJIHkgbm8gaGF5IHJlc3RyaWNjaW9uZXMgZGVsIG7Dum1lcm8gZGUgbGxhdmVzIHF1ZSBzZSBwdWVkZW4gZ2VuZXJhciwgYXVucXVlIHNvbGFtZW50ZSBlcyBuZWNlc2FyaWEgdW5hLiBFbiBlc3RvcyBtb21lbnRvcywgZWwgVG9rZW4gcXVlIGVzdGFtb3MgdXRpbGl6YW5kbyBwYXJhIGhhY2VyIG51ZXN0cmFzIHBydWViYXMgZXMgZWwgc2lndWllbnRlOiAqKklNdzN2dTNzLXRTa00tN0ZieC0xM3NpLVYxaExRUDEwM2FsTioqCgpDb24gZXN0YSBsbGF2ZSBzZSBpcmFuIGZvcm1hbmRvIHVybMK0cyBjb24gZGlmZXJlbnRlcyBwYXLDoW1ldHJvcywgc2Vnw7puIHNlYSBlbCBjYXNvIGRlIGxvIHF1ZSBlc3RlbW9zIGJ1c2NhbmRvLGVuIGxhcyBjdWFsZXMgc2llbXByZSBwb25kcmVtb3MgY29tbyDDumx0aW1vIHBhcsOhbWV0cm8gZWwgKlRva2VuKi4gTcOhcyBhZGVsYW50ZSBkYXJlbW9zIGxvcyBlamVtcGxvcyBkZSBsYSBlc3RydWN0dXJhIGRlIGVzdG9zIHVybMK0cyB5IGxvcyBwYXLDoW1ldHJvcyBuZWNlc2FyaW9zIHNlZ8O6biBzZWEgZWwgY2Fzby4KClBhcmEgcG9kZXIgdHJhemFyIHVuYSBydXRhIHNlIHRpZW5lbiBxdWUgbGxldmFyYSBjYWJvIGRvcyBwcm9jZXNvczoKLSBCdXNjYXIgeSBzZWxlY2Npb25hciBlbCBvcmlnZW4geSBkZXN0aW5vLgotIFRyYXphciBsYSBydXRhLgoKUHJpbWVybyBleHBsaWNhcmVtb3MgZWwgcHJvY2VzbyBkZSBidXNxdWVkYSB5IHNlbGVjY2nDs24gZGUgb3JpZ2VuIC0gZGVzdGlubwpMYSBBUEkgcGVybWl0ZSBidXNjYXIgdW4gb3JpZ2VuIG8gZGVzdGlubyBkZSBkb3MgbWFuZXJhczoKCi0gQsO6c3F1ZWRhIGVzcGVjw61maWNhIGRlIHVuIGx1Z2FyLgotIELDunNxdWVkYSBwb3IgY29vcmRlbmFkYXMuCgojIyBUcmF6byBkZSBydXRhCgpQYXJhIHBvZGVyIHRyYXphciB1bmEgcnV0YSBzZSB0aWVuZW4gcXVlIGxsZXZhcmEgY2FibyBkb3MgcHJvY2Vzb3M6Ci0gQnVzY2FyIHkgc2VsZWNjaW9uYXIgbG9zIHB1bnRvcyBkZSBvcmlnZW4uCi0gVHJhemFyIGxhIHJ1dGEuCgpFbiBlc3RlIGNhc28gZWwgdXN1YXJpbyBzb2xhbWVudGUgdGVuZHLDoSBxdWUgc2VsZWNjaW9uYXIgZWwgcHVudG8gZGUgb3JpZ2VuLCB5IGVsIHNpc3RlbWEgdHJhemFyw6EgbGEgcnV0YSBhIGxhcyBkaWZlcmVudGVzIGNlbnRyYWxlcyBkZSBhYmFzdG8geSBoYXLDoSBlbCBjw6FsY3VsbyBkZSBjb3N0b3MgYXNvY2lhZG9zIGEgY2FkYSBydXRhLgoKIyMjIELDunNxdWVkYSB5IHNlbGVjY2nDs24gZGUgcHVudG8gZGUgb3JpZ2VuLgoKUHJpbWVybyBleHBsaWNhcmVtb3MgZWwgcHJvY2VzbyBkZSBidXNxdWVkYSB5IHNlbGVjY2nDs24gZGUgb3JpZ2VuIC0gZGVzdGlubwpMYSBBUEkgcGVybWl0ZSBidXNjYXIgdW4gb3JpZ2VuIG8gZGVzdGlubyBkZSBkb3MgbWFuZXJhczoKCi0gQsO6c3F1ZWRhIGVzcGVjw61maWNhIGRlIHVuIGx1Z2FyLgotIELDunNxdWVkYSBwb3IgY29vcmRlbmFkYXMuCgojIyMjIELDunNxdWVkYSBlc3BlY8OtZmljYSBkZSB1biBsdWdhci4KCkxvcyAqKnBhcsOhbWV0cm9zKiogYSB1dGlsaXphciBlbiBlc3RlIGNhc28gc29uOgotIGJ1c2NhcjogZXMgdW5hIGNhZGVuYSBkZSBjYXJhY3RlcmVzIHF1ZSBkZWZpbmUgZWwgbm9tYnJlIG8gcGFydGUgZGVsIGRlc3Rpbm8gcXVlIGRlc2VhIGVuY29udHJhci4KLSB0eXBlOiBUaXBvIGRlIGZvcm1hdG8gYSByZWdyZXNhciAoanNvbiBvIHhtbCkuCi0ga2V5OiBUb2tlbiBxdWUgcGVybWl0ZSBhY2NlZGVyIGEgbGEgQVBJLiAgCgpFc3RvIGZvcm1hcsOhIHVuIHVybCBkZWwgdGlwbzogIAoKKipodHRwOi8vZ2FpYS5pbmVnaS5vcmcubXgvc2FrYmUvd3NlcnZpY2U/bWFrZT1TRCZidXNjYXI9YnVzcXVlZGEmdHlwZT1qc29uJmtleT10b2tlbioqICAKClBhcmEgc2lzdGVtYXRpemFyIGVzdG8gc2UgaGl6byB1bmEgZnVuY2nDs24gbGxhbWFkYSAqZ2V0X3ViaWNhY2lvbmVzKCkqLCBxdWUgZ2VuZXJhIGxhIHVybCBwYXJhIGhhY2VyIGxhIGLDunNxdWVkYSBkZSBtYW5lcmEgYXV0b21hdGl6YWRhIGTDoW5kb2xlIHNvbG8gZWwgbm9tYnJlIGRlbCBsdWdhciBxdWUgZXN0YW1vcyBidXNjYW5kby4gTGEgZnVuY2nDs24gc2UgcHVlZGUgZW5jb250cmFyIGVuIGVsIGFyY2hpdm8gKmdldF9vcmlnZW5kZXN0aW5vLlIqCgpwb3IgZWplbXBsbzoKCmBgYHtyfQoKc291cmNlKCJnZXRfb3JpZ2VuZGVzdGluby5SIikKCgpidXNxdWVkYTwtZ2V0X3ViaWNhY2lvbmVzKCJVcnVhcGFuIikKa25pdHI6OmthYmxlKGJ1c3F1ZWRhKQoKYGBgCgpFc3RhIGZ1bmNpw7NuIGRlYmVyw6EgZGUgaW1wbGVtZW50YXJzZSBlbiB1biBtZW7DuiBkZSBiw7pzcXVlZGEgZGVudHJvIGRlIGxhIGFwbGljYWNpw7NuLgoKIyMjIyBCw7pzcXVlZGEgcG9yIGNvb3JkZW5hZGFzLgoKRW4gY2FzbyBkZSBxdWUgbGEgdWJpY2FjacOzbiBlc3BlY8OtZmljYSBkZSBsYSBxdWUgcXVlcmVtb3MgcGFydGlyIG5vIGV4aXN0YSwgbGEgYXBsaWNhY2nDs24gdGVuZHLDoSB1biBtYXBhIGVuIGVsIGN1w6FsIHNlIHBvZHLDoSBwb25lciB1biBwaW4gZGVzZGUgdHUgdWJpY2FjacOzbiBhY3R1YWwgbyBhbGfDum4gbHVnYXIgbWVkaWFudGUgdW4gcGluIChjb21vIGVuIHViZXIpLiBQYXJhIGhhY2VyIGxhIHJ1dGEgdXNhbmRvIGxhcyBjb29yZGVuYWRhcyBzZSBnZW5lcsOzIGxhIGZ1bmNpw7NuICpnZXRfY29vcmQobG9uLGxhdCkqIGxhIGN1w6FsIG5vcyBkYSBpbmZvcm1hY2nDs24gc2ltaWxhciBhIGxhIGZ1bmNpw7NuICpnZXRfdWJpY2FjaW9uZXMoKSogcXVlIGRlZmluaW1vcyBhcnJpYmEuIAoKTG9zIHBhcsOhbWV0cm9zIHF1ZSBzZSB1dGlsaXphbiBlbiBlc3RlIGNhc28gc29uOgotIGVzY2FsYTogZXMgZWwgdmFsb3IgZGUgbGEgZXNjYWxhIGRlIHZpc3VhbGl6YWNpw7NuIGVuIGxhIHF1ZSBzZSBlbmN1ZW50cmEgc3UgbWFwYS4KLSB4OiBlcyBlbCB2YWxvciBkZSBsYSBsb25naXR1ZCBkZSB1biBwdW50byBkYWRvIGVuIGNvb3JkZW5hZGFzIGdlb2dyw6FmaWNhcyAoZ3JhZG9zIGRlY2ltYWxlcykgbyBTcGhlcmljYWwgTWVyY2F0b3IgKG1ldHJvcykgZGVwZW5kaWVuZG8gZGVsIHZhbG9yIGRlbCBwYXLDoW1ldHJvIHByb2ouCi0geTogZXMgZWwgdmFsb3IgZGUgbGEgbGF0aXR1ZCBkZSB1biBwdW50byBkYWRvIGVuIGNvb3JkZW5hZGFzIGdlb2dyw6FmaWNhcyAoZ3JhZG9zIGRlY2ltYWxlcykgbyBTcGhlcmljYWwgTWVyY2F0b3IgKG1ldHJvcykgZGVwZW5kaWVuZG8gZGVsIHZhbG9yIGRlbCBwYXLDoW1ldHJvIHByb2ouCi0gcHJvajogZXMgZWwgdGlwbyBkZSBzaXN0ZW1hIGRlIHJlZmVyZW5jaWEsIGVudHJlIGxvcyB2YWxvcmVzIHBlcm1pdGlkb3MgZXN0w6FuIEdSUzgwIChHZW9ncsOhZmljYSkgeSBNRVJDIChTcGhlcmljYWwgTWVyY2F0b3IpLiBFc3RlIHBhcsOhbWV0cm8gZXMgb3BjaW9uYWwsIHNpIHNlIG9taXRlIGVsIHZhbG9yIHBvciBkZWZhdWx0IHNlcsOhIEdSUzgwLCB5IGxhcyBjb29yZGVuYWRhcyBkZWJlcsOhbiBkZSBlc3TDoW4gZW4gZ3JhZG9zIGRlY2ltYWxlcy4KLSB0eXBlOiBUaXBvIGRlIGZvcm1hdG8gYSByZWdyZXNhciAoanNvbiBvIHhtbCkuCi0ga2V5OiBuw7ptZXJvIMO6bmljbyBxdWUgcGVybWl0ZSBhY2NlZGVyIGEgbGEgQVBJLgoKTGEgZnVuY2nDs24gc2UgcHVlZGUgZW5jb250cmFyIGRlIG1hbmVyYSBkZXRhbGxhZGEgZW4gZWwgYXJjaGl2byAqZ2V0X29yaWdlbmRlc3Rpbm8uUiouClVuIGVqZW1wbG8gZGVsIHVzbyB5IGxhcyBzYWxpZGFzIGRlIGVzdGEgZnVuY2nDs24gZXM6CgpgYGB7cn0Ka25pdHI6OmthYmxlKGdldF9jb29yZCgiLTk5LjAwNjE5NjEiLCIxOS42MTgwOTQiKSkKYGBgCgojIyBPYnRlbmVyIHJ1dGEgZSBpbmZvcm1hY2nDs24gZGUgY29zdG9zCgpVbmEgdmV6IHF1ZSBzZSBoYSBkZWZpbmlkbyBlbCBwdW50byBkZSBvcmlnZW4gcG9yIGN1YWxxdWllcmEgZGUgbG9zIGRvcyBtw6l0b2RvcyBhcnJpYmEgbWVuY2lvbmFkb3MsIHNlIG9idGVuZHLDoSBlbCB0cmF6byBkZSBsYSBydXRhLiBMb3MgcGFyw6FtZXRyb3MgcXVlIGxvcyB1c3VhcmlvcyBwb2Ryw6FuIGVzY29nZXIgc29uOgoKLSB0aXBvX3J1dGE6IGVzcGVjw61maWNhIHRpcG8gZGUgcnV0YS4gUG9yIGRlZmF1bHQgc2Vyw6EgbGEgcnV0YSBzdWdlcmlkYSBwZXJvIHNlIHB1ZWRlIGVzY29nZXIgc2kgcHJlZmllcm8gdG9tYXIgdW5hIHNpbiBjYXNldGFzLigqVmVyIHRhYmxhMSBlbiB0YWJsYXNfcGFyYW1ldHJvcy54bHN4KikKLSB0aXBvX3ZlaGljdWxvOiBlc3BlY2lmaWNhIGVsIHRpcG8gZGUgdmVow61jdWxvICgqVmVyIHRhYmxhMiBlbiB0YWJsYXNfcGFyYW1ldHJvcy54bHN4KikuCi0gZWplczogZXNwZWNpZmljYSBlbCBuw7ptZXJvIGRlIGVqZXMgZXhjZWRlbnRlcy4gRXMgb3BjaW9uYWwsIHNpIHNlIG9taXRlIGVsIHZhbG9yIHBvciBkZWZhdWx0IHNlcsOhIDAuICgqVmVyIHRhYmxhMyBlbiB0YWJsYXNfcGFyYW1ldHJvcy54bHN4KikKCkFkZW3DoXMgZGUgZXN0YXMsIGhheSBxdWUgY29uZmlndXJhcjogCi0gcHJvajogZXMgZWwgdGlwbyBkZSBzaXN0ZW1hIGRlIHJlZmVyZW5jaWEsIGVudHJlIGxvcyB2YWxvcmVzIHBlcm1pdGlkb3MgZXN0w6FuIEdSUzgwIChHZW9ncsOhZmljYSkgeSBNRVJDIChTcGhlcmljYWwgTWVyY2F0b3IpLiBFc3RlIHBhcsOhbWV0cm8gZXMgb3BjaW9uYWwsIHNpIHNlIG9taXRlIGVsIHZhbG9yIHBvciBkZWZhdWx0IHNlcsOhIEdSUzgwLgotIHR5cGU6IHRpcG8gZGUgZm9ybWF0byBhIHJlZ3Jlc2FyIChqc29uIG8geG1sKS4KLSBrZXk6IG7Dum1lcm8gw7puaWNvIHF1ZSBwZXJtaXRlIGFjY2VkZXIgYSBsYSBBUEkuCgpBIGNvbnRpbnVhY2nDs24gcHJlc2VudGFtb3MgdW4gZWplbXBsbyBkZSBsb3MgZGF0b3MgcXVlIGVudHJhbiB5IGxhIGluZm9ybWFjacOzbiBxdWUgc2Ugb2J0aWVuZQoKCmBgYHtyfQppZF9vcmlnZW48LW9idGVuZXJfaWQoYnVzcXVlZGEsMSkKdGlwb192ZWhpY3VsbzwtNQplamVzX3RvdGFsZXM8LTEKdGlwb19ydXRhPC0yCgpkYXRhPC1oYWNlcl9ydXRhKGlkX29yaWdlbix0aXBvX3J1dGEsdGlwb192ZWhpY3VsbyxlamVzX3RvdGFsZXMpCgoKcHJpbnQocGFzdGUwKCJFbCBjb3N0byBkZSBsYXMgY2FzZXRhcyBlczogIiwgYXMuY2hhcmFjdGVyKHN1bShkYXRhJGNvc3RvX2Nhc2V0YSkpLCAiIG14bi4iKSkKcHJpbnQocGFzdGUwKCJFbCBjb3N0byBwb3IgZWplIGV4Y2VkZW50ZSBlczogIiwgYXMuY2hhcmFjdGVyKHN1bShkYXRhJGVqZV9leGNlZGVudGUpKmVqZXNfdG90YWxlcyksICIgbXhuLiIpKQpwcmludChwYXN0ZTAoIkVsIHZpYWplIGVzIGRlIHVuIHRvdGFsIGRlIDogIiwgYXMuY2hhcmFjdGVyKHN1bShkYXRhJGxvbmdfa20pKSwgIiBraWzDs21ldHJvcyB0b3RhbGVzIikpCnByaW50KHBhc3RlMCgiTGEgZHVyYWNpw7NuIGRlbCB2aWFqZSBlcyBhcHJveGltYWRhbWVudGUgZGUgOiAiLCBhcy5jaGFyYWN0ZXIoZGF0YSR0aWVtcG9fbWluKSwgIiBtaW51dG9zIikpCmBgYAoKQ29uIGVzdGEgaW5mb3JtYWNpw7NuIHBvZGVtb3MgZsOhY2lsbWVudGUgY2FsY3VsYXIgY29zdG9zOgoKQ29zdG9zIGRlIHBlYWplOgoKYGBge3J9CiMjIENhc2V0YXMgKyBlamVzIGV4Y2VkZW50ZXMKcGVhamVzPC1zdW0oZGF0YSRjb3N0b19jYXNldGEpICsgc3VtKGRhdGEkZWplX2V4Y2VkZW50ZSkKcGVhamVzCmBgYAoKQ29zdG9zIGRlIGdhc29saW5hOgoKUGFyYSByZWFsaXphciBlbCBjw6FsY3VsbyBkZWwgY29zdG8gZGUgZ2Fzb2xpbmEgc2UgY29uc2lkZXJhIHVuIHJlbmRpbWllbnRvIGRlIDMga21zIHBvciBsaXRybyBkZSBhY3VlcmRvIGEgdW5hIHBlcXVlw7FhIGludmVzdGlnYWNpw7NuIHF1ZSBzZSByZWFsaXrDsyAqaHR0cHM6Ly9pbXQubXgvYXJjaGl2b3MvUHVibGljYWNpb25lcy9QdWJsaWNhY2lvblRlY25pY2EvcHQzNjgucGRmKgoKUGFyYSBjYWxjdWxhciBlbCBjb3N0byBkZSBnYXNvbGluYSBzZSBoaXhvIHVuYSBmdW5jacOzbiBxdWUgb2J0aWVuZSBlbCBwcmVjaW8gcHJvbWVkaW8gZGUgbG9zIGRpZmVyZW50ZXMgY29tYnVzdGlibGVzLCBlc3RvIGVzOgoKYGBge3IsIGVjaG89RkFMU0UsIHdhcm5pbmc9RkFMU0V9CmdldF9nYXNvbGluYSgiRGnDqXNlbCIpCmBgYAoKRW50b25jZXMgZWwgY8OhbGN1bG8gZGUgY29zdG8gZGUgZ2Fzb2xpbmEgc2UgZGEgY29uIGxhIHNpZ3VpZW50ZSBmw7NybXVsYToKCmBgYHtyLHdhcm5pbmc9RkFMU0V9CnByZWNpbzwtZ2V0X2dhc29saW5hKCJEacOpc2VsIikkY29zdG8KCmdhc3RvX2dhczwtKGRhdGEkbG9uZ19rbS8zKSpwcmVjaW8KcHJpbnQocGFzdGUwKCJTZSB2YSBhIGdhc3RhciB1biBhcHJvemltYWRvIGRlIGRlICIsIHJvdW5kKGdhc3RvX2dhcywyKSwgIiBteG4uIGVuIGNvbWJ1c2libGUiKSkKCmBgYAoKCkFzw60sIGVsIGNvc3RvIHRvdGFsIGVuIHRyYW5zcG9ydGUgc2Vyw61hIGRlIDoKCmBgYHtyfQpwZWFqZXMgKyBnYXN0b19nYXMKYGBgCgpBc8OtIHBvZHLDrWFtb3MgY2FsY3VsYXIgbG9zIGNvc3RvcyBkZSB0cmFuc3BvcnRlLgoKCgoK</div>
 
 
 
