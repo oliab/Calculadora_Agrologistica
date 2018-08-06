@@ -1,0 +1,25 @@
+---
+title: "Cálculo de precios"
+output: html_notebook
+---
+
+Para el cálculo de precios se tiene como base el código de scrapping de la página del SNIIM. Este código nos permite hacer pedidos de información a la página con ciertos parámetros y transformar las tablas que devuelve de formato html a una tabla de Python la cuál puede ser manipulada para hacer agregaciones y calcular precios. 
+
+A continuación se presenta un diagnóstico general de este método:
+
+### Datos disponibles
+
+El SNIIM tiene varias maneras de consultar la información. Para nuestros fines la página cuenta con tres secciones en las cuáles **podemos encontrar la mayoría de los precios de los 38 productos estratégicos**. Estas secciones son:
+
+- Frutas y hortalizas.
+- Granos.
+- Precuarios.
+
+El detalle de la disponibilidad de los 38 cultivos estratégicos por sección se encuentra en el archivo *disponibilidad_precios_siiam.xlsx* en la carpeta de Github correspondiente al cálculo de precios.
+
+El script de scrapping original tiene la estructura para manejar las secciones de *Frutas y hortalizas* y *Granos* y se está trabajando para adaptar a la sección de *Precuarios*
+
+La lista general de productos y destinos se encuentra en el archivo *claves_script*
+
+ 
+
