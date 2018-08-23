@@ -1,0 +1,329 @@
+---
+title: "Revisión de cosechas siniestradas"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    number_sections: yes
+    df_print: paged
+    highlight: tango
+    theme: lumen
+---
+
+```{r, warning=FALSE, message=FALSE,echo=FALSE,results=FALSE}
+library(readr)
+library(tidyverse)
+library(stringr)
+library(plotly)
+library(gridExtra)
+
+siap<- read.csv("~/Documents/proyectos/Calculadora_Agrologistica/seguros/datos/Cierre_agricola_mun_2017.csv", fileEncoding = "latin1")
+
+siap$Nomcultivo <- as.character(siap$Nomcultivo)
+
+## generar claves geo ##
+siap$cve_ent <- str_pad(siap$Idestado,2,pad = 0)
+siap$cve_mun <- paste0(siap$cve_ent,str_pad(siap$Idmunicipio,3,pad = 0))
+
+siap<-siap %>% 
+  filter(Nomunidad=="Tonelada")
+
+```
+# Panorama general de la producción agrícola
+
+De acuerdo con el Servicio de Información Agroalimentaria y Pesquera, en el 2017 se sembraron 21,563,836 toneladas de productos agrícolas, que suman un valor total de 577,120,153,313 pesos, medidos a partir del precio medio rural que presenta la misma fuente.
+
+Si se analiza la producción en 2017 de cada uno de las entidades del país, encontramos que en 10 de ellas se concentra el 68% del valor de producción total, lo cual representa 391,249,896,854 pesos. Dichos estados generan entre 18 mil y 80 mil millones de pesos de valor producción y se presentan en la gráfica a continuación:
+
+```{r, warning=FALSE, message=FALSE,echo=FALSE,comment=FALSE,}
+prod_edo<- siap %>%
+  group_by(Nomestado) %>%
+  summarise(valor_prod=sum(Valorproduccion)) %>%
+  arrange(desc(valor_prod)) %>% head(10)
+
+g<-ggplot(prod_edo, aes(x=reorder(Nomestado,-valor_prod), y=valor_prod)) +
+  geom_bar(stat = "identity",fill = "#FF6666") +
+  theme(axis.text.x=element_text(angle = -45, hjust = 0)) +
+  ggtitle("Estados con mayor valor de producción") 
+ggplotly(g)
+```
+
+```{r, warning=FALSE, message=FALSE,echo=FALSE}
+prod_edo$valor_prod<-prettyNum(prod_edo$valor_prod,big.mark=",")
+knitr::kable(prod_edo)
+```
+
+Si se rankea el valor de producción por cultivo, se identifican los 10 primeros productos que en conjunto agrupan más de la mitad del valor agrícola producido durante el 2017:
+
+```{r, warning=FALSE, message=FALSE,echo=FALSE}
+prod_cult<- siap %>%
+  group_by(Nomcultivo) %>%
+  summarise(valor_prod=sum(Valorproduccion)) %>%
+  arrange(desc(valor_prod)) %>% head(10)
+
+may_prod<-ggplot(prod_cult, aes(x=reorder(Nomcultivo,-valor_prod), y=valor_prod)) +
+  geom_bar(stat = "identity",fill = "#FF6666") +
+  theme(axis.text.x=element_text(angle = -45, hjust = 0)) +
+  ggtitle("Cultivos con mayor valor de producción")
+ggplotly(may_prod)
+```
+
+```{r, warning=FALSE, message=FALSE,echo=FALSE}
+prod_cult$valor_prod<-prettyNum(prod_cult$valor_prod,big.mark=",")
+knitr::kable(prod_cult)
+```
+
+Sin embargo, a pesar de que tan sólo 10 cultivos concetran más del 50% del valor de producción, la base de datos del SIAP permite contar con un registro de 255 diferentes productos que se cultivan en el territorio mexicano. 
+
+# Datos de cultivos siniestrados durante 2017
+
+Durante el 2017, la superficie sembrada total en México fue de 21,590,575 hectáreas, de las cuales, 342,235 hectáreas, es decir, cerca del 2% del total se reportan como siniestradas. El valor de la superficie siniestrada asciende a 1,886,294,308 pesos.
+
+![Siembra siniestrada: Hectáreas.](/Users/usuario/Documents/proyectos/Calculadora_Agrologistica/seguros/mapas_siniestrados/siniestrada_entidad.jpg)
+```{r, warning=FALSE, message=FALSE,echo=FALSE}
+# Cálculo de valor de cultivo siniestrado
+
+siap<- siap %>%
+  mutate(valor_siniestrada= Precio*Siniestrada) 
+
+```
+
+Si ordenamos los 32 estados de acuerdo con el registro superficie siniestrada en relación con su valor de producción, encontramos que de mayor a menor pérdida se clasifican de la siguiente manera:
+
+```{r, warning=FALSE, message=FALSE,echo=FALSE}
+estado_sin<- siap %>%
+  group_by(Nomestado) %>%
+  summarise(valor_siniestrada=sum(valor_siniestrada), porcentaje_siniestrado=round((sum(valor_siniestrada)*100/sum(Valorproduccion)),1)) %>%
+  select(-porcentaje_siniestrado) %>%
+  arrange(desc(valor_siniestrada)) 
+
+knitr::kable(estado_sin)
+```
+
+Podemos ver que en general el porcentaje de cosecha siniestrada es muy pequeña, pero el valor de estas perdidas le cuestan a los seguros una cantidad enorme. Pueden haber diferentes factores metereológicos que causen estos siniestros sin embargo siempre está la posibilidad de que los números reportados por los productores y ajustadores no se ajusten a la realidad.
+
+Por ejemplo, en 2017 podemos ver que en el porcentaje de siembra siniestrada es el doble que el de Campeche, el segundo en el ranking. Si prestamos un poco de atención a esto y vemos el estado a mayor detalle:
+
+
+```{r, warning=FALSE, message=FALSE,echo=FALSE}
+tipo<-siap %>% 
+  filter(Nomestado=="San Luis Potosí") %>%
+  mutate(valor_cultivo=Precio*Rendimiento*Siniestrada) %>%
+  group_by(Nommodalidad) %>%
+  summarise(valor_siniestrada=sum(valor_cultivo), valor_total=sum(Valorproduccion))
+
+uno<-ggplot(tipo, aes(Nommodalidad,valor_siniestrada, fill=Nommodalidad)) + geom_bar(stat = "identity") + ggtitle("Valor de la cosecha siniestrada por tipo de riego")
+dos<-ggplot(tipo, aes(Nommodalidad,valor_total, fill=Nommodalidad)) + geom_bar(stat = "identity") + ggtitle("Valor total producido por tipo de riego")
+
+grid.arrange(dos,uno)
+```
+ Podemos concluir rápidamente que la siembra que se riega por temporal es mucho más vulnerable a ser perdida. Esto nos pueda dar una guía en qué cosas se deberían atacar con capacitación o tecnología para evitar perdidas y generar ahorro a gobierno, a través de dejar de pagar seguros, a largo plazo.
+
+![Siembra siniestrada: Porcentaje.](/Users/usuario/Documents/proyectos/Calculadora_Agrologistica/seguros/mapas_siniestrados/p_siniestrada_entidad.jpg)
+
+# Análisis intertemporal
+
+Para enriquecer la investigación y mitigar posibles efectos extraordinarios que se pudieran haber presentado al analizar solo el año 2017, se tomó la decisión de analizar históricamente la información de los productos disponibles en los datos del SIAP, lo cual genera un universo de análisis temporal de 15 años, es decir, del cierre del año 2003 al de 2017.Lo anterior permite analizar exhaustivamente la constancia y proclividad real de siniestro del territorio sembrado del pais.
+
+```{r, warning=FALSE, message=FALSE,echo=FALSE}
+cultivos_nuevos <- read.csv("~/Documents/proyectos/Calculadora_Agrologistica/seguros/cultivos_nuevos.csv", fileEncoding = "latin1")
+
+
+```
+
+
+
+Al analizar de esta manera los datos, podemos observar que en promedio del valor de producción de la superficie anual siniestrada ha sido de 4,365,994,622 pesos, lo cual nos ayuda a identificar que en los años 2005, 2009, 2010, 2011 se han presentado valores por encima de esta métrica. La gráfica siguiente nos muestra como el año 2011 presenta más de 14 mil millones de pérdida, seguido por el año 2009 donde la pérdida es de poco más de 8 mil millones de pesos.
+
+```{r, warning=FALSE, message=FALSE,echo=FALSE}
+
+st_agregado<-cultivos_nuevos %>%
+  filter(Nomunidad=="Tonelada") %>%
+  group_by(Anio) %>%
+  summarise(valor_tot_prod=sum(Valorproduccion),valor_tot_sin=sum(Precio*Siniestrada)) 
+  
+gregado<-ggplot(st_agregado, aes(Anio, valor_tot_sin, colour = "#FF6666")) + geom_line(stat = "identity") + ggtitle("Valor de los cultivos siniestrados")
+
+ggplotly(gregado)
+
+```
+
+
+```{r, warning=FALSE, message=FALSE,echo=FALSE}
+serie_siniestrada<-cultivos_nuevos %>%
+  mutate(valor_siniestrada=Precio*Siniestrada) %>%
+  group_by(Nomestado, Anio) %>%
+  summarise(valor_siniestrada=sum(valor_siniestrada))
+
+```
+
+Si aterrizamos la información histórica a nivel de entidad, encontramos que para los últimos 6 años, los estados que han presentado una mayor pérdida económica producto de los siniestros sucitados en la superficie sembrada son Zacatecas, Tamaulipas y San Luis Potosí. Cabe destacar que este último se presenta como el estado con mayor pérdida durante los últimos tres años que presenta la medición histórica, sin embargo, en los tres años donde no encabeza la medición, es el estado que sistemáticamente queda en el segundo lugar de la misma.
+
+```{r, warning=FALSE, message=FALSE,echo=FALSE}
+serie_siniestrada_g<-serie_siniestrada %>%
+  filter(Anio>=2006) %>%
+  group_by(Anio)%>%
+  mutate(promedio_anual=mean(valor_siniestrada)) %>%
+  ungroup() %>%
+  arrange(Nomestado,Anio) %>%
+  filter(valor_siniestrada>=promedio_anual)
+
+p <- ggplot(serie_siniestrada_g, aes(Nomestado,valor_siniestrada, colour= Nomestado)) + geom_bar(stat = "identity") + theme(axis.text.x = element_text(angle = 90, hjust = 1)) + ggtitle("Estados con mayor perdida económica por cosecha siniestrada")
+
+# Use vars() to supply faceting variables:
+p <- p + facet_wrap(~Anio)
+
+ggplotly(p)
+```
+Cuando se investiga la pérdida económica histórica desde el punto de vista de los cultivos, encontramos que los cultivos más siniestrados son el frijol y el maíz, sin embargo, esta información podría abordarse aislando el efecto de que de entrada son los cultivos con una mayor superficie sembrada, por ende son los que en ese sentido también presentan una mayor superficie y mayor valor de pérdida económica por siniestros.
+
+```{r, warning=FALSE, message=FALSE,echo=FALSE}
+serie_siniestrada<-cultivos_nuevos %>%
+  mutate(valor_siniestrada=Precio*Siniestrada) %>%
+  group_by(Nomcultivo, Anio) %>%
+  summarise(valor_siniestrada=sum(valor_siniestrada))
+
+serie_siniestrada_g<-serie_siniestrada %>%
+  filter(Anio>=2012) %>%
+  group_by(Anio)%>%
+  mutate(promedio_anual=mean(valor_siniestrada)) %>%
+  ungroup() %>%
+  arrange(Nomcultivo,Anio) %>%
+  filter(valor_siniestrada>=1.5*(promedio_anual))
+
+p <- ggplot(serie_siniestrada_g, aes(Nomcultivo,valor_siniestrada, colour= Nomcultivo)) + geom_bar(stat = "identity") + theme(axis.text.x = element_text(angle = 90, hjust = 1)) + ggtitle("Cultivos con mayor perdida económica por cosecha siniestrada")
+
+# Use vars() to supply faceting variables:
+p <- p + facet_wrap(~Anio)
+
+ggplotly(p)
+```
+
+Aislando el efecto de estos cultivos podemos ver que el siguiente cultivo más siniestrado es el Sorgo en grano, con un promedio de  309,286,406 de pesos reportados en perdidas anualmente:
+
+```{r, warning=FALSE, message=FALSE,echo=FALSE}
+serie_siniestrada<-cultivos_nuevos %>%
+  mutate(valor_siniestrada=Precio*Siniestrada) %>%
+  group_by(Nomcultivo, Anio) %>%
+  summarise(valor_siniestrada=sum(valor_siniestrada))
+
+serie_siniestrada_g<-serie_siniestrada %>%
+  filter(Anio>=2012 & Nomcultivo!="Maíz grano" & Nomcultivo!="Frijol") %>%
+  group_by(Anio)%>%
+  mutate(promedio_anual=mean(valor_siniestrada)) %>%
+  ungroup() %>%
+  arrange(Nomcultivo,Anio) %>%
+  filter(valor_siniestrada>=1.5*(promedio_anual))
+
+p <- ggplot(serie_siniestrada_g, aes(Nomcultivo,valor_siniestrada, colour= Nomcultivo)) + geom_bar(stat = "identity") + theme(axis.text.x = element_text(angle = 90, hjust = 1)) + ggtitle("Cultivos con mayor perdida económica por cosecha siniestrada")
+
+# Use vars() to supply faceting variables:
+p <- p + facet_wrap(~Anio)
+
+ggplotly(p)
+```
+
+# Análisis de San Luis Potosí
+
+Enfocandonos en el caso de San Luis Potosí, encontramos que hay años en los que las perdidas de algunos cultivos ascendieron hasta el 80%
+
+```{r, warning=FALSE, message=FALSE,echo=FALSE}
+cultivos_nuevos$Rendimiento<-as.character(cultivos_nuevos$Rendimiento)
+cultivos_nuevos$Rendimiento<-as.numeric(cultivos_nuevos$Rendimiento)
+
+tabla<-cultivos_nuevos %>%
+  filter(Nomestado =="San Luis Potosí" & Nomunidad=="Tonelada") %>%
+  mutate(valor_siniestrada=Precio*Siniestrada*Rendimiento) %>%
+  mutate(valor_tot=Precio*Rendimiento*Sembrada) %>%
+  group_by(Anio,Nomcultivo) %>%
+  summarise(valor_siniestrada=sum(valor_siniestrada), valor_p= sum(Valorproduccion), valor_p_total=sum(valor_tot)) %>%
+  filter(Anio >= 2012) %>%
+  arrange(desc(valor_siniestrada,Anio)) %>%
+  mutate(porc_siniestrada=valor_siniestrada*100/valor_p_total) %>%
+  arrange(desc(porc_siniestrada)) 
+knitr::kable(head(tabla,10), format.args = list( big.mark = ","))
+  
+```
+
+Haciendo el ejercicio para el maíz en grano podemos ver que hubo años en los que el valor de la siembra siniestrada que se reportó estuvo siempre arriba del 10% de la producción total hasta llegar al 30%, cifras muy por arriba de los datos nacionales.
+
+Durante este periodo se reportaron $1,593,756,849 millones de pesos perdidos solamente en Maíz en el estado.
+
+```{r, warning=FALSE, message=FALSE,echo=FALSE}
+sin_sl<-cultivos_nuevos %>%
+  filter(Nomestado =="San Luis Potosí" & Nomunidad=="Tonelada") %>%
+  filter(Anio>=2006 & Nomcultivo=="Maíz grano") %>%
+  mutate(valor_siniestrada=Siniestrada*Rendimiento*Precio) %>%
+  mutate(valor_tot=Precio*Rendimiento*Sembrada) %>%
+  group_by(Anio) %>%
+  summarise(valor_siniestrada=sum(valor_siniestrada), valor_prod= sum(Valorproduccion), valor_p_total=sum(valor_tot)) %>%
+  mutate(porc_siniestrada=valor_siniestrada*100/valor_p_total)
+  
+sin_sl$Anio<-as.character(sin_sl$Anio)
+
+knitr::kable(sin_sl, format.args = list( big.mark = ","))
+
+```
+```{r, warning=FALSE, message=FALSE,echo=FALSE}
+
+graf<-sin_sl %>%
+  select(c(-porc_siniestrada,-valor_p_total)) %>%
+  gather(tipo,valor,-Anio)
+graf$Anio<-as.character(graf$Anio)
+# Bar graph, time on x-axis, color fill grouped by sex -- use position_dodge()
+graf_sl<-ggplot(data=graf, aes(x=Anio, y=valor, fill=tipo)) +
+    geom_bar(stat="identity", colour="black") + ggtitle("Valor de producción de maíz cosechado vs siniestado en SLP")
+
+ggplotly(graf_sl)
+```
+
+Al comparar los precios anuales en las centrales de abasto cercanas a San Luis Potosí, y el promedio de precios de maíz en las centrales de abastos a nivel nacional con el porcentaje de siempra reportada como siniestrada encontramos que estas variables tienen una correlación negativa con el Precio Rural y Positiva con el Precio Nacional.
+
+```{r, warning=FALSE, message=FALSE,echo=FALSE}
+library(readr)
+precios <- read_csv("~/Documents/proyectos/Calculadora_Agrologistica/seguros/precios.csv")
+```
+
+```{r, warning=FALSE, message=FALSE,echo=FALSE}
+precios_situ<-cultivos_nuevos %>%
+  filter(Nomestado =="San Luis Potosí" & Nomunidad=="Tonelada" & Nomcultivo=="Maíz grano") %>%
+  group_by(Anio) %>%
+  summarise(precio_prom=mean(Precio/1000)) %>%
+  filter(Anio>=2006)
+  
+precios<-cbind(precios_situ,precios,sin_sl$porc_siniestrada)
+precios<-precios %>%
+  mutate(ganancia=promedio_sl- precio_prom)
+
+```
+
+
+```{r, warning=FALSE, message=FALSE,echo=FALSE}
+
+graf_1<-ggplot(precios,aes(x=as.integer(Anio))) +
+ # geom_line(aes(y=precio_prom, colour="precio_prom")) +
+  geom_line(aes(y=promedio_sl, colour="Precio SLP.")) +
+  geom_line(aes(y=promedio_nal, colour="Precio NAL.")) + ggtitle("Precio de venta en SLP y Nacional")
+graf2<-ggplot(precios,aes(as.integer(Anio),sin_sl$porc_siniestrada, colour="% maiz sinies")) + geom_line() + ggtitle("Porcentaje de siembra reportada como Siniestrada")
+
+graf3<-ggplot(precios,aes(as.integer(Anio),sin_sl$valor_prod, colour="Precio rural")) + geom_line() + ggtitle("Precio rural promedio")
+grid.arrange(graf_1,graf2,graf3)  
+
+```
+
+```{r, warning=FALSE, message=FALSE,echo=FALSE}
+g1<-ggplot(precios,aes(Anio)) +
+  geom_line(aes(y=ganancia,colour="Ganancia posible")) + ggtitle("Ganancia posible: Venta en SLP")
+
+g2<- ggplot(precios,aes(Anio)) +
+   geom_line(aes(y=`sin_sl$porc_siniestrada`, colour="% maiz sinies")) + ggtitle("Porcentaje de siembra reportada como Siniestrada")
+
+ggplotly(g1)
+
+```
+
+
+```{r, warning=FALSE, message=FALSE,echo=FALSE}
+ggplotly(g2)
+```
+

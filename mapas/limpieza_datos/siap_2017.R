@@ -3,7 +3,8 @@ library(stringr)
 library(readr)
 library(tidyr)
 
-siap_2017 <- read.csv("C:/Users/paty/Desktop/bases_sam/Cierre_agricola_mun_2017.csv", fileEncoding = "latin1")
+siap_2017 <- read.csv("~/Documents/proyectos/Calculadora_Agrologistica/seguros/datos/Cierre_agricola_mun_2017.csv", fileEncoding = "latin1")
+
 
 siap_2017$Nomcultivo <- as.character(siap_2017$Nomcultivo)
 
@@ -12,10 +13,10 @@ siap_2017 <- siap_2017 %>%
 
 unique(siap_2017$Nomcultivo)
 
-siap_sel <- c("Trigo grano", "Cártamo", "Higuerilla", "Sorgo grano", "Avena forrajera en verde", "Cebada grano", "Limón", "Fresa", "Nuez",
-             "Maíz grano", "Frijol", "Canola", "Arroz palay", "Jatropha", "Algodón hueso", "Tomate rojo (jitomate)", "Uva", "Arándano", 
-             "Vainilla", "Café cereza", "Cacao", "Soya", "Pi\xf1a", "Agave", "Chile verde", "Naranja", "Papaya", "Zarzamora", "Frambuesa", 
-             "Caña de azúcar", "Girasol", "Manzana", "Aguacate", "Mango", "Toronja (pomelo)", "Palma africana o de aceite")
+siap_sel <- c("Trigo grano", "C?rtamo", "Higuerilla", "Sorgo grano", "Avena forrajera en verde", "Cebada grano", "Lim?n", "Fresa", "Nuez",
+             "Ma?z grano", "Frijol", "Canola", "Arroz palay", "Jatropha", "Algod?n hueso", "Tomate rojo (jitomate)", "Uva", "Ar?ndano", 
+             "Vainilla", "Caf? cereza", "Cacao", "Soya", "Pi\xf1a", "Agave", "Chile verde", "Naranja", "Papaya", "Zarzamora", "Frambuesa", 
+             "Ca?a de az?car", "Girasol", "Manzana", "Aguacate", "Mango", "Toronja (pomelo)", "Palma africana o de aceite")
 
 
 siap_2017_select <- filter(siap_2017, siap_2017$Nomcultivo %in% siap_sel)
