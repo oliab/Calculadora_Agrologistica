@@ -17,6 +17,7 @@ library(stringr)
 library(plotly)
 library(gridExtra)
 
+
 siap<- read.csv("~/Documents/proyectos/Calculadora_Agrologistica/seguros/datos/Cierre_agricola_mun_2017.csv", fileEncoding = "latin1")
 
 siap$Nomcultivo <- as.character(siap$Nomcultivo)
@@ -84,7 +85,7 @@ Durante el 2017, la superficie sembrada total en México fue de 21,590,575 hect�
 # Cálculo de valor de cultivo siniestrado
 
 siap<- siap %>%
-  mutate(valor_siniestrada= Precio*Siniestrada) 
+  mutate(valor_siniestrada= Precio*Siniestrada)
 
 ```
 
@@ -100,7 +101,7 @@ estado_sin<- siap %>%
 knitr::kable(estado_sin)
 ```
 
-Podemos ver que en general el porcentaje de cosecha siniestrada es muy pequeña, pero el valor de estas perdidas le cuestan a los seguros una cantidad enorme. Pueden haber diferentes factores metereológicos que causen estos siniestros sin embargo siempre está la posibilidad de que los números reportados por los productores y ajustadores no se ajusten a la realidad.
+Podemos ver que en general el porcentaje de cosecha siniestrada es muy pequeño, pero el valor de estas pérdidas le cuestan a los seguros una cantidad enorme. Pueden haber diferentes factores metereológicos que causen estos siniestros sin embargo siempre está la posibilidad de que los números reportados por los productores y ajustadores no se apeguen a la realidad.
 
 Por ejemplo, en 2017 podemos ver que en el porcentaje de siembra siniestrada es el doble que el de Campeche, el segundo en el ranking. Si prestamos un poco de atención a esto y vemos el estado a mayor detalle:
 
@@ -117,18 +118,16 @@ dos<-ggplot(tipo, aes(Nommodalidad,valor_total, fill=Nommodalidad)) + geom_bar(s
 
 grid.arrange(dos,uno)
 ```
- Podemos concluir rápidamente que la siembra que se riega por temporal es mucho más vulnerable a ser perdida. Esto nos pueda dar una guía en qué cosas se deberían atacar con capacitación o tecnología para evitar perdidas y generar ahorro a gobierno, a través de dejar de pagar seguros, a largo plazo.
+Podemos concluir rápidamente que la siembra que se riega por temporal es mucho más vulnerable a ser siniestrada. Esto nos pueda dar una guía en qué cosas se deberían atacar con capacitación o tecnología para evitar perdidas y generar ahorro a gobierno, a través de dejar de pagar seguros, a largo plazo.
 
 ![Siembra siniestrada: Porcentaje.](/Users/usuario/Documents/proyectos/Calculadora_Agrologistica/seguros/mapas_siniestrados/p_siniestrada_entidad.jpg)
 
 # Análisis intertemporal
 
-Para enriquecer la investigación y mitigar posibles efectos extraordinarios que se pudieran haber presentado al analizar solo el año 2017, se tomó la decisión de analizar históricamente la información de los productos disponibles en los datos del SIAP, lo cual genera un universo de análisis temporal de 15 años, es decir, del cierre del año 2003 al de 2017.Lo anterior permite analizar exhaustivamente la constancia y proclividad real de siniestro del territorio sembrado del pais.
+Para enriquecer la investigación y mitigar posibles efectos extraordinarios que se pudieran haber presentado al analizar solo el año 2017, se tomó la decisión de analizar históricamente la información de los productos disponibles en los datos del SIAP, lo cual genera un universo de análisis temporal de 15 años, es decir, del cierre del año 2003 al de 2017. Lo anterior permite analizar exhaustivamente la constancia y proclividad real de siniestro del territorio sembrado del pais.
 
 ```{r, warning=FALSE, message=FALSE,echo=FALSE}
-cultivos_nuevos <- read.csv("~/Documents/proyectos/Calculadora_Agrologistica/seguros/cultivos_nuevos.csv", fileEncoding = "latin1")
-
-
+cultivos_nuevos <- read.csv("/Users/usuario/Documents/proyectos/Calculadora_Agrologistica/seguros/cultivos_nuevos.csv", fileEncoding = "latin1")
 ```
 
 
@@ -279,9 +278,13 @@ ggplotly(graf_sl)
 
 Al comparar los precios anuales en las centrales de abasto cercanas a San Luis Potosí, y el promedio de precios de maíz en las centrales de abastos a nivel nacional con el porcentaje de siempra reportada como siniestrada encontramos que estas variables tienen una correlación negativa con el Precio Rural y Positiva con el Precio Nacional.
 
+Al ver las siguientes gráficas podemos interpretar esta correlación de la siguiente manera: El porcentaje de siembra siniestrada crece en los años en los que los precios de venta son más bajos o cuando los costos de producción crecen (Usando el precio rural como un proxy de costos).
+
+Esta relación no se ve tan clara cuando se compara contra la ganancia promedio (Medida como el precio de venta menos el costo). Aún faltaría hacer una comparación y las relaciones con los precios internacionales por lo que es una buena oportunidad de utilizar información de los pedimentos.
+
 ```{r, warning=FALSE, message=FALSE,echo=FALSE}
 library(readr)
-precios <- read_csv("~/Documents/proyectos/Calculadora_Agrologistica/seguros/precios.csv")
+precios <- read_csv("/Users/usuario/Documents/proyectos/Calculadora_Agrologistica/seguros/precios.csv")
 ```
 
 ```{r, warning=FALSE, message=FALSE,echo=FALSE}
@@ -326,4 +329,16 @@ ggplotly(g1)
 ```{r, warning=FALSE, message=FALSE,echo=FALSE}
 ggplotly(g2)
 ```
+Conclusiones de este primer ejercicio:
+
+El análisis refleja la importancia de abordar desde distintas perspectivas las causas y efectos de la pérdida económica que conlleva el siniestro de la producción agroalimentaria.
+
+La gran cantidad de datos que provee el Servicio de Información Agroalimentaria y Pesquera y la capacidad de cruzarlos con datos de precios provenientes de sistemas como el SNIIM permite estudiar un universo basto de datos relacionados el siniestro de la producción desde el enfoque de los cultivos, sus precios, su valor de producción, entre otros y se puede llegar a tener un análisis mucho más exhaustivo.
+
+Si se profundiza en el análisis territorial y de marcado, se podría profundizar en las posibles causas de fluctuación valor estimado de cultivos respecto al precio de mercado de los mismos, se podrían encontrar mecanismos que mitiguen las pérdidas económicas derivadas del apoyo a los productores en caso de siniestro de la producción, incluso podría analizarse y proponer mecanismos que ofrezcan alternativas para reducir incentivos de reportar como siniestrada una superficie sembrada en lugar de sacarla a venta o resguardarla en los casos en que los precios de mercado del cultivo se contraigan.
+
+
+
+
+
 
