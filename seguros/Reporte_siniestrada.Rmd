@@ -276,7 +276,7 @@ graf_sl<-ggplot(data=graf, aes(x=Anio, y=valor, fill=tipo)) +
 ggplotly(graf_sl)
 ```
 
-Al comparar los precios anuales en las centrales de abasto cercanas a San Luis Potosí, y el promedio de precios de maíz en las centrales de abastos a nivel nacional con el porcentaje de siempra reportada como siniestrada encontramos que estas variables tienen una correlación negativa con el Precio Rural y Positiva con el Precio Nacional.
+Al comparar los precios anuales en las centrales de abasto cercanas a San Luis Potosí, y el promedio de precios de maíz en las centrales de abastos a nivel nacional con el porcentaje de siempra reportada como siniestrada encontramos que estas variables tienen una correlación negativa con el Precio Rural y positiva con el Precio Nacional.
 
 Al ver las siguientes gráficas podemos interpretar esta correlación de la siguiente manera: El porcentaje de siembra siniestrada crece en los años en los que los precios de venta son más bajos o cuando los costos de producción crecen (Usando el precio rural como un proxy de costos).
 
@@ -285,6 +285,13 @@ Esta relación no se ve tan clara cuando se compara contra la ganancia promedio 
 ```{r, warning=FALSE, message=FALSE,echo=FALSE}
 library(readr)
 precios <- read_csv("/Users/usuario/Documents/proyectos/Calculadora_Agrologistica/seguros/precios.csv")
+id <-as.numeric( rownames(precios))
+#rownames(d) <- NULL
+precios <- cbind(id,precios)
+precios<-precios %>%
+  arrange(desc(id)) %>%
+  select(-id)
+precios
 ```
 
 ```{r, warning=FALSE, message=FALSE,echo=FALSE}
@@ -329,6 +336,111 @@ ggplotly(g1)
 ```{r, warning=FALSE, message=FALSE,echo=FALSE}
 ggplotly(g2)
 ```
+
+
+
+# Análisis de cultivos prioritarios
+
+## 1. Maíz
+Primavera Verano (PV) Temporal: Chiapas, Jalisco, Oaxaca, Puebla, Guerrero, Estado de México, Veracruz, Michoacán, Guanajuato, Zacatecas, San Luis Potosí, Hidalgo, Campeche, Yucatán, Durango, Tlaxcala, Querétaro, Quintana Roo, Chihuahua y Tamaulipas.
+Otoño Invierno (OI) Riego: Sinaloa, Tamaulipas, Guerrero, Oaxaca, Sonora y Chiapas.
+
+```{r, warning=FALSE, message=FALSE,echo=FALSE}
+edos_maiz<-c("Chiapas", "Jalisco", "Oaxaca", "Puebla", "Guerrero", "México", "Veracruz", "Michoacán", "Guanajuato", "Zacatecas", "San Luis Potosí", "Hidalgo", "Campeche", "Yucatán", "Durango", "Tlaxcala", "Querétaro", "Quintana Roo", "Chihuahua", "Tamaulipas","Sinaloa","Oaxaca","Sonora","Chiapas","Nacional")
+```
+
+
+```{r, warning=FALSE, message=FALSE,echo=FALSE}
+maiz_gen<-cultivos_nuevos %>%
+  filter(Nomcultivo=="Maíz grano") %>%
+  group_by(Anio) %>%
+  summarise(Sembrada=sum(Sembrada),Cosechada=sum(Cosechada),Siniestrada=sum(Siniestrada),valor_siniestrada=sum(Siniestrada*Rendimiento*Precio),valor_sembrada=sum(Precio*Rendimiento*Sembrada),valor_cosechada=sum(Precio*Rendimiento*Cosechada)) %>%
+  mutate(porc_reportada_siniestrada=(Siniestrada*100)/Sembrada,porc_perdida_volumen=(valor_siniestrada*100 )/valor_cosechada,prom_valor_siniestrada=mean(valor_siniestrada)) 
+
+```
+
+```{r, warning=FALSE, message=FALSE,echo=FALSE}
+graf<-maiz_gen %>%
+  select(c(Anio,valor_siniestrada,valor_cosechada)) %>%
+  gather(tipo,valor,-Anio)
+#graf$Anio<-as.character(graf$Anio)
+# Bar graph, time on x-axis, color fill grouped by sex -- use position_dodge()
+graf_sl<-ggplot(data=graf, aes(x=Anio, y=valor, fill=tipo)) +
+    geom_bar(stat="identity", colour="black") + ggtitle("Valor de producción de maíz cosechado vs siniestado a nivel nacional")
+
+ggplotly(graf_sl)
+
+```
+
+Revisando en los estados prioritarios
+```{r, warning=FALSE, message=FALSE,echo=FALSE}
+edos<-cultivos_nuevos %>%
+  filter(Nomcultivo=="Maíz grano") %>%
+  filter(Nomestado %in% edos_maiz) %>%
+  mutate(Anio = as.numeric(Anio)) %>%
+  group_by(Anio,Nomestado) %>%
+  summarise(Sembrada=sum(Sembrada),Cosechada=sum(Cosechada),Siniestrada=sum(Siniestrada),valor_siniestrada=sum(Siniestrada*Rendimiento*Precio),valor_sembrada=sum(Precio*Rendimiento*Sembrada),valor_cosechada=sum(Precio*Rendimiento*Cosechada),Precio=mean(Precio)) %>%
+  mutate(porc_reportada_siniestrada=(Siniestrada*100)/Sembrada,porc_perdida_volumen=(valor_siniestrada*100 )/valor_cosechada,prom_valor_siniestrada=mean(valor_siniestrada)) 
+knitr::kable(head(edos))
+
+
+```
+
+Obtuvimos los precios del maiz a través del sistema SNIIM de la Secretaría de Economía, con el proposito de ver si existe una relación entre estos precios y el porcentaje de cosechas reportadas como siniestrada.
+```{r, warning=FALSE, message=FALSE,echo=FALSE}
+library(readxl)
+precios_productos <- read_excel("~/Documents/proyectos/Calculadora_Agrologistica/seguros/datos/precios_productos.xlsx")
+
+precios_productos$Estado<-trimws(as.character(precios_productos$Estado), which = c("both"))
+#gsub("Nacional  ","Nacional",precios_productos$Estado)
+
+##Hago el precio promedio por año por estado
+
+prec<-precios_productos %>%
+  group_by(Anio,Estado) %>%
+  summarise(precio_promedio = mean(Promedio)) %>%
+  filter(Estado %in% edos_maiz)
+
+graf_p<-ggplot(prec,aes(x=Anio,y=precio_promedio,colour=Estado)) + geom_line() +
+  ggtitle("Precio promedio en Centrales de abasto locales")
+ggplotly(graf_p) 
+
+```
+
+Porcentaje de cultivo reportado como siniestrado:
+```{r, warning=FALSE, message=FALSE,echo=FALSE}
+edos_graf<- edos %>%
+  filter(Nomestado %in% edos_maiz)
+perd<-ggplot(edos_graf,aes(x=Anio, y= porc_reportada_siniestrada,colour=Nomestado)) + geom_line() + ggtitle("Porcentaje de cultivo reportado como siniestrado")
+ggplotly(perd)
+```
+
+
+```{r, warning=FALSE, message=FALSE,echo=FALSE}
+precio_join<-precios_productos %>%
+  filter(Estado %in% edos_maiz) %>% 
+  select(Estado,Promedio,Anio,Producto) %>%
+  group_by(Estado,Anio) %>%
+  mutate(Promedio=mean(Promedio)) %>%
+  unique()
+```
+
+```{r, warning=FALSE, message=FALSE,echo=FALSE}
+prueba<-left_join(edos_graf,precio_join,by=c("Anio"="Anio","Nomestado"="Estado"))
+prueba<-unique(prueba)
+```
+
+Hacemos una comparación anual de las costos y precios promedios del maíz vs. el porcentaje de cosecha reportada a nivel nacional.
+```{r, warning=FALSE, message=FALSE,echo=FALSE}
+sum<-prueba %>%
+  group_by(Anio) %>%
+  summarise(costo_promedio=mean(Precio)/1000,precio_promedio=mean(Promedio, na.rm=TRUE),reportada_siniestrada=mean((Siniestrada*100)/Sembrada))
+sum
+```
+
+
+La correlación entre el precio promedio en las centrales de abastos vs. el el porcentaje de cosecha reportada como siniestrada es de **-.26**
+
 Conclusiones de este primer ejercicio:
 
 El análisis refleja la importancia de abordar desde distintas perspectivas las causas y efectos de la pérdida económica que conlleva el siniestro de la producción agroalimentaria.
@@ -336,9 +448,4 @@ El análisis refleja la importancia de abordar desde distintas perspectivas las 
 La gran cantidad de datos que provee el Servicio de Información Agroalimentaria y Pesquera y la capacidad de cruzarlos con datos de precios provenientes de sistemas como el SNIIM permite estudiar un universo basto de datos relacionados el siniestro de la producción desde el enfoque de los cultivos, sus precios, su valor de producción, entre otros y se puede llegar a tener un análisis mucho más exhaustivo.
 
 Si se profundiza en el análisis territorial y de marcado, se podría profundizar en las posibles causas de fluctuación valor estimado de cultivos respecto al precio de mercado de los mismos, se podrían encontrar mecanismos que mitiguen las pérdidas económicas derivadas del apoyo a los productores en caso de siniestro de la producción, incluso podría analizarse y proponer mecanismos que ofrezcan alternativas para reducir incentivos de reportar como siniestrada una superficie sembrada en lugar de sacarla a venta o resguardarla en los casos en que los precios de mercado del cultivo se contraigan.
-
-
-
-
-
 
