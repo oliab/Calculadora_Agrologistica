@@ -1,0 +1,961 @@
+---
+title: 'Calculadora Agrologística: Back'
+output:
+  pdf_document: default
+  html_notebook: default
+---
+
+## Calculadora
+package com.cultivodatos.model;
+
+public class Calculadora {
+	
+	private int cultivo;
+	private double cantidad;
+	private int umedida;
+	private int idVeh;
+	private Integer idDes;
+	private double lat;
+	private double lng;
+	private int ejes;	
+	
+	private int utipo;
+	private Integer id_i;
+	private Integer source_i;
+	private Integer target_i;
+	
+	public int getCultivo() {
+		return cultivo;
+	}
+	public void setCultivo(int cultivo) {
+		this.cultivo = cultivo;
+	}
+	public double getCantidad() {
+		return cantidad;
+	}
+	public void setCantidad(double cantidad) {
+		this.cantidad = cantidad;
+	}
+	public int getUmedida() {
+		return umedida;
+	}
+	public void setUmedida(int umedida) {
+		this.umedida = umedida;
+	}
+	public int getIdVeh() {
+		return idVeh;
+	}
+	public void setIdVeh(int idVeh) {
+		this.idVeh = idVeh;
+	}
+	public Integer getIdDes() {
+		return idDes;
+	}
+	public void setIdDes(Integer idDes) {
+		this.idDes = idDes;
+	}
+	public double getLat() {
+		return lat;
+	}
+	public void setLat(double lat) {
+		this.lat = lat;
+	}
+	public double getLng() {
+		return lng;
+	}
+	public void setLng(double lng) {
+		this.lng = lng;
+	}
+	public int getEjes() {
+		return ejes;
+	}
+	public void setEjes(int ejes) {
+		this.ejes = ejes;
+	}
+	public int getUtipo() {
+		return utipo;
+	}
+	public void setUtipo(int utipo) {
+		this.utipo = utipo;
+	}
+	public Integer getId_i() {
+		return id_i;
+	}
+	public void setId_i(Integer id_i) {
+		this.id_i = id_i;
+	}
+	public Integer getSource_i() {
+		return source_i;
+	}
+	public void setSource_i(Integer source_i) {
+		this.source_i = source_i;
+	}
+	public Integer getTarget_i() {
+		return target_i;
+	}
+	public void setTarget_i(Integer target_i) {
+		this.target_i = target_i;
+	}
+}
+
+## CategoriaVehículo
+package com.cultivodatos.model;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.NamedStoredProcedureQueries;
+import javax.persistence.NamedStoredProcedureQuery;
+import javax.persistence.Table;
+
+import lombok.Data;
+
+@Entity
+@Table(name = "tipo_vehiculo")
+@Data
+@NamedStoredProcedureQueries({
+        @NamedStoredProcedureQuery(name = "_lstCatVehiculos",
+            procedureName = "_spGetCatVehiculos", 
+            resultClasses = CategoriaVehiculo.class
+            )
+})
+public class CategoriaVehiculo {
+	
+	@Id
+	private Integer id_tipo;
+	
+	private String categoria;
+
+	public String getCategoria() {
+		return categoria;
+	}
+
+	public void setCategoria(String categoria) {
+		this.categoria = categoria;
+	}
+
+	public Integer getId_tipo() {
+		return id_tipo;
+	}
+
+	public void setId_tipo(Integer id_tipo) {
+		this.id_tipo = id_tipo;
+	}
+	
+}
+
+
+##CategoriaVeehiculoDAO
+package com.cultivodatos.model;
+
+import java.util.List;
+
+import org.springframework.data.repository.CrudRepository;
+
+public interface  CategoriaVehiculoDAO extends CrudRepository<CategoriaVehiculo, Long>, CategoriaVehiculoDAOCustom{
+	public List<CategoriaVehiculo> findAll();
+}
+
+## CategoríaVehículoDAOImpl
+
+package com.cultivodatos.model;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.persistence.StoredProcedureQuery;
+
+public class CategoriaVehiculoDAOImpl implements CategoriaVehiculoDAOCustom{
+	
+	@PersistenceContext
+    private EntityManager em;
+	
+	@Override
+    public List<CategoriaVehiculo> getCatVehiculos() {
+        StoredProcedureQuery _sp = em.createNamedStoredProcedureQuery("_lstCatVehiculos");
+        return _sp.getResultList();
+    }
+
+}
+
+## Cultivo
+
+package com.cultivodatos.model;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "cultivos")
+public class Cultivo {
+
+	@Id
+	private Integer clave;
+	
+	
+	private String cultivo;
+	private Integer activo;
+	public Integer getClave() {
+		return clave;
+	}
+	public void setClave(Integer clave) {
+		this.clave = clave;
+	}
+	public String getCultivo() {
+		return cultivo;
+	}
+	public void setCultivo(String cultivo) {
+		this.cultivo = cultivo;
+	}
+	public Integer getActivo() {
+		return activo;
+	}
+	public void setActivo(Integer activo) {
+		this.activo = activo;
+	}
+	
+	
+	
+}
+
+## Cultivo DAO
+
+package com.cultivodatos.model;
+
+import java.util.List;
+
+import org.springframework.data.repository.CrudRepository;
+
+public interface CultivoDAO extends CrudRepository<Cultivo, Long>{
+	public List<Cultivo> findAll();
+}
+
+## Destino
+package com.cultivodatos.model;
+
+import java.util.Date;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.Transient;
+
+@Entity
+@Table(name = "destinos")
+public class Destino {
+
+	@Id
+	private Integer clave;
+	
+	private String destino;
+	private Double lat;
+	private Double lng;
+	private Integer id_f;
+	private Integer source_f;
+	private Integer target_f;
+	
+	@Transient
+	private Double venta;
+	@Transient
+	private Double pUnitario;
+	@Transient
+	private Date fPrecio;
+	
+	public Integer getClave() {
+		return clave;
+	}
+	public void setClave(Integer clave) {
+		this.clave = clave;
+	}
+	public String getDestino() {
+		return destino;
+	}
+	public void setDestino(String destino) {
+		this.destino = destino;
+	}
+	public Double getLat() {
+		return lat;
+	}
+	public void setLat(Double lat) {
+		this.lat = lat;
+	}
+	public Double getLng() {
+		return lng;
+	}
+	public void setLng(Double lng) {
+		this.lng = lng;
+	}
+	public Integer getId_f() {
+		return id_f;
+	}
+	public void setId_f(Integer id_f) {
+		this.id_f = id_f;
+	}
+	public Integer getSource_f() {
+		return source_f;
+	}
+	public void setSource_f(Integer source_f) {
+		this.source_f = source_f;
+	}
+	public Integer getTarget_f() {
+		return target_f;
+	}
+	public void setTarget_f(Integer target_f) {
+		this.target_f = target_f;
+	}
+	public Double getpUnitario() {
+		return pUnitario;
+	}
+	public void setpUnitario(Double pUnitario) {
+		this.pUnitario = pUnitario;
+	}
+	public Date getfPrecio() {
+		return fPrecio;
+	}
+	public void setfPrecio(Date fPrecio) {
+		this.fPrecio = fPrecio;
+	}
+	public Double getVenta() {
+		return venta;
+	}
+	public void setVenta(Double venta) {
+		this.venta = venta;
+	}
+}
+
+## DestinoDao
+
+package com.cultivodatos.model;
+
+import java.util.List;
+
+import javax.transaction.Transactional;
+import org.springframework.data.repository.CrudRepository;
+
+@Transactional
+public interface DestinoDAO extends CrudRepository<Destino, Long> {
+	
+	public List<Destino> findAll();
+}
+
+## Ejes
+
+ackage com.cultivodatos.model;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "ejes")
+public class Ejes {
+
+	@Id
+	private Integer clave;
+	
+	private String eje;
+	
+	public Integer getClave() {
+		return clave;
+	}
+	public void setClave(Integer clave) {
+		this.clave = clave;
+	}
+	public String getEje() {
+		return eje;
+	}
+	public void setEje(String eje) {
+		this.eje = eje;
+	}
+}
+
+## EjesDAO
+
+package com.cultivodatos.model;
+
+import java.util.List;
+
+import org.springframework.data.repository.CrudRepository;
+
+public interface EjesDAO extends CrudRepository<Ejes, Long>{
+	public List<Ejes> findAll();
+}
+
+## GeoJson
+package com.cultivodatos.model;
+
+public class GeoJson {
+
+	private String type;
+	private String coordinates;
+	public String getType() {
+		return type;
+	}
+	public void setType(String type) {
+		this.type = type;
+	}
+	public String getCoordinates() {
+		return coordinates;
+	}
+	public void setCoordinates(String coordinates) {
+		this.coordinates = coordinates;
+	}
+	
+}
+
+## PrecioCultivo
+
+package com.cultivodatos.model;
+
+import java.io.Serializable;
+import java.util.Objects;
+
+public class PrecioCultivo  implements Serializable{
+	
+	private static final long serialVersionUID = 1L;
+	
+	private Integer cve_cultivo;
+	private Integer cve_destino;
+	
+	public Integer getCve_cultivo() {
+		return cve_cultivo;
+	}
+	public void setCve_cultivo(Integer cve_cultivo) {
+		this.cve_cultivo = cve_cultivo;
+	}
+	public Integer getCve_destino() {
+		return cve_destino;
+	}
+	public void setCve_destino(Integer cve_destino) {
+		this.cve_destino = cve_destino;
+	}	
+}
+
+## Precios
+
+ackage com.cultivodatos.model;
+
+import java.io.Serializable;
+import java.util.Date;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.IdClass;
+import javax.persistence.NamedStoredProcedureQueries;
+import javax.persistence.NamedStoredProcedureQuery;
+import javax.persistence.StoredProcedureParameter;
+import javax.persistence.ParameterMode;
+import javax.persistence.Table;
+
+import lombok.Data;
+
+@Entity
+@Table(name = "precios_cultivos")
+@IdClass(value=PrecioCultivo.class)
+@Data
+@NamedStoredProcedureQueries({
+        @NamedStoredProcedureQuery(name = "_lstPreciosCultivo",
+            procedureName = "_spGetPreciosCultivo", 
+    		parameters = { 
+    		        @StoredProcedureParameter(
+    		          name = "cveCultivo", 
+    		          type = Integer.class, 
+    		          mode = ParameterMode.IN) 
+	        },
+            resultClasses = Precios.class
+            )
+})
+
+public class Precios implements Serializable {
+
+	private static final long serialVersionUID = 1L;
+
+	@Id
+	private Integer cve_cultivo;
+    
+    @Id
+	private Integer cve_destino;
+    
+    
+	private Float precio;
+	private Float min_precio;
+	private Float max_precio;
+	private Date fecha_act;
+	
+	public Integer getCve_cultivo() {
+		return cve_cultivo;
+	}
+	public void setCve_cultivo(Integer cve_cultivo) {
+		this.cve_cultivo = cve_cultivo;
+	}
+	public Integer getCve_destino() {
+		return cve_destino;
+	}
+	public void setCve_destino(Integer cve_destino) {
+		this.cve_destino = cve_destino;
+	}
+	public Float getPrecio() {
+		return precio;
+	}
+	public void setPrecio(Float precio) {
+		this.precio = precio;
+	}
+	public Float getMin_precio() {
+		return min_precio;
+	}
+	public void setMin_precio(Float min_precio) {
+		this.min_precio = min_precio;
+	}
+	public Float getMax_precio() {
+		return max_precio;
+	}
+	public void setMax_precio(Float max_precio) {
+		this.max_precio = max_precio;
+	}
+	public Date getFecha_act() {
+		return fecha_act;
+	}
+	public void setFecha_act(Date fecha_act) {
+		this.fecha_act = fecha_act;
+	}
+	
+	
+}
+
+
+## Precios Impl
+om.cultivodatos.model;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.ParameterMode;
+import javax.persistence.PersistenceContext;
+import javax.persistence.StoredProcedureQuery;
+
+public class PreciosDAOImpl implements PreciosDAOCustom {
+
+	@PersistenceContext
+    private EntityManager em;
+	
+	@Override
+    public List<Precios> getPreciosCultivo(int cveCultivo) {
+        StoredProcedureQuery _sp = em.createStoredProcedureQuery("_spGetPreciosCultivo");
+        _sp.registerStoredProcedureParameter(0,Integer.class, ParameterMode.IN);
+        _sp.setParameter(0, cveCultivo);
+        
+        Object [] results = _sp.getResultList().toArray();
+        List<Precios> precios = new ArrayList<Precios>();
+        
+        for(Object res : results) {
+        	Precios precio = new Precios();
+        	Object[] tmp = (Object[])res;
+        	precio.setCve_cultivo((int)tmp[0]);
+        	precio.setCve_destino((int)tmp[1]);
+        	precio.setPrecio((float)tmp[2]);
+        	precio.setMin_precio((float)tmp[3]);
+        	precio.setMax_precio((float)tmp[4]);
+        	precio.setFecha_act((Date)tmp[5]);        	
+        	precios.add(precio);
+        }         
+         
+        return precios; 
+    }
+}
+
+## Vehículo
+
+package com.cultivodatos.model;
+
+import java.io.Serializable;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.NamedStoredProcedureQueries;
+import javax.persistence.NamedStoredProcedureQuery;
+import javax.persistence.Table;
+import lombok.Data;
+
+@Entity
+@Table(name = "vehiculos")
+@Data
+@NamedStoredProcedureQueries({
+        @NamedStoredProcedureQuery(name = "_lstVehiculos",
+            procedureName = "_spGetVehiculos", 
+            resultClasses = Vehiculo.class
+            )
+})
+
+
+public class Vehiculo  implements Serializable {
+	
+
+	private static final long serialVersionUID = 1L;
+
+	@Id
+	private Integer clave;	
+	
+	private String vehiculo;
+	private int activo;
+	private int id_tveh;
+	public Integer getClave() {
+		return clave;
+	}
+	public void setClave(Integer clave) {
+		this.clave = clave;
+	}
+	public String getVehiculo() {
+		return vehiculo;
+	}
+	public void setVehiculo(String vehiculo) {
+		this.vehiculo = vehiculo;
+	}
+	public int getActivo() {
+		return activo;
+	}
+	public void setActivo(int activo) {
+		this.activo = activo;
+	}
+	public int getId_tveh() {
+		return id_tveh;
+	}
+	public void setId_tveh(int id_tveh) {
+		this.id_tveh = id_tveh;
+	}
+	
+
+}
+
+## Vehiculo dao imp
+package com.cultivodatos.model;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.persistence.StoredProcedureQuery;
+
+public class VehiculoDAOImpl implements VehiculoDAOCustom {
+
+	@PersistenceContext
+    private EntityManager em;
+	
+	@Override
+    public List<Vehiculo> getVehiculos() {
+        StoredProcedureQuery _sp = em.createNamedStoredProcedureQuery("_lstVehiculos");
+        return _sp.getResultList();
+    }
+}
+
+## Ruta Control
+
+package com.cultivodatos.controllers;
+
+
+import java.io.InputStreamReader;
+import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
+
+import org.apache.http.HttpResponse;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.params.BasicHttpParams;
+import org.apache.http.params.HttpConnectionParams;
+import org.apache.http.params.HttpParams;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.cultivodatos.model.Calculadora;
+import com.cultivodatos.model.CategoriaVehiculo;
+import com.cultivodatos.model.CategoriaVehiculoDAO;
+import com.cultivodatos.model.Cultivo;
+import com.cultivodatos.model.CultivoDAO;
+import com.cultivodatos.model.Destino;
+import com.cultivodatos.model.DestinoDAO;
+import com.cultivodatos.model.Ejes;
+import com.cultivodatos.model.EjesDAO;
+import com.cultivodatos.model.Precios;
+import com.cultivodatos.model.PreciosDAO;
+import com.cultivodatos.model.Ruta;
+import com.cultivodatos.model.Vehiculo;
+import com.cultivodatos.model.VehiculoDAO;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+@RestController
+public class RutaCtrl {
+	
+	@Autowired
+    private DestinoDAO destinoDao;
+	
+	@Autowired
+    private CultivoDAO cultivoDao;
+	
+	@Autowired
+    private CategoriaVehiculoDAO catVehDao;
+	
+	@Autowired
+    private VehiculoDAO vehiculoDao;
+	
+	@Autowired
+    private EjesDAO ejesDao;
+	
+	@Autowired
+    private PreciosDAO preciosDao;
+	
+	@Value("${apisakbe.config.token}")
+	private String aSakbeToken;
+
+	@Value("${apisakbe.config.url_base_ruta}")
+	private String aSakbeUrlBaseRuta;
+	
+	@Value("${apisakbe.config.url_base_ruta_pin}")
+	private String aSakbeUrlBaseRutaPin;
+	
+	@Value("${apisakbe.config.num_max}")
+	private int aSakbeNumMax;
+	
+	
+	
+	@RequestMapping(value={"ruta"}, method = RequestMethod.POST) 
+	public TreeMap<Double, List<Ruta>> getRuta(@RequestBody Calculadora calculadora) {
+		
+		TreeMap<Double, Destino> sDestinos = new TreeMap<Double, Destino>();
+	  	TreeMap<Double, List<Ruta>> sRutas = new TreeMap<Double, List<Ruta>>();
+	  	
+	  	
+	  	System.out.println(aSakbeToken);
+	  	System.out.println(aSakbeUrlBaseRuta);
+	  		  		  
+	  	List<Destino> destinos = destinoDao.findAll();
+	  	for(Destino destino: destinos) {
+	  		sDestinos.put(distance( destino.getLat().doubleValue(),
+	  								destino.getLng().doubleValue(),
+	  								calculadora.getLat(), 
+	  								calculadora.getLng(),'K'), 
+	  					  destino);
+	  	}
+	  	
+	  	
+	  	List<Precios> lstPrecios = preciosDao.getPreciosCultivo(new Integer(calculadora.getCultivo()));
+	  	
+	  	TreeMap<Double, Destino> pDestinos = new TreeMap<Double, Destino>();	  	
+	  	for(Precios precio: lstPrecios) {
+	  		for(Map.Entry<Double,Destino> sDes : sDestinos.entrySet()) {
+	  		   Destino des = sDes.getValue();	  		  
+	  		   if(des.getClave().intValue() == precio.getCve_destino().intValue()) {
+	  			   try {
+		  			  double venta = calculadora.getUmedida() == 1 ? precio.getPrecio().floatValue()  * calculadora.getCantidad()
+	                          : precio.getPrecio().floatValue()  * 1000 * calculadora.getCantidad();
+		  			  
+		  			  des.setpUnitario(precio.getPrecio().doubleValue());
+		  			  des.setfPrecio(precio.getFecha_act());
+		  			  des.setVenta(venta);
+		  			  
+		  			  pDestinos.put(venta * (-1), des);
+	  			   } catch(Exception ex) {
+	  				   ex.printStackTrace();
+	  			   }
+	  		   }
+	  		}
+	  	}
+	  		  	  
+	  	
+	  	int idx=0;
+	  	for(Map.Entry<Double,Destino> entry : sDestinos.entrySet()) {
+	  		
+  			  if(idx >= 12) { //aSakbeNumMax) {
+  				  //System.out.println("num max peticiones");
+  				  break;
+  			  }
+  			  
+		  	  Destino destino = entry.getValue();
+		  	  Double venta = destino.getVenta();
+		  	  		  	  
+		  	  System.out.println("destino=> " + destino.getDestino());
+		  	  try {
+		  		List<Ruta> ruta = getRutaDestino(calculadora, destino, aSakbeUrlBaseRuta, aSakbeUrlBaseRutaPin, aSakbeToken);
+		  		ruta.get(0).setDestino(destino.getDestino());
+		  		ruta.get(0).setLat(destino.getLat().floatValue());
+		  		ruta.get(0).setLng(destino.getLng().floatValue());
+		  		ruta.get(0).setVenta(venta);
+		  		ruta.get(0).setpUnitario(destino.getpUnitario());
+		  		ruta.get(0).setfPrecio(destino.getfPrecio());
+		  		
+		  		double cCombustible = (ruta.get(0).getLong_km().floatValue() / 3) * 19.6;
+		  		ruta.get(0).setpCombustible(cCombustible);
+		  		
+		  		double costo = ruta.get(0).getCosto_caseta().doubleValue() + cCombustible;
+		  		sRutas.put(costo- venta ,ruta);		  		
+		  		idx++;
+		  		
+		  	  } catch (Exception e) {						
+		  		  e.printStackTrace();
+		  		  
+			  }
+		  	  
+	  	}
+	  	  
+	  	return sRutas;
+	}
+	
+		
+	private static List<Ruta> getRutaDestino(Calculadora calculadora, Destino destino, String aSakbeUrlBaseRuta, String aSakbeUrlBaseRutaPin, String aSakbeToken) throws Exception{
+		
+		String urlRuta = calculadora.getUtipo() == 1 ? aSakbeUrlBaseRuta: aSakbeUrlBaseRutaPin;
+		urlRuta= urlRuta.replaceAll("PARAM_key", aSakbeToken);
+		
+		if(calculadora.getUtipo() == 1) {
+			urlRuta= urlRuta.replaceAll("PARAM_dest_i", String.valueOf(calculadora.getIdDes()));
+		} else {
+			urlRuta= urlRuta.replaceAll("PARAM_id_i", String.valueOf(calculadora.getId_i()));
+			urlRuta= urlRuta.replaceAll("PARAM_source_i", String.valueOf(calculadora.getSource_i()));
+			urlRuta= urlRuta.replaceAll("PARAM_target_i", String.valueOf(calculadora.getTarget_i()));
+		}
+		
+		
+		urlRuta= urlRuta.replaceAll("PARAM_id_f", String.valueOf(destino.getId_f()));
+		urlRuta= urlRuta.replaceAll("PARAM_source_f", String.valueOf(destino.getSource_f()));
+		urlRuta= urlRuta.replaceAll("PARAM_target_f", String.valueOf(destino.getTarget_f()));
+		urlRuta= urlRuta.replaceAll("PARAM_veh", String.valueOf(calculadora.getIdVeh()));
+		urlRuta= urlRuta.replaceAll("PARAM_ejes", String.valueOf(calculadora.getEjes()));
+		
+		//System.out.println(urlRuta);
+		
+		 final HttpParams httpParams = new BasicHttpParams();
+	     HttpConnectionParams.setConnectionTimeout(httpParams, 30000);
+		    
+						
+		DefaultHttpClient httpClient = new DefaultHttpClient(httpParams);
+		HttpGet getRequest = new HttpGet(urlRuta);
+		getRequest.addHeader("accept", "application/json");
+		HttpResponse response = httpClient.execute(getRequest);
+		if (response.getStatusLine().getStatusCode() != 200) {
+			throw new RuntimeException("Error al recuperar los calculos del destino <" 
+					+ destino.getDestino() + ">: Código : "  + response.getStatusLine().getStatusCode());
+		}
+		
+		ObjectMapper mapper = new ObjectMapper();
+		TypeReference<List<Ruta>> typeReference = new TypeReference<List<Ruta>>(){};
+		List<Ruta> ruta = mapper.readValue(new InputStreamReader((response.getEntity().getContent())), typeReference);
+		httpClient.getConnectionManager().shutdown();
+		return ruta;	
+	}
+	
+	private static double distance(double lat1, double lon1, double lat2, double lon2, char unit) {
+	      double theta = lon1 - lon2;
+	      double dist = Math.sin(deg2rad(lat1)) * Math.sin(deg2rad(lat2)) + Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2)) * Math.cos(deg2rad(theta));
+	      dist = Math.acos(dist);
+	      dist = rad2deg(dist);
+	      dist = dist * 60 * 1.1515;
+	      if (unit == 'K') {
+	        dist = dist * 1.609344;
+	      } else if (unit == 'N') {
+	        dist = dist * 0.8684;
+	        }
+	      return (dist);
+    }
+
+    private static double deg2rad(double deg) {
+      return (deg * Math.PI / 180.0);
+    }
+
+
+    private static double rad2deg(double rad) {
+      return (rad * 180.0 / Math.PI);
+    }
+    
+    @RequestMapping(value={"cultivos"}, method = RequestMethod.POST) 
+    private List<Cultivo> getCultivos() {
+    	return cultivoDao.findAll();
+    }
+    
+    @RequestMapping(value={"catVehiculos"}, method = RequestMethod.POST) 
+    private List<CategoriaVehiculo> getCVehiculos() {
+    	return catVehDao.getCatVehiculos();
+    }
+    
+    @RequestMapping(value={"vehiculos"}, method = RequestMethod.POST) 
+    private List<Vehiculo> getVehiculos() {
+    	return vehiculoDao.getVehiculos(); 
+    }
+    
+    @RequestMapping(value={"ejes"}, method = RequestMethod.POST) 
+    private List<Ejes> getEjes() {
+    	return ejesDao.findAll();
+    }
+    
+    @RequestMapping(value={"precios"}, method = RequestMethod.GET) 
+    private List<Precios>  getPreciosCultivo() {
+    	return preciosDao.getPreciosCultivo(9076);
+    }
+}
+
+##Inicio Control
+package com.cultivodatos.controllers;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
+
+@Controller
+public class InicioCtrl {
+	
+	@RequestMapping(value={"/", "/inicio"}, method = RequestMethod.GET) 
+	public ModelAndView inicio() {
+		ModelAndView mv = new ModelAndView("Inicio");
+		return mv;
+	}
+	
+	@RequestMapping(value={"encabezado"}, method = RequestMethod.GET) 
+	public ModelAndView encabezado() {
+		ModelAndView mv = new ModelAndView("encabezado");
+		return mv;
+	}
+	
+	@RequestMapping(value={"piepagina"}, method = RequestMethod.GET) 
+	public ModelAndView piepagina() {
+		ModelAndView mv = new ModelAndView("piepagina");
+		return mv;
+	}
+
+	@RequestMapping(value={"calculadora"}, method = RequestMethod.GET) 
+	public ModelAndView calculadora() {
+		ModelAndView mv = new ModelAndView("calculadora");
+		return mv;
+	}
+	
+	
+	@RequestMapping(value={"cultivo"}, method = RequestMethod.GET) 
+	public ModelAndView cultivo() {
+		ModelAndView mv = new ModelAndView("cultivo");
+		return mv;
+	}
+	
+	
+	@RequestMapping(value={"vehiculo"}, method = RequestMethod.GET) 
+	public ModelAndView vehiculo() {
+		ModelAndView mv = new ModelAndView("vehiculo");
+		return mv;
+	}
+	
+	
+	@RequestMapping(value={"ubicacion"}, method = RequestMethod.GET) 
+	public ModelAndView ubicacion() {
+		ModelAndView mv = new ModelAndView("ubicacion");
+		return mv;
+	}
+	
+	
+}
+
+
