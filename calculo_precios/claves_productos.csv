@@ -1,1 +1,76 @@
-cve,producto,9003,Ajo,9004,Apio,9005,Berenjena,9007,Br—coli,9008,Cacahuate,9009,Calabacita,9011,Camote,9012,Ca–a de azœcar,9013,Cebolla,9021,Cilantro,9022,Ciruela,9023,Coco,9024,Col,9025,Coliflor,9084,Champi–—n,9016,Chayote,9017,Ch’charo,9019,Chile seco,9020,Chile verde,9026,Durazno,9027,Ejote,9028,Elote,9030,Esp‡rrago,9032,Fresa,9033,Granada China,9034,Granada Roja,9035,Guan‡bana,9037,Guayaba,9038,Haba verde,9040,Jamaica,9041,J’cama,9074,Jitomate<br/, (Tomate Rojo)9042,Kiwi,9044,Lechuga,9045,Lima,9046,Lim—n,9047,Mamey,9048,Mandarina,9049,Mango,9050,Manzana,9051,Mel—n,9052,Membrillo,9053,Nanche,9054,Naranja,9055,Nectarina,9056,Nopal,9057,Nuez,9058,OrŽgano,9059,Papa,9060,Papaya,9061,Pepino,9062,Pera,90201,Pimiento,9066,Pi–a,9067,Pistache,9068,Pitaya,9069,Pl‡tano,9071,Sand’a,9072,Tamarindo,9073,Tejocote,9074,Tomate Rojo,9075,Tomate Verde,9076,Toronja,9077,Tuna,9078,Uva,9080,Zanahoria,9081,Zapote,9082,Zarzamora,19598,Alubia,19001,Arroz,19332,Frijol,19600,Garbanzo,19602,Haba,19603,Lenteja,19605,Ma’z,
+cve,producto,imagen
+9003,Ajo,1
+9004,Apio,1
+9005,Berenjena,1
+9007,BrÑcoli,1
+9008,Cacahuate,1
+9009,Calabacita,1
+9011,Camote,1
+9012,CaÐa de azÏcar,1
+9013,Cebolla,1
+9021,Cilantro,1
+9022,Ciruela,1
+9023,Coco,1
+9024,Col,1
+9025,Coliflor,1
+9084,ChampiÐÑn,1
+9016,Chayote,1
+9017,ChÕcharo,1
+9019,Chile seco,1
+9020,Chile verde,1
+9026,Durazno,1
+9027,Ejote,1
+9028,Elote,1
+9030,Espàrrago,1
+9032,Fresa,1
+9033,Granada China,
+9034,Granada Roja,
+9035,Guanàbana,
+9037,Guayaba,
+9038,Haba verde,
+9040,Jamaica,
+9041,JÕcama,
+9074,Jitomate<br/, (Tomate Rojo)
+9042,Kiwi,
+9044,Lechuga,
+9045,Lima,
+9046,LimÑn,
+9047,Mamey,
+9048,Mandarina,
+9049,Mango,
+9050,Manzana,
+9051,MelÑn,
+9052,Membrillo,
+9053,Nanche,
+9054,Naranja,
+9055,Nectarina,
+9056,Nopal,
+9057,Nuez,
+9058,Or_gano,
+9059,Papa,
+9060,Papaya,
+9061,Pepino,
+9062,Pera,
+90201,Pimiento,
+9066,PiÐa,
+9067,Pistache,
+9068,Pitaya,
+9069,Plàtano,
+9071,SandÕa,
+9072,Tamarindo,
+9073,Tejocote,
+9074,Tomate Rojo,
+9075,Tomate Verde,
+9076,Toronja,
+9077,Tuna,
+9078,Uva,
+9080,Zanahoria,
+9081,Zapote,
+9082,Zarzamora,1
+19598,Alubia,
+19001,Arroz,1
+19332,Frijol,1
+19600,Garbanzo,
+19602,Haba,
+19603,Lenteja,
+19605,MaÕz,
